@@ -1,9 +1,8 @@
 import UIKit
 
-class ViewController: UIViewController {
+class EnterUserNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 }
-

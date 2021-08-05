@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185EA8FA26BC01CC00BC80B6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EA8F926BC01CC00BC80B6 /* AppState.swift */; };
+		185EA8FC26BC04B100BC80B6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EA8FB26BC04B100BC80B6 /* Store.swift */; };
+		185EA8FE26BC04CA00BC80B6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EA8FD26BC04CA00BC80B6 /* Observer.swift */; };
+		185EA90026BC062700BC80B6 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EA8FF26BC062700BC80B6 /* Action.swift */; };
+		185EA90226BC087000BC80B6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 185EA90126BC087000BC80B6 /* README.md */; };
 		18CCE14026BBFCFD00C2706E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCE13F26BBFCFD00C2706E /* AppDelegate.swift */; };
-		18CCE14426BBFCFD00C2706E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCE14326BBFCFD00C2706E /* ViewController.swift */; };
+		18CCE14426BBFCFD00C2706E /* EnterUserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCE14326BBFCFD00C2706E /* EnterUserNameViewController.swift */; };
 		18CCE14726BBFCFD00C2706E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CCE14526BBFCFD00C2706E /* Main.storyboard */; };
 		18CCE14926BBFCFF00C2706E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CCE14826BBFCFF00C2706E /* Assets.xcassets */; };
 		18CCE14C26BBFCFF00C2706E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CCE14A26BBFCFF00C2706E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185EA8F926BC01CC00BC80B6 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		185EA8FB26BC04B100BC80B6 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		185EA8FD26BC04CA00BC80B6 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		185EA8FF26BC062700BC80B6 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		185EA90126BC087000BC80B6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		18CCE13C26BBFCFD00C2706E /* Sleep-Test-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep-Test-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CCE13F26BBFCFD00C2706E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18CCE14326BBFCFD00C2706E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18CCE14326BBFCFD00C2706E /* EnterUserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUserNameViewController.swift; sourceTree = "<group>"; };
 		18CCE14626BBFCFD00C2706E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18CCE14826BBFCFF00C2706E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18CCE14B26BBFCFF00C2706E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,9 +45,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185EA8F426BC00AC00BC80B6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				185EA8F926BC01CC00BC80B6 /* AppState.swift */,
+				185EA8FF26BC062700BC80B6 /* Action.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		185EA8F526BC00B200BC80B6 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				185EA8FB26BC04B100BC80B6 /* Store.swift */,
+				185EA8FD26BC04CA00BC80B6 /* Observer.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		185EA8F626BC00BC00BC80B6 /* Shell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shell;
+			sourceTree = "<group>";
+		};
+		185EA8F726BC00C300BC80B6 /* ShellUI */ = {
+			isa = PBXGroup;
+			children = (
+				18CCE14826BBFCFF00C2706E /* Assets.xcassets */,
+				18CCE14526BBFCFD00C2706E /* Main.storyboard */,
+				18CCE14326BBFCFD00C2706E /* EnterUserNameViewController.swift */,
+			);
+			path = ShellUI;
+			sourceTree = "<group>";
+		};
+		185EA8F826BC011400BC80B6 /* Sleep */ = {
+			isa = PBXGroup;
+			children = (
+				18CCE14D26BBFCFF00C2706E /* Info.plist */,
+				18CCE14A26BBFCFF00C2706E /* LaunchScreen.storyboard */,
+				18CCE13F26BBFCFD00C2706E /* AppDelegate.swift */,
+			);
+			path = Sleep;
+			sourceTree = "<group>";
+		};
 		18CCE13326BBFCFD00C2706E = {
 			isa = PBXGroup;
 			children = (
+				185EA90126BC087000BC80B6 /* README.md */,
 				18CCE13E26BBFCFD00C2706E /* Sleep-Test-App */,
 				18CCE13D26BBFCFD00C2706E /* Products */,
 			);
@@ -54,12 +110,11 @@
 		18CCE13E26BBFCFD00C2706E /* Sleep-Test-App */ = {
 			isa = PBXGroup;
 			children = (
-				18CCE13F26BBFCFD00C2706E /* AppDelegate.swift */,
-				18CCE14326BBFCFD00C2706E /* ViewController.swift */,
-				18CCE14526BBFCFD00C2706E /* Main.storyboard */,
-				18CCE14826BBFCFF00C2706E /* Assets.xcassets */,
-				18CCE14A26BBFCFF00C2706E /* LaunchScreen.storyboard */,
-				18CCE14D26BBFCFF00C2706E /* Info.plist */,
+				185EA8F426BC00AC00BC80B6 /* Core */,
+				185EA8F526BC00B200BC80B6 /* Store */,
+				185EA8F626BC00BC00BC80B6 /* Shell */,
+				185EA8F726BC00C300BC80B6 /* ShellUI */,
+				185EA8F826BC011400BC80B6 /* Sleep */,
 			);
 			path = "Sleep-Test-App";
 			sourceTree = "<group>";
@@ -123,6 +178,7 @@
 			files = (
 				18CCE14C26BBFCFF00C2706E /* LaunchScreen.storyboard in Resources */,
 				18CCE14926BBFCFF00C2706E /* Assets.xcassets in Resources */,
+				185EA90226BC087000BC80B6 /* README.md in Resources */,
 				18CCE14726BBFCFD00C2706E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,8 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18CCE14426BBFCFD00C2706E /* ViewController.swift in Sources */,
+				185EA8FA26BC01CC00BC80B6 /* AppState.swift in Sources */,
+				185EA90026BC062700BC80B6 /* Action.swift in Sources */,
+				185EA8FE26BC04CA00BC80B6 /* Observer.swift in Sources */,
+				18CCE14426BBFCFD00C2706E /* EnterUserNameViewController.swift in Sources */,
 				18CCE14026BBFCFD00C2706E /* AppDelegate.swift in Sources */,
+				185EA8FC26BC04B100BC80B6 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +342,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86A2URF89S;
-				INFOPLIST_FILE = "Sleep-Test-App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sleep-Test-App/Sleep/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,7 +362,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86A2URF89S;
-				INFOPLIST_FILE = "Sleep-Test-App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sleep-Test-App/Sleep/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
