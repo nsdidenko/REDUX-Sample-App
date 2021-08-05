@@ -7,7 +7,7 @@
 
 ### Материалы ОБЯЗАТЕЛЬНЫЕ к изучению:
 
-[Алексей Демедецкий — Data-driven UI: безграничная власть](https://www.youtube.com/watch?v=tnKeUr5tRUg&t=1777s)
+[Data-driven UI: безграничная власть](https://www.youtube.com/watch?v=tnKeUr5tRUg&t=1777s)
 
 ### Материалы для ознакомления:
 

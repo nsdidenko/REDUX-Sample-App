@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Sleep-Test-Playground.playground">
+      location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:Store">
+      location = "group:Sleep-Test-Playground.playground">
    </FileRef>
    <FileRef
       location = "group:Sleep-Test-App.xcodeproj">
