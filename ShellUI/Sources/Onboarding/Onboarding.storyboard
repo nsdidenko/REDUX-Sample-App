@@ -23,18 +23,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKj-td-nVT">
+                                <rect key="frame" x="24" y="782" width="366" height="64"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Kow-Lo-0lp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Next"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DKj-td-nVT" secondAttribute="trailing" constant="24" id="7xa-1r-jol"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DKj-td-nVT" secondAttribute="bottom" constant="16" id="Evt-j8-9My"/>
                             <constraint firstItem="aAd-zi-Seh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KDe-fh-eQp"/>
+                            <constraint firstItem="DKj-td-nVT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Y1s-cb-N1d"/>
                             <constraint firstItem="aAd-zi-Seh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rpK-wp-MBn"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762" y="113"/>
+            <point key="canvasLocation" x="903" y="113"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="ON2-5O-hUN">
@@ -50,10 +62,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gf7-gR-nLm">
+                                <rect key="frame" x="24" y="782" width="366" height="64"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="0bn-qk-jCb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Next"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1oh-b7-cfl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1oh-b7-cfl" firstAttribute="bottom" secondItem="Gf7-gR-nLm" secondAttribute="bottom" constant="16" id="Amn-z0-tY3"/>
+                            <constraint firstItem="Gf7-gR-nLm" firstAttribute="leading" secondItem="1oh-b7-cfl" secondAttribute="leading" constant="24" id="Ecv-hB-IBI"/>
+                            <constraint firstItem="1oh-b7-cfl" firstAttribute="trailing" secondItem="Gf7-gR-nLm" secondAttribute="trailing" constant="24" id="SeD-Sg-vrl"/>
                             <constraint firstItem="YxJ-CJ-jAd" firstAttribute="centerY" secondItem="zkj-RO-T2t" secondAttribute="centerY" id="fEw-3r-W8K"/>
                             <constraint firstItem="YxJ-CJ-jAd" firstAttribute="centerX" secondItem="zkj-RO-T2t" secondAttribute="centerX" id="pU3-DQ-nC2"/>
                         </constraints>
@@ -61,7 +85,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vlg-LZ-UVy" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="113"/>
+            <point key="canvasLocation" x="31.884057971014496" y="112.5"/>
+        </scene>
+        <!--Thank You View Controller-->
+        <scene sceneID="oBF-H7-X5D">
+            <objects>
+                <viewController storyboardIdentifier="ThankYouViewController" id="phz-45-d4m" customClass="ThankYouViewController" customModule="ShellUI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NjA-0t-mR7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0II-3j-OoR">
+                                <rect key="frame" x="107" y="421" width="200" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piu-k1-bC3">
+                                <rect key="frame" x="24" y="782" width="366" height="64"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="2nn-TP-q2U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Finish"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M57-cA-Zdl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0II-3j-OoR" firstAttribute="centerX" secondItem="NjA-0t-mR7" secondAttribute="centerX" id="33F-Dh-3lK"/>
+                            <constraint firstAttribute="trailing" secondItem="piu-k1-bC3" secondAttribute="trailing" constant="24" id="65U-Km-UV7"/>
+                            <constraint firstItem="piu-k1-bC3" firstAttribute="leading" secondItem="M57-cA-Zdl" secondAttribute="leading" constant="24" id="FCm-hL-w4L"/>
+                            <constraint firstItem="0II-3j-OoR" firstAttribute="centerY" secondItem="NjA-0t-mR7" secondAttribute="centerY" id="q89-8s-sJg"/>
+                            <constraint firstItem="M57-cA-Zdl" firstAttribute="bottom" secondItem="piu-k1-bC3" secondAttribute="bottom" constant="16" id="ypV-gS-GzM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wPu-YB-9u5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="113"/>
         </scene>
     </scenes>
     <resources>
