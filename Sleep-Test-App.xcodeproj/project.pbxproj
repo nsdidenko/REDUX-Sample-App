@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184FE25126BC14BF00B4CC31 /* ReduxStore in Frameworks */ = {isa = PBXBuildFile; productRef = 184FE25026BC14BF00B4CC31 /* ReduxStore */; };
 		185EA8FA26BC01CC00BC80B6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EA8F926BC01CC00BC80B6 /* AppState.swift */; };
-		185EA8FC26BC04B100BC80B6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EA8FB26BC04B100BC80B6 /* Store.swift */; };
-		185EA8FE26BC04CA00BC80B6 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EA8FD26BC04CA00BC80B6 /* Observer.swift */; };
 		185EA90026BC062700BC80B6 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EA8FF26BC062700BC80B6 /* Action.swift */; };
 		185EA90226BC087000BC80B6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 185EA90126BC087000BC80B6 /* README.md */; };
 		18CCE14026BBFCFD00C2706E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCE13F26BBFCFD00C2706E /* AppDelegate.swift */; };
@@ -21,8 +20,6 @@
 
 /* Begin PBXFileReference section */
 		185EA8F926BC01CC00BC80B6 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		185EA8FB26BC04B100BC80B6 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		185EA8FD26BC04CA00BC80B6 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		185EA8FF26BC062700BC80B6 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		185EA90126BC087000BC80B6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		18CCE13C26BBFCFD00C2706E /* Sleep-Test-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep-Test-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,12 +36,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184FE25126BC14BF00B4CC31 /* ReduxStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184FE24F26BC14BF00B4CC31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		185EA8F426BC00AC00BC80B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -52,15 +57,6 @@
 				185EA8FF26BC062700BC80B6 /* Action.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		185EA8F526BC00B200BC80B6 /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				185EA8FB26BC04B100BC80B6 /* Store.swift */,
-				185EA8FD26BC04CA00BC80B6 /* Observer.swift */,
-			);
-			path = Store;
 			sourceTree = "<group>";
 		};
 		185EA8F626BC00BC00BC80B6 /* Shell */ = {
@@ -96,6 +92,7 @@
 				185EA90126BC087000BC80B6 /* README.md */,
 				18CCE13E26BBFCFD00C2706E /* Sleep-Test-App */,
 				18CCE13D26BBFCFD00C2706E /* Products */,
+				184FE24F26BC14BF00B4CC31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				185EA8F426BC00AC00BC80B6 /* Core */,
-				185EA8F526BC00B200BC80B6 /* Store */,
 				185EA8F626BC00BC00BC80B6 /* Shell */,
 				185EA8F726BC00C300BC80B6 /* ShellUI */,
 				185EA8F826BC011400BC80B6 /* Sleep */,
@@ -135,6 +131,9 @@
 			dependencies = (
 			);
 			name = "Sleep-Test-App";
+			packageProductDependencies = (
+				184FE25026BC14BF00B4CC31 /* ReduxStore */,
+			);
 			productName = "Sleep-Test-App";
 			productReference = 18CCE13C26BBFCFD00C2706E /* Sleep-Test-App.app */;
 			productType = "com.apple.product-type.application";
@@ -192,10 +191,8 @@
 			files = (
 				185EA8FA26BC01CC00BC80B6 /* AppState.swift in Sources */,
 				185EA90026BC062700BC80B6 /* Action.swift in Sources */,
-				185EA8FE26BC04CA00BC80B6 /* Observer.swift in Sources */,
 				18CCE14426BBFCFD00C2706E /* EnterUserNameViewController.swift in Sources */,
 				18CCE14026BBFCFD00C2706E /* AppDelegate.swift in Sources */,
-				185EA8FC26BC04B100BC80B6 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +394,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		184FE25026BC14BF00B4CC31 /* ReduxStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ReduxStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18CCE13426BBFCFD00C2706E /* Project object */;
 }

@@ -1,10 +1,11 @@
 
-struct AppState {
+public struct AppState {
     var user: User = User()
     var lastSomeAction: SomeAction = .initial(Initial())
 
     mutating func reduce(_ action: Action) {
         user.reduce(action)
+        lastSomeAction = SomeAction(action: action)
     }
 }
 
