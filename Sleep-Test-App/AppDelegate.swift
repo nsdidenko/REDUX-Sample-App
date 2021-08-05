@@ -5,30 +5,33 @@ import Shell
 import ShellUI
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, Storyboarded {
+    var window: UIWindow?
+
     private let store: Store<AppState, Action>
 
     override init() {
         store = Store(initial: .init()) { $0.reduce($1) }
         super.init()
 
-        store.subscribeUIRootOperator()
+        store.subscribeDefineStartFlowOperator()
+        store.subscribeUIFlowOperator()
+        store.subscribeFirebaseOperator()
+        store.subscribeLastActionConsolePrintOperator()
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        splash()
+
         store.dispatch(action: DidFinishLaunch())
         return true
     }
-}
 
-public struct InfrastructureInitOperator {
-    public let store: Store<AppState, Action>
+    private func splash() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
 
-    public init(store: Store<AppState, Action>) {
-        self.store = store
-    }
-
-    public func process(_ state: AppState) {
-        
+        let vc = storyboarded(.splash, ofType: SplashViewController.self)
+        window?.rootViewController = vc
     }
 }

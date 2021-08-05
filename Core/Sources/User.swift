@@ -15,5 +15,4 @@ public struct User {
             break
         }
     }
-
 }
