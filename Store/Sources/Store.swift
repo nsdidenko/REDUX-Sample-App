@@ -1,20 +1,20 @@
 import Foundation
 
-final class Store<State, Action> {
-    typealias Reducer = (inout State, Action) -> Void
+public final class Store<State, Action> {
+    public typealias Reducer = (inout State, Action) -> Void
 
-    var observers: Set<Observer<State>> = []
-    var state: State
+    public private(set) var observers: Set<Observer<State>> = []
+    public private(set) var state: State
 
     private let queue = DispatchQueue(label: "Store queue", qos: .userInitiated)
     private let reducer: Reducer
 
-    init(initial state: State, reducer: @escaping Reducer) {
+    public init(initial state: State, reducer: @escaping Reducer) {
         self.state = state
         self.reducer = reducer
     }
 
-    func dispatch(action: Action) {
+    public func dispatch(action: Action) {
         queue.async {
             self.reducer(&self.state, action)
             self.observers.forEach { $0.perform(with: self.state) }
@@ -22,7 +22,7 @@ final class Store<State, Action> {
     }
 
     @discardableResult
-    func subscribe(observer: Observer<State>) -> Observer<Void> {
+    public func subscribe(observer: Observer<State>) -> Observer<Void> {
         queue.async {
             self.observers.insert(observer)
             observer.perform(with: self.state)

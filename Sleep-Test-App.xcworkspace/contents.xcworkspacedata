@@ -5,6 +5,9 @@
       location = "group:Sleep-Test-Playground.playground">
    </FileRef>
    <FileRef
+      location = "group:Store">
+   </FileRef>
+   <FileRef
       location = "group:Sleep-Test-App.xcodeproj">
    </FileRef>
 </Workspace>
