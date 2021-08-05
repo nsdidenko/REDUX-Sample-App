@@ -1,16 +1,18 @@
 import UIKit
 import Core
 import ReduxStore
+import Shell
+import ShellUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-
     private let store: Store<AppState, Action>
 
     override init() {
         store = Store(initial: .init()) { $0.reduce($1) }
         super.init()
+
+        store.subscribeUIRootOperator()
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

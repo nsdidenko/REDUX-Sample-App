@@ -35,4 +35,12 @@ public enum SomeAction {
             fatalError("Unknown action: \(action)")
         }
     }
+
+    public var action: Action {
+        switch self {
+        case let .initial(action): return action
+        case let .setUserName(action): return action
+        case let .didFinishLaunch(action): return action
+        }
+    }
 }
