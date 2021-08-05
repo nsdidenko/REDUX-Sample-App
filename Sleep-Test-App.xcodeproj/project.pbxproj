@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		184FE25126BC14BF00B4CC31 /* ReduxStore in Frameworks */ = {isa = PBXBuildFile; productRef = 184FE25026BC14BF00B4CC31 /* ReduxStore */; };
-		185EA8FA26BC01CC00BC80B6 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EA8F926BC01CC00BC80B6 /* AppState.swift */; };
-		185EA90026BC062700BC80B6 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EA8FF26BC062700BC80B6 /* Action.swift */; };
+		184FE25A26BC21D500B4CC31 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 184FE25926BC21D500B4CC31 /* Core */; };
 		18CCE14026BBFCFD00C2706E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCE13F26BBFCFD00C2706E /* AppDelegate.swift */; };
 		18CCE14426BBFCFD00C2706E /* EnterUserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCE14326BBFCFD00C2706E /* EnterUserNameViewController.swift */; };
 		18CCE14726BBFCFD00C2706E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18CCE14526BBFCFD00C2706E /* Main.storyboard */; };
@@ -19,8 +18,7 @@
 
 /* Begin PBXFileReference section */
 		184FE25326BC1D4A00B4CC31 /* Store */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Store; sourceTree = "<group>"; };
-		185EA8F926BC01CC00BC80B6 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		185EA8FF26BC062700BC80B6 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		184FE25626BC1F6E00B4CC31 /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
 		18CCE13C26BBFCFD00C2706E /* Sleep-Test-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sleep-Test-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CCE13F26BBFCFD00C2706E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18CCE14326BBFCFD00C2706E /* EnterUserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUserNameViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +34,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				184FE25126BC14BF00B4CC31 /* ReduxStore in Frameworks */,
+				184FE25A26BC21D500B4CC31 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +51,6 @@
 		185EA8F426BC00AC00BC80B6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				185EA8F926BC01CC00BC80B6 /* AppState.swift */,
-				185EA8FF26BC062700BC80B6 /* Action.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -88,6 +85,7 @@
 		18CCE13326BBFCFD00C2706E = {
 			isa = PBXGroup;
 			children = (
+				184FE25626BC1F6E00B4CC31 /* Core */,
 				184FE25326BC1D4A00B4CC31 /* Store */,
 				18CCE13E26BBFCFD00C2706E /* Sleep-Test-App */,
 				18CCE13D26BBFCFD00C2706E /* Products */,
@@ -132,6 +130,7 @@
 			name = "Sleep-Test-App";
 			packageProductDependencies = (
 				184FE25026BC14BF00B4CC31 /* ReduxStore */,
+				184FE25926BC21D500B4CC31 /* Core */,
 			);
 			productName = "Sleep-Test-App";
 			productReference = 18CCE13C26BBFCFD00C2706E /* Sleep-Test-App.app */;
@@ -187,8 +186,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185EA8FA26BC01CC00BC80B6 /* AppState.swift in Sources */,
-				185EA90026BC062700BC80B6 /* Action.swift in Sources */,
 				18CCE14426BBFCFD00C2706E /* EnterUserNameViewController.swift in Sources */,
 				18CCE14026BBFCFD00C2706E /* AppDelegate.swift in Sources */,
 			);
@@ -397,6 +394,10 @@
 		184FE25026BC14BF00B4CC31 /* ReduxStore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ReduxStore;
+		};
+		184FE25926BC21D500B4CC31 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

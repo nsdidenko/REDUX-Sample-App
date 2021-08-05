@@ -1,17 +1,21 @@
 
 public protocol Action {}
 
-struct Initial: Action {}
+public struct Initial: Action { public init() {} }
 
-struct DidFinishLaunch: Action {}
+public struct DidFinishLaunch: Action { public init() {} }
 
-struct SetUserName: Action {
-    let name: String
+public struct SetUserName: Action {
+    public let name: String
+
+    public init(name: String) {
+        self.name = name
+    }
 }
 
 // MARK: - Helper
 
-enum SomeAction {
+public enum SomeAction {
     case initial(Initial)
     case setUserName(SetUserName)
     case didFinishLaunch(DidFinishLaunch)
@@ -32,5 +36,3 @@ enum SomeAction {
         }
     }
 }
-
-
