@@ -18,12 +18,14 @@ public struct DidFinishLaunch: Action { public init() {} }
 public struct DidLoadRemoteConfig: Action { public init() {} }
 
 public struct DidEnterName: Action {
-    public let name: String
+    public let name: User.Name
 
-    public init(_ name: String) {
+    public init(_ name: User.Name) {
         self.name = name
     }
 }
+
+public struct DidPurchase: Action { public init() {} }
 
 // MARK: - SomeAction в боевом проекте кодогенерируется
 
@@ -33,6 +35,7 @@ public enum SomeAction {
     case skipOnboarding(SkipOnboarding)
     case didFinishLaunch(DidFinishLaunch)
     case didLoadRemoteConfig(DidLoadRemoteConfig)
+    case didPurchase(DidPurchase)
 
     init<A>(action: A) {
         switch action {
@@ -51,6 +54,9 @@ public enum SomeAction {
         case let action as DidLoadRemoteConfig:
             self = .didLoadRemoteConfig(action)
 
+        case let action as DidPurchase:
+            self = .didPurchase(action)
+
         default:
             fatalError("Unknown action: \(action)")
         }
@@ -63,6 +69,7 @@ public enum SomeAction {
         case let .didEnterName(action): return action
         case let .didFinishLaunch(action): return action
         case let .didLoadRemoteConfig(action): return action
+        case let .didPurchase(action): return action
         }
     }
 }

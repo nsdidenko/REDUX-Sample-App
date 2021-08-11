@@ -30,7 +30,10 @@
                                     <constraint firstAttribute="height" constant="64" id="MY1-jn-PuZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Finish"/>
+                                <state key="normal" title="Purchase"/>
+                                <connections>
+                                    <action selector="buttonActionWithSender:" destination="CDY-aj-1Kb" eventType="touchUpInside" id="jt0-UL-r7G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="egr-9K-bdm"/>

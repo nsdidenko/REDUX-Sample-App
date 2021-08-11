@@ -66,4 +66,14 @@ final class FlowTests: XCTestCase {
         assertEqual(expected: .init(checkPoints: checkPoints, currentCheckPoint: .onboarding),
                     actual: state)
     }
+
+    func test_didPurchase() {
+        let checkPoints: [Flow.CheckPoint] = [ .launching, .splash, .onboarding, .home ]
+        var state = Flow(checkPoints: checkPoints, currentCheckPoint: .onboarding)
+
+        state.reduce(DidPurchase())
+
+        assertEqual(expected: .init(checkPoints: checkPoints, currentCheckPoint: .home),
+                    actual: state)
+    }
 }

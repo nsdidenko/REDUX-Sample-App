@@ -8,7 +8,7 @@ public enum EnterNameUIComposer: Storyboarded {
 
         vc.props = EnterNameViewController.Props(
             title: "Enter name",
-            action: .init { store.dispatch(action: DidEnterName($0)) })
+            action: .init { store.dispatch(action: DidEnterName(.init($0))) })
 
         return vc
     }

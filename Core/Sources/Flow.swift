@@ -35,6 +35,9 @@ public struct Flow: Equatable {
         case is DidLoadRemoteConfig:
             nextCheckPoint().map { currentCheckPoint = $0 }
 
+        case is DidPurchase:
+            nextCheckPoint().map { currentCheckPoint = $0 }
+
         default:
             break
         }

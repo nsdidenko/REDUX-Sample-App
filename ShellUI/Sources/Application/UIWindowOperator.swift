@@ -29,22 +29,17 @@ public class UIWindowOperator: Storyboarded {
 
 public extension Store where State == Core.AppState, Action == Core.Action {
     func subscribeUIWindowOperator(window: @escaping () -> UIWindow, nc: UINavigationController) {
-        let op = UIWindowOperator(window: window) {
-            $0.toVC(store: self).map { vc in
-                nc.setViewControllers([vc], animated: true)
-                return nc
-            }
-        }
-
+        let op = UIWindowOperator(window: window) { $0.toVC(store: self, nc: nc) }
         subscribe(observer: .init(action: { op.process($0.flow.currentCheckPoint) }).dispatched(on: .main))
     }
 }
 
 private extension Flow.CheckPoint {
-    func toVC(store: Store<AppState, Action>) -> UIViewController? {
+    func toVC(store: Store<AppState, Action>, nc: UINavigationController) -> UIViewController? {
         switch self {
         case .onboarding:
-            return EnterNameUIComposer.compose(store: store)
+            nc.setViewControllers([EnterNameUIComposer.compose(store: store)], animated: true)
+            return nc
 
         case .home:
             return HomeUIComposer.compose(store: store)
