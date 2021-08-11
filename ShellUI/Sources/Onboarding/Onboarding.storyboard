@@ -31,6 +31,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="buttonActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="csF-ru-jiX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

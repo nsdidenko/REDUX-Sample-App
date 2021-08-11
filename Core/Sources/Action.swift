@@ -17,10 +17,10 @@ public struct DidFinishLaunch: Action { public init() {} }
 
 public struct DidLoadRemoteConfig: Action { public init() {} }
 
-public struct SetUserName: Action {
+public struct DidEnterName: Action {
     public let name: String
 
-    public init(name: String) {
+    public init(_ name: String) {
         self.name = name
     }
 }
@@ -29,7 +29,7 @@ public struct SetUserName: Action {
 
 public enum SomeAction {
     case initial(Initial)
-    case setUserName(SetUserName)
+    case didEnterName(DidEnterName)
     case skipOnboarding(SkipOnboarding)
     case didFinishLaunch(DidFinishLaunch)
     case didLoadRemoteConfig(DidLoadRemoteConfig)
@@ -45,8 +45,8 @@ public enum SomeAction {
         case let action as DidFinishLaunch:
             self = .didFinishLaunch(action)
 
-        case let action as SetUserName:
-            self = .setUserName(action)
+        case let action as DidEnterName:
+            self = .didEnterName(action)
 
         case let action as DidLoadRemoteConfig:
             self = .didLoadRemoteConfig(action)
@@ -60,7 +60,7 @@ public enum SomeAction {
         switch self {
         case let .initial(action): return action
         case let .skipOnboarding(action): return action
-        case let .setUserName(action): return action
+        case let .didEnterName(action): return action
         case let .didFinishLaunch(action): return action
         case let .didLoadRemoteConfig(action): return action
         }

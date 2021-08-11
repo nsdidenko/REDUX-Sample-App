@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, Storyboarded {
         super.init()
 
         store.subscribeFlowLoadOperator(skipOnboarding: { false })
-        store.subscribeUIFlowOperator(window: { [unowned self] in self.window! })
+        store.subscribeUIWindowOperator(window: { [unowned self] in self.window! })
         store.subscribeFirebaseOperator()
         store.subscribeLastActionConsolePrintOperator()
     }

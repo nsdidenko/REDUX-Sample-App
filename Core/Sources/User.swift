@@ -1,5 +1,5 @@
 
-public struct User {
+public struct User: Equatable {
     public var name: String
 
     public init(name: String = "") {
@@ -8,7 +8,7 @@ public struct User {
 
     public mutating func reduce(_ action: Action) {
         switch action {
-        case let action as SetUserName:
+        case let action as DidEnterName:
             name = action.name
 
         default:
