@@ -1,30 +1,29 @@
 import Core
 import ReduxStore
+import Foundation
 
-public struct DefineStartFlowOperator {
+public class FlowLoadOperator {
     private let store: Store<AppState, Action>
+    private let skipOnboarding: () -> Bool
 
-    init(store: Store<AppState, Action>) {
+    init(store: Store<AppState, Action>, skipOnboarding: @escaping () -> Bool) {
         self.store = store
+        self.skipOnboarding = skipOnboarding
     }
 
+    private var currentCheckPoint: Flow.CheckPoint?
+
     public func process(_ state: AppState) {
-        guard state.lastSomeAction.action is DidLoadRemoteConfig else { return }
+        guard state.flow.currentCheckPoint == .launching,
+              state.flow.currentCheckPoint != currentCheckPoint else { return }
 
-        // Это должно взяться из UserDefaults (например)
-        let needToShowOnboarding = Bool.random()
-
-        let action: Action = needToShowOnboarding
-            ? StartOnboarding()
-            : StartHome()
-
-        store.dispatch(action: action)
+        store.dispatch(action: SkipOnboarding(flag: skipOnboarding()))
     }
 }
 
 public extension Store where State == Core.AppState, Action == Core.Action {
-    func subscribeDefineStartFlowOperator() {
-        let op = DefineStartFlowOperator(store: self)
+    func subscribeFlowLoadOperator(skipOnboarding: @escaping () -> Bool) {
+        let op = FlowLoadOperator(store: self, skipOnboarding: skipOnboarding)
         subscribe(observer: .init(action: op.process).dispatched(on: .main))
     }
 }

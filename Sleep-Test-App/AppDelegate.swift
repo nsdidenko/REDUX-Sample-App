@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, Storyboarded {
         store = Store(initial: .init()) { $0.reduce($1) }
         super.init()
 
-        store.subscribeDefineStartFlowOperator()
+        store.subscribeFlowLoadOperator(skipOnboarding: Bool.random)
         store.subscribeUIFlowOperator()
         store.subscribeFirebaseOperator()
         store.subscribeLastActionConsolePrintOperator()

@@ -6,39 +6,39 @@ public class UIFlowOperator {
     private let store: Store<AppState, Action>
     private var window: UIWindow?
 
-    private var currentFlow: Flow?
+    private var currentCheckPoint: Flow.CheckPoint?
 
     public init(store: Store<AppState, Action>) {
         self.store = store
     }
 
     public func process(_ state: AppState) {
-        processSplashIfNeeded(state.flow)
-        processOnboardingIfNeeded(state.flow)
-        processHomeIfNeeded(state.flow)
+        processSplashIfNeeded(state.flow.currentCheckPoint)
+        processOnboardingIfNeeded(state.flow.currentCheckPoint)
+        processHomeIfNeeded(state.flow.currentCheckPoint)
     }
 
     // MARK: - Private
 
-    private func processSplashIfNeeded(_ flow: Flow) {
-        guard flow == .splash, flow != currentFlow else { return }
-        currentFlow = flow
+    private func processSplashIfNeeded(_ checkPoint: Flow.CheckPoint) {
+        guard checkPoint == .splash, checkPoint != currentCheckPoint else { return }
+        currentCheckPoint = checkPoint
 
         window = UIApplication.shared.windows.first
 
         setRoot(withStoryboardName: "Splash", id: "SplashViewController")
     }
 
-    private func processOnboardingIfNeeded(_ flow: Flow) {
-        guard flow == .onboarding, flow != currentFlow else { return }
-        currentFlow = flow
+    private func processOnboardingIfNeeded(_ checkPoint: Flow.CheckPoint) {
+        guard checkPoint == .onboarding, checkPoint != currentCheckPoint else { return }
+        currentCheckPoint = checkPoint
 
         setRoot(withStoryboardName: "Onboarding", id: "WelcomeViewController")
     }
 
-    private func processHomeIfNeeded(_ flow: Flow) {
-        guard flow == .home, flow != currentFlow else { return }
-        currentFlow = flow
+    private func processHomeIfNeeded(_ checkPoint: Flow.CheckPoint) {
+        guard checkPoint == .home, checkPoint != currentCheckPoint else { return }
+        currentCheckPoint = checkPoint
 
         setRoot(withStoryboardName: "Home", id: "HomeViewController")
     }

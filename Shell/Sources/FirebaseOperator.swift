@@ -4,15 +4,16 @@ import Foundation
 
 public class FirebaseOperator {
     public let store: Store<AppState, Action>
-    private var currentFlow: Flow?
+
+    private var currentCheckPoint: Flow.CheckPoint?
 
     public init(store: Store<AppState, Action>) {
         self.store = store
     }
 
     public func process(_ state: AppState) {
-        guard state.flow == .splash, state.flow != currentFlow else { return }
-        currentFlow = state.flow
+        guard state.flow.currentCheckPoint == .splash, state.flow.currentCheckPoint != currentCheckPoint else { return }
+        currentCheckPoint = state.flow.currentCheckPoint
         
         // Simulate request
         DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
