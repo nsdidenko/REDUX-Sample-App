@@ -6,6 +6,7 @@ public enum StoryboardName: String {
     case splash = "Splash"
     case onboarding = "Onboarding"
     case home = "Home"
+    case paywall = "Paywall"
 }
 
 public extension Storyboarded {

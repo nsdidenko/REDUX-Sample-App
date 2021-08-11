@@ -27,7 +27,20 @@ public class UIWindowOperator: Storyboarded {
     }
 }
 
-extension Flow.CheckPoint {
+public extension Store where State == Core.AppState, Action == Core.Action {
+    func subscribeUIWindowOperator(window: @escaping () -> UIWindow, nc: UINavigationController) {
+        let op = UIWindowOperator(window: window) {
+            $0.toVC(store: self).map { vc in
+                nc.setViewControllers([vc], animated: true)
+                return nc
+            }
+        }
+
+        subscribe(observer: .init(action: { op.process($0.flow.currentCheckPoint) }).dispatched(on: .main))
+    }
+}
+
+private extension Flow.CheckPoint {
     func toVC(store: Store<AppState, Action>) -> UIViewController? {
         switch self {
         case .onboarding:
@@ -39,12 +52,5 @@ extension Flow.CheckPoint {
         default:
             return nil
         }
-    }
-}
-
-public extension Store where State == Core.AppState, Action == Core.Action {
-    func subscribeUIWindowOperator(window: @escaping () -> UIWindow) {
-        let op = UIWindowOperator(window: window) { $0.toVC(store: self) }
-        subscribe(observer: .init(action: { op.process($0.flow.currentCheckPoint) }).dispatched(on: .main))
     }
 }

@@ -9,6 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     private let store: Store<AppState, Action>
+    private var navigationController = UINavigationController()
 
     override init() {
         store = Store(initial: .init()) { $0.reduce($1) }
@@ -16,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         super.init()
 
         store.subscribeFlowLoadOperator(skipOnboarding: { false })
-        store.subscribeUIWindowOperator(window: { [unowned self] in self.window! })
+        store.subscribeUIWindowOperator(window: { [unowned self] in self.window! }, nc: navigationController)
+        store.subscribeOnboardingNavigationOperator(nc: navigationController)
         store.subscribeFirebaseOperator()
         store.subscribeLastActionConsolePrintOperator()
     }
