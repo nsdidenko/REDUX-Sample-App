@@ -12,10 +12,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, Storyboarded {
 
     override init() {
         store = Store(initial: .init()) { $0.reduce($1) }
+
         super.init()
 
-        store.subscribeFlowLoadOperator(skipOnboarding: Bool.random)
-        store.subscribeUIFlowOperator()
+        store.subscribeFlowLoadOperator(skipOnboarding: { false })
+        store.subscribeUIFlowOperator(window: { [unowned self] in self.window! })
         store.subscribeFirebaseOperator()
         store.subscribeLastActionConsolePrintOperator()
     }
