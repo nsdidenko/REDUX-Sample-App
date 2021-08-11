@@ -11,9 +11,9 @@ public class FirebaseOperator {
         self.store = store
     }
 
-    public func process(_ state: AppState) {
-        guard state.flow.currentCheckPoint == .splash, state.flow.currentCheckPoint != currentCheckPoint else { return }
-        currentCheckPoint = state.flow.currentCheckPoint
+    public func process(_ state: Flow.CheckPoint) {
+        guard state == .splash, state != currentCheckPoint else { return }
+        currentCheckPoint = state
         
         // Simulate request
         DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
@@ -25,6 +25,6 @@ public class FirebaseOperator {
 public extension Store where State == Core.AppState, Action == Core.Action {
     func subscribeFirebaseOperator() {
         let op = FirebaseOperator(store: self)
-        subscribe(observer: .init(action: op.process).dispatched(on: .main))
+        subscribe(observer: .init { op.process($0.flow.currentCheckPoint) }.dispatched(on: .main) )
     }
 }

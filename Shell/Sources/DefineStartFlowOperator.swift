@@ -13,9 +13,8 @@ public class FlowLoadOperator {
 
     private var currentCheckPoint: Flow.CheckPoint?
 
-    public func process(_ state: AppState) {
-        guard state.flow.currentCheckPoint == .launching,
-              state.flow.currentCheckPoint != currentCheckPoint else { return }
+    public func process(_ state: Flow.CheckPoint) {
+        guard state == .launching, state != currentCheckPoint else { return }
 
         store.dispatch(action: SkipOnboarding(flag: skipOnboarding()))
     }
@@ -24,6 +23,6 @@ public class FlowLoadOperator {
 public extension Store where State == Core.AppState, Action == Core.Action {
     func subscribeFlowLoadOperator(skipOnboarding: @escaping () -> Bool) {
         let op = FlowLoadOperator(store: self, skipOnboarding: skipOnboarding)
-        subscribe(observer: .init(action: op.process).dispatched(on: .main))
+        subscribe(observer: .init { op.process($0.flow.currentCheckPoint) }.dispatched(on: .main) )
     }
 }
