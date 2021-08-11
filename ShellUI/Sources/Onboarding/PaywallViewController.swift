@@ -1,6 +1,6 @@
 import UIKit
 
-public final class WelcomeViewController: UIViewController {
+public final class PaywallViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 

@@ -24,7 +24,7 @@ public class UIFlowOperator {
         guard checkPoint == .onboarding, checkPoint != currentCheckPoint else { return }
         currentCheckPoint = checkPoint
 
-        setRoot(withStoryboardName: "Onboarding", id: "WelcomeViewController")
+        setRoot(withStoryboardName: "Onboarding", id: "EnterNameViewController")
     }
 
     private func processHomeIfNeeded(_ checkPoint: Flow.CheckPoint) {
