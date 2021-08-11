@@ -9,44 +9,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Enter Name View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Paywall View Controller-->
+        <scene sceneID="puD-vW-TRn">
             <objects>
-                <viewController storyboardIdentifier="EnterNameViewController" id="BYZ-38-t0r" customClass="EnterNameViewController" customModule="ShellUI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="PaywallViewController" id="CDY-aj-1Kb" customClass="PaywallViewController" customModule="ShellUI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gCW-K4-Xca">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAd-zi-Seh">
-                                <rect key="frame" x="98.5" y="421" width="217" height="54"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paywall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLD-bg-IsB">
+                                <rect key="frame" x="135" y="421" width="144" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKj-td-nVT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrv-Qk-N9M">
                                 <rect key="frame" x="24" y="782" width="366" height="64"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="Kow-Lo-0lp"/>
+                                    <constraint firstAttribute="height" constant="64" id="MY1-jn-PuZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="Finish"/>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="egr-9K-bdm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="DKj-td-nVT" secondAttribute="trailing" constant="24" id="7xa-1r-jol"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DKj-td-nVT" secondAttribute="bottom" constant="16" id="Evt-j8-9My"/>
-                            <constraint firstItem="aAd-zi-Seh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KDe-fh-eQp"/>
-                            <constraint firstItem="DKj-td-nVT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Y1s-cb-N1d"/>
-                            <constraint firstItem="aAd-zi-Seh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rpK-wp-MBn"/>
+                            <constraint firstItem="zrv-Qk-N9M" firstAttribute="leading" secondItem="egr-9K-bdm" secondAttribute="leading" constant="24" id="5NJ-eF-Lsz"/>
+                            <constraint firstAttribute="trailing" secondItem="zrv-Qk-N9M" secondAttribute="trailing" constant="24" id="Afb-Az-dYl"/>
+                            <constraint firstItem="NLD-bg-IsB" firstAttribute="centerY" secondItem="gCW-K4-Xca" secondAttribute="centerY" id="US1-Mu-Ym3"/>
+                            <constraint firstItem="NLD-bg-IsB" firstAttribute="centerX" secondItem="gCW-K4-Xca" secondAttribute="centerX" id="bAr-hb-qft"/>
+                            <constraint firstItem="egr-9K-bdm" firstAttribute="bottom" secondItem="zrv-Qk-N9M" secondAttribute="bottom" constant="16" id="vO9-SS-4pY"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nxl-yD-aI5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="113"/>
+            <point key="canvasLocation" x="1770" y="113"/>
         </scene>
     </scenes>
     <resources>
