@@ -14,7 +14,7 @@ public class OnboardingNavigationOperator {
     private var currentName: Name?
 
     public func process(_ state: User) {
-        guard currentName != state.name else { return }
+        guard currentName != state.name, !state.name.value.isEmpty else { return }
         currentName = state.name
 
         navigationController.pushViewController(vc(), animated: true)
