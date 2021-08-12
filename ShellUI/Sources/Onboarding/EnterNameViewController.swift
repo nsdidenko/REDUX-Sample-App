@@ -2,24 +2,32 @@ import UIKit
 
 public extension EnterNameViewController {
     struct Props {
-        let title: String
-        let header: String
-        let field: EnterNameTextField.Props
-        let button: EnterNameNextButton.Props
+        public let title: String
+        public let header: String
+        public let invalidCaption: InvalidCaption; public struct InvalidCaption {
+            let title: String
+            let state: State; enum State {
+                case shown, hidden
+            }
+        }
+        public let field: EnterNameTextField.Props
+        public let button: EnterNameNextButton.Props
 
         public init(
             title: String,
             header: String,
+            invalidCaption: InvalidCaption,
             field: EnterNameTextField.Props,
             button: EnterNameNextButton.Props)
         {
             self.title = title
             self.header = header
+            self.invalidCaption = invalidCaption
             self.field = field
             self.button = button
         }
 
-        static let initial = Props(title: "", header: "", field: .initial, button: .initial)
+        static let initial = Props(title: "", header: "", invalidCaption: .init(title: "", state: .hidden), field: .initial, button: .initial)
     }
 }
 
@@ -30,6 +38,7 @@ public final class EnterNameViewController: UIViewController {
 
     @IBOutlet weak private var headerLabel: UILabel!
     @IBOutlet weak private var textField: EnterNameTextField!
+    @IBOutlet weak private var invalidLabel: UILabel!
     @IBOutlet weak private var nextButton: EnterNameNextButton!
     @IBOutlet weak private var nextButtonBottomConstraint: NSLayoutConstraint!
 
@@ -58,5 +67,13 @@ public final class EnterNameViewController: UIViewController {
         headerLabel.text = props.header
         textField.props = props.field
         nextButton.props = props.button
+
+        invalidLabel.text = props.invalidCaption.title
+        invalidLabel.isHidden = {
+            switch props.invalidCaption.state {
+            case .shown: return false
+            case .hidden: return true
+            }
+        }()
     }
 }

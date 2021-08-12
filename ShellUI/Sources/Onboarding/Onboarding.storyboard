@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,13 +39,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Next"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The name must not contain numbers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRJ-E6-4Pi">
+                                <rect key="frame" x="20" y="240.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Le8-Gb-3IZ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yRJ-E6-4Pi" firstAttribute="leading" secondItem="Le8-Gb-3IZ" secondAttribute="leading" constant="20" id="6Tc-4d-qfV"/>
+                            <constraint firstItem="Le8-Gb-3IZ" firstAttribute="trailing" secondItem="yRJ-E6-4Pi" secondAttribute="trailing" constant="20" id="CY8-Tr-qlb"/>
                             <constraint firstItem="9bD-0N-ReR" firstAttribute="top" secondItem="Le8-Gb-3IZ" secondAttribute="top" constant="15" id="JZ3-lS-5Fg"/>
                             <constraint firstItem="Le8-Gb-3IZ" firstAttribute="bottom" secondItem="yLk-rT-t3K" secondAttribute="bottom" constant="278" id="Li9-W8-vja"/>
                             <constraint firstItem="yLk-rT-t3K" firstAttribute="leading" secondItem="Le8-Gb-3IZ" secondAttribute="leading" constant="15" id="MsW-Vg-aeU"/>
+                            <constraint firstItem="yRJ-E6-4Pi" firstAttribute="top" secondItem="FfZ-Dn-vkg" secondAttribute="bottom" constant="24" id="NWT-gj-9rx"/>
                             <constraint firstItem="Le8-Gb-3IZ" firstAttribute="trailing" secondItem="FfZ-Dn-vkg" secondAttribute="trailing" constant="15" id="WeI-V8-3Gj"/>
                             <constraint firstItem="Le8-Gb-3IZ" firstAttribute="trailing" secondItem="9bD-0N-ReR" secondAttribute="trailing" constant="15" id="XQE-PP-DPy"/>
                             <constraint firstItem="Le8-Gb-3IZ" firstAttribute="trailing" secondItem="yLk-rT-t3K" secondAttribute="trailing" constant="15" id="byb-iw-kbW"/>
@@ -56,6 +66,7 @@
                     <navigationItem key="navigationItem" id="MDh-4z-mvb"/>
                     <connections>
                         <outlet property="headerLabel" destination="9bD-0N-ReR" id="nrw-Hq-CoS"/>
+                        <outlet property="invalidLabel" destination="yRJ-E6-4Pi" id="UkV-m8-NbO"/>
                         <outlet property="nextButton" destination="yLk-rT-t3K" id="v1l-a2-qKj"/>
                         <outlet property="nextButtonBottomConstraint" destination="Li9-W8-vja" id="5DE-G3-FyO"/>
                         <outlet property="textField" destination="FfZ-Dn-vkg" id="1d0-Fa-8FY"/>
@@ -63,7 +74,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enw-35-QHK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-297" y="124"/>
+            <point key="canvasLocation" x="-297.10144927536237" y="123.88392857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
