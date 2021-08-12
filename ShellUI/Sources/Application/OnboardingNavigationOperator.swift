@@ -11,7 +11,7 @@ public class OnboardingNavigationOperator {
         self.vc = vc
     }
 
-    private var currentName: User.Name?
+    private var currentName: Name?
 
     public func process(_ state: User) {
         guard currentName != state.name else { return }
