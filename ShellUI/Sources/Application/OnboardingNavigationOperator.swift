@@ -23,10 +23,7 @@ public class OnboardingNavigationOperator {
 
 public extension Store where State == Core.AppState, Action == Core.Action {
     func subscribeOnboardingNavigationOperator(nc: UINavigationController, nextVC: @escaping () -> UIViewController) {
-        let op = OnboardingNavigationOperator(
-            navigationController: nc,
-            nextVC: { PaywallUIComposer.compose(store: self) })
-
+        let op = OnboardingNavigationOperator(navigationController: nc, nextVC: nextVC)
         subscribe(observer: .init { op.process($0.user) }.dispatched(on: .main))
     }
 }

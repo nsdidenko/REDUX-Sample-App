@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         store.subscribeFlowLoadOperator(skipOnboarding: { false })
         store.subscribeUIWindowOperator(window: { [unowned self] in self.window! }, nc: navigationController)
-        store.subscribeOnboardingNavigationOperator(nc: navigationController)
+        store.subscribeOnboardingNavigationOperator(nc: navigationController, nextVC: { [unowned self] in PaywallUIComposer.compose(store: self.store) })
         store.subscribeFirebaseOperator(fetch: FirebaseRemoteConfigFetch.run)
         store.subscribeLastActionConsolePrintOperator()
     }
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = SplashUIComposer.compose(store: store)
+        window?.rootViewController = SplashViewController()
 
         store.dispatch(action: DidFinishLaunch())
         return true
