@@ -6,7 +6,7 @@ public class UIWindowOperator: Storyboarded {
     private let window: () -> UIWindow
     private let root: (Flow.CheckPoint) -> UIViewController?
 
-    init(window: @escaping () -> UIWindow,
+    public init(window: @escaping () -> UIWindow,
          root: @escaping (Flow.CheckPoint) -> UIViewController?
     ) {
         self.window = window
