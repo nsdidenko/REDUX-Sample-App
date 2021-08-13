@@ -13,15 +13,9 @@ public struct User: Equatable {
 }
 
 public struct Name: Equatable {
-    private let id: UUID
     public private(set) var value: String
 
-    public init(
-        id: UUID = UUID(),
-        maxLength: Int = 5,
-        value: String = ""
-    ) {
-        self.id = id
+    public init(value: String = "") {
         self.value = value
     }
 

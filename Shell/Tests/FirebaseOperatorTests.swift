@@ -19,14 +19,10 @@ final class FirebaseOperatorTests: XCTestCase {
     private typealias CheckPoint = Flow.CheckPoint
 
     private func afterSplashExpect(_ checkPoint: CheckPoint, whenAll checkPoints: [CheckPoint]) {
-        let id = UUID()
         let exp = expectation(description: "Wait for notification")
 
-        let store = Store<AppState, Action>(
-            initial: .init(
-                flow: .init(checkPoints: checkPoints, currentCheckPoint: .splash),
-                user: .init(name: .init(id: id))))
-        {
+        let startFlow = Flow(checkPoints: checkPoints, currentCheckPoint: .splash)
+        let store = Store<AppState, Action>(initial: .init(flow: startFlow)) {
             $0.reduce($1)
             exp.fulfill()
         }
@@ -41,7 +37,6 @@ final class FirebaseOperatorTests: XCTestCase {
 
         let expectedState = AppState(
             flow: .init(checkPoints: checkPoints, currentCheckPoint: checkPoint),
-            user: .init(name: .init(id: id)),
             lastSomeAction: .didLoadRemoteConfig(DidLoadRemoteConfig()))
 
         assertEqual(expected: expectedState, actual: store.state)

@@ -17,14 +17,10 @@ final class DefineStartFlowOperatorTests: XCTestCase {
     // MARK: - Helpers
 
     private func expect(_ checkPoints: [Flow.CheckPoint], whenSkipOnboarding flag: Bool) {
-        let id = UUID()
         let exp = expectation(description: "Wait for notification")
 
-        let store = Store<AppState, Action>(
-            initial: .init(
-                flow: .init(checkPoints: [], currentCheckPoint: .launching),
-                user: .init(name: .init(id: id))))
-        {
+        let startFlow = Flow(checkPoints: [], currentCheckPoint: .launching)
+        let store = Store<AppState, Action>(initial: .init(flow: startFlow)) {
             $0.reduce($1)
             exp.fulfill()
         }
@@ -35,7 +31,6 @@ final class DefineStartFlowOperatorTests: XCTestCase {
 
         let expectedState = AppState(
             flow: .init(checkPoints: checkPoints, currentCheckPoint: .launching),
-            user: .init(name: .init(id: id)),
             lastSomeAction: .skipOnboarding(SkipOnboarding(flag: flag)))
 
         assertEqual(expected: expectedState, actual: store.state)
