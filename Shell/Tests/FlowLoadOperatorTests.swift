@@ -5,6 +5,7 @@ import ReduxStore
 import Core
 
 final class DefineStartFlowOperatorTests: XCTestCase {
+
     func test_skipOnboarding() {
         expect([ .launching, .splash, .home ], whenSkipOnboarding: true)
     }

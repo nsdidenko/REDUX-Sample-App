@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         store.subscribeFlowLoadOperator(skipOnboarding: { false })
         store.subscribeUIWindowOperator(window: { [unowned self] in self.window! }, nc: navigationController)
         store.subscribeOnboardingNavigationOperator(nc: navigationController)
-        store.subscribeFirebaseOperator()
+        store.subscribeFirebaseOperator(fetch: FirebaseRemoteConfigFetch.run)
         store.subscribeLastActionConsolePrintOperator()
     }
 
