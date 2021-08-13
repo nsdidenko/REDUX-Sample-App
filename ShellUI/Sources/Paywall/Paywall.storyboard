@@ -17,35 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paywall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLD-bg-IsB">
-                                <rect key="frame" x="135" y="421" width="144" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dear Friend! We have a special offer for you!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLD-bg-IsB">
+                                <rect key="frame" x="20" y="84" width="374" height="143.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrv-Qk-N9M">
-                                <rect key="frame" x="24" y="782" width="366" height="64"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dl-nz-2yO" customClass="EnterNameNextButton" customModule="ShellUI">
+                                <rect key="frame" x="15" y="773" width="384" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="MY1-jn-PuZ"/>
+                                    <constraint firstAttribute="height" constant="65" id="XAo-uq-eKo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Purchase"/>
                                 <connections>
-                                    <action selector="buttonActionWithSender:" destination="CDY-aj-1Kb" eventType="touchUpInside" id="jt0-UL-r7G"/>
+                                    <action selector="buttonActionWithSender:" destination="CDY-aj-1Kb" eventType="touchUpInside" id="DE5-CV-aDJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="egr-9K-bdm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zrv-Qk-N9M" firstAttribute="leading" secondItem="egr-9K-bdm" secondAttribute="leading" constant="24" id="5NJ-eF-Lsz"/>
-                            <constraint firstAttribute="trailing" secondItem="zrv-Qk-N9M" secondAttribute="trailing" constant="24" id="Afb-Az-dYl"/>
-                            <constraint firstItem="NLD-bg-IsB" firstAttribute="centerY" secondItem="gCW-K4-Xca" secondAttribute="centerY" id="US1-Mu-Ym3"/>
+                            <constraint firstItem="egr-9K-bdm" firstAttribute="bottom" secondItem="9Dl-nz-2yO" secondAttribute="bottom" constant="24" id="3O5-DP-5lY"/>
+                            <constraint firstItem="9Dl-nz-2yO" firstAttribute="leading" secondItem="egr-9K-bdm" secondAttribute="leading" constant="15" id="SGe-ZK-fgK"/>
+                            <constraint firstItem="NLD-bg-IsB" firstAttribute="top" secondItem="egr-9K-bdm" secondAttribute="top" constant="40" id="VtA-nc-6qE"/>
                             <constraint firstItem="NLD-bg-IsB" firstAttribute="centerX" secondItem="gCW-K4-Xca" secondAttribute="centerX" id="bAr-hb-qft"/>
-                            <constraint firstItem="egr-9K-bdm" firstAttribute="bottom" secondItem="zrv-Qk-N9M" secondAttribute="bottom" constant="16" id="vO9-SS-4pY"/>
+                            <constraint firstItem="egr-9K-bdm" firstAttribute="trailing" secondItem="9Dl-nz-2yO" secondAttribute="trailing" constant="15" id="ikB-35-9dh"/>
+                            <constraint firstItem="NLD-bg-IsB" firstAttribute="leading" secondItem="gCW-K4-Xca" secondAttribute="leading" constant="20" id="kas-rS-i4r"/>
+                            <constraint firstAttribute="trailing" secondItem="NLD-bg-IsB" secondAttribute="trailing" constant="20" id="o2k-mI-hgY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="purchase" destination="9Dl-nz-2yO" id="8q6-TL-0lG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nxl-yD-aI5" sceneMemberID="firstResponder"/>
             </objects>

@@ -3,7 +3,7 @@ import UIKit
 public protocol Storyboarded {}
 
 public enum StoryboardName: String {
-    case onboarding = "Onboarding"
+    case onboarding = "EnterName"
     case paywall = "Paywall"
 }
 

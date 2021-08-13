@@ -65,11 +65,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="MDh-4z-mvb"/>
                     <connections>
-                        <outlet property="headerLabel" destination="9bD-0N-ReR" id="nrw-Hq-CoS"/>
                         <outlet property="invalidLabel" destination="yRJ-E6-4Pi" id="UkV-m8-NbO"/>
                         <outlet property="nextButton" destination="yLk-rT-t3K" id="v1l-a2-qKj"/>
                         <outlet property="nextButtonBottomConstraint" destination="Li9-W8-vja" id="5DE-G3-FyO"/>
                         <outlet property="textField" destination="FfZ-Dn-vkg" id="1d0-Fa-8FY"/>
+                        <outlet property="titleLabel" destination="9bD-0N-ReR" id="nrw-Hq-CoS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enw-35-QHK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

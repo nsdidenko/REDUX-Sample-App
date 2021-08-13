@@ -3,7 +3,6 @@ import UIKit
 public extension EnterNameViewController {
     struct Props {
         public let title: String
-        public let header: String
         public let invalidCaption: InvalidCaption; public struct InvalidCaption {
             let title: String
             let state: State; enum State {
@@ -15,19 +14,17 @@ public extension EnterNameViewController {
 
         public init(
             title: String,
-            header: String,
             invalidCaption: InvalidCaption,
             field: EnterNameTextField.Props,
             button: EnterNameNextButton.Props)
         {
             self.title = title
-            self.header = header
             self.invalidCaption = invalidCaption
             self.field = field
             self.button = button
         }
 
-        static let initial = Props(title: "", header: "", invalidCaption: .init(title: "", state: .hidden), field: .initial, button: .initial)
+        static let initial = Props(title: "", invalidCaption: .init(title: "", state: .hidden), field: .initial, button: .initial)
     }
 }
 
@@ -36,7 +33,7 @@ public final class EnterNameViewController: UIViewController {
         didSet { view.setNeedsLayout() }
     }
 
-    @IBOutlet weak private var headerLabel: UILabel!
+    @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var textField: EnterNameTextField!
     @IBOutlet weak private var invalidLabel: UILabel!
     @IBOutlet weak private var nextButton: EnterNameNextButton!
@@ -63,8 +60,7 @@ public final class EnterNameViewController: UIViewController {
     }
 
     private func render() {
-        title = props.title
-        headerLabel.text = props.header
+        titleLabel.text = props.title
         textField.props = props.field
         nextButton.props = props.button
 

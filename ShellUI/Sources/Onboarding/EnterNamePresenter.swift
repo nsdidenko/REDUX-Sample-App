@@ -19,8 +19,7 @@ public struct EnterNamePresenter {
 
     public func process(_ state: NameInput) {
         let props = Props(
-            title: "Enter name",
-            header: "Please enter the name you would like to use:",
+            title: "Please enter the name you would like to use:",
             invalidCaption: .init(
                 title: "The name must not contain numbers.",
                 state: map(state.validity)),

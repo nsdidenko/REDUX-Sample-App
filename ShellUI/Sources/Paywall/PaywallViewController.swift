@@ -15,6 +15,8 @@ public final class PaywallViewController: UIViewController {
         didSet { view.setNeedsLayout() }
     }
 
+    @IBOutlet weak private var purchase: EnterNameNextButton!
+
     public override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
 

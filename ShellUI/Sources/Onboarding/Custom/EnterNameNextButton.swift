@@ -31,37 +31,18 @@ public final class EnterNameNextButton: UIButton {
 
     private func setup() {
         layer.cornerRadius = 6
+        setTitleColor(.white, for: .normal)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 28)
         addTarget(self, action: #selector(handle), for: .touchUpInside)
     }
 
     private func render() {
         setTitle(props.title, for: .normal)
 
-        setTitleColor({
-            switch props.state {
-            case .inactive: return .white
-            case .active: return .blue
-            }
-        }(), for: .normal)
-
         backgroundColor = {
             switch props.state {
             case .inactive: return .lightGray.withAlphaComponent(0.3)
-            case .active: return .clear
-            }
-        }()
-
-        layer.borderColor = {
-            switch props.state {
-            case .inactive: return UIColor.clear.cgColor
-            case .active: return UIColor.blue.cgColor
-            }
-        }()
-
-        layer.borderWidth = {
-            switch props.state {
-            case .inactive: return 0
-            case .active: return 1
+            case .active: return .blue
             }
         }()
 
