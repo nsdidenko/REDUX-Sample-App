@@ -4,11 +4,11 @@ import ReduxStore
 
 public class OnboardingNavigationOperator {
     private let navigationController: UINavigationController
-    private let vc: () -> UIViewController
+    private let nextVC: () -> UIViewController
 
-    init(navigationController: UINavigationController, vc: @escaping () -> UIViewController) {
+    public init(navigationController: UINavigationController, nextVC: @escaping () -> UIViewController) {
         self.navigationController = navigationController
-        self.vc = vc
+        self.nextVC = nextVC
     }
 
     private var currentName: Name?
@@ -17,15 +17,15 @@ public class OnboardingNavigationOperator {
         guard currentName != state.name, !state.name.value.isEmpty else { return }
         currentName = state.name
 
-        navigationController.pushViewController(vc(), animated: true)
+        navigationController.pushViewController(nextVC(), animated: true)
     }
 }
 
 public extension Store where State == Core.AppState, Action == Core.Action {
-    func subscribeOnboardingNavigationOperator(nc: UINavigationController) {
+    func subscribeOnboardingNavigationOperator(nc: UINavigationController, nextVC: @escaping () -> UIViewController) {
         let op = OnboardingNavigationOperator(
             navigationController: nc,
-            vc: { PaywallUIComposer.compose(store: self) })
+            nextVC: { PaywallUIComposer.compose(store: self) })
 
         subscribe(observer: .init { op.process($0.user) }.dispatched(on: .main))
     }
