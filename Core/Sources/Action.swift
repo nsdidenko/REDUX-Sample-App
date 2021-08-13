@@ -3,9 +3,9 @@ public protocol Action {}
 
 // MARK: - Конкретные экшены
 
-public struct Initial: Action { public init() {} }
+public struct Initial: Action & Equatable { public init() {} }
 
-public struct SkipOnboarding: Action {
+public struct SkipOnboarding: Action & Equatable {
     public let flag: Bool
 
     public init(flag: Bool) {
@@ -13,11 +13,11 @@ public struct SkipOnboarding: Action {
     }
 }
 
-public struct DidFinishLaunch: Action { public init() {} }
+public struct DidFinishLaunch: Action & Equatable { public init() {} }
 
-public struct DidLoadRemoteConfig: Action { public init() {} }
+public struct DidLoadRemoteConfig: Action & Equatable { public init() {} }
 
-public struct DidEditName: Action {
+public struct DidEditName: Action & Equatable {
     public let value: String
 
     public init(with value: String) {
@@ -25,7 +25,7 @@ public struct DidEditName: Action {
     }
 }
 
-public struct DidEnterName: Action {
+public struct DidEnterName: Action & Equatable {
     public let name: Name
 
     public init(_ name: Name) {
@@ -33,7 +33,7 @@ public struct DidEnterName: Action {
     }
 }
 
-public struct DidPurchase: Action { public init() {} }
+public struct DidPurchase: Action & Equatable { public init() {} }
 
 // MARK: - SomeAction в боевом проекте кодогенерируется
 
@@ -86,3 +86,5 @@ public enum SomeAction {
         }
     }
 }
+
+extension SomeAction: Equatable {}

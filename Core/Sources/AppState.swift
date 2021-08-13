@@ -1,5 +1,5 @@
 
-public struct AppState {
+public struct AppState: Equatable {
     public private(set) var flow: Flow
     public private(set) var user: User
     public private(set) var nameInput: NameInput

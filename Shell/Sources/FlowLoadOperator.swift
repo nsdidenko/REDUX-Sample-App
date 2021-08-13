@@ -6,7 +6,7 @@ public class FlowLoadOperator {
     private let store: Store<AppState, Action>
     private let skipOnboarding: () -> Bool
 
-    init(store: Store<AppState, Action>, skipOnboarding: @escaping () -> Bool) {
+    public init(store: Store<AppState, Action>, skipOnboarding: @escaping () -> Bool) {
         self.store = store
         self.skipOnboarding = skipOnboarding
     }
@@ -15,6 +15,7 @@ public class FlowLoadOperator {
 
     public func process(_ state: Flow.CheckPoint) {
         guard state == .launching, state != currentCheckPoint else { return }
+        currentCheckPoint = state
 
         store.dispatch(action: SkipOnboarding(flag: skipOnboarding()))
     }
