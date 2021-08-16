@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         super.init()
 
         store.subscribeFlowLoadOperator(skipOnboarding: { false })
+        store.subscribeLoadSubscriptionsOperator()
         store.subscribeUIWindowOperator(window: { [unowned self] in self.window! }, nc: navigationController)
         store.subscribeOnboardingNavigationOperator(nc: navigationController, nextVC: { [unowned self] in PaywallUIComposer.compose(store: self.store) })
         store.subscribeFirebaseOperator(fetch: FirebaseRemoteConfigFetch.run)

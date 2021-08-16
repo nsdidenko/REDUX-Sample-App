@@ -4,15 +4,13 @@ import ReduxStore
 import Shell
 
 public struct EnterNamePresenter {
+    public typealias Store = ReduxStore.Store<AppState, Action>
     public typealias Props = EnterNameViewController.Props
 
-    let store: Store<AppState, Action>
+    let store: Store
     let render: CommandWith<Props>
 
-    public init(
-        store: Store<AppState, Action>,
-        render: CommandWith<EnterNameViewController.Props>
-    ) {
+    public init(store: Store, render: CommandWith<Props>) {
         self.store = store
         self.render = render
     }
@@ -34,7 +32,7 @@ public struct EnterNamePresenter {
 
     // MARK: - Helpers
 
-    private func map(_ input: NameInput) -> EnterNameNextButton.Props.State {
+    private func map(_ input: NameInput) -> NextButton.Props.State {
         switch input.validity {
         case .empty, .invalid:
             return .inactive

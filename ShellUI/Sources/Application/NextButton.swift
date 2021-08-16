@@ -1,24 +1,32 @@
 import UIKit
 import Shell
 
-public extension EnterNameNextButton {
-    struct Props {
+public extension NextButton {
+    struct Props: Equatable {
         public let title: String
-        public let state: State; public enum State {
+        public let state: State; public enum State: Equatable {
             case active(Command)
             case inactive
+
+            var isInactive: Bool {
+                self == .inactive
+            }
         }
 
-        public init(title: String, state: EnterNameNextButton.Props.State) {
+        public init(title: String, state: State) {
             self.title = title
             self.state = state
         }
 
         static let initial = Props(title: "", state: .inactive)
+
+        public static func == (lhs: Self, rhs: Self) -> Bool {
+            lhs.title == rhs.title && lhs.state.isInactive == rhs.state.isInactive
+        }
     }
 }
 
-public final class EnterNameNextButton: UIButton {
+public final class NextButton: UIButton {
     public var props = Props.initial {
         didSet { render() }
     }

@@ -35,6 +35,22 @@ public struct DidEnterName: Action & Equatable {
 
 public struct DidPurchase: Action & Equatable { public init() {} }
 
+public struct DidLoadSubscriptions: Action & Equatable {
+    public let subscriptions: [Subscription]
+
+    public init(subscriptions: [Subscription]) {
+        self.subscriptions = subscriptions
+    }
+}
+
+public struct DidSelectPaywallOption: Action & Equatable {
+    public let subscription: Subscription
+
+    public init(subscription: Subscription) {
+        self.subscription = subscription
+    }
+}
+
 // MARK: - SomeAction в боевом проекте кодогенерируется
 
 public enum SomeAction {
@@ -45,6 +61,8 @@ public enum SomeAction {
     case didFinishLaunch(DidFinishLaunch)
     case didLoadRemoteConfig(DidLoadRemoteConfig)
     case didPurchase(DidPurchase)
+    case didLoadSubscriptions(DidLoadSubscriptions)
+    case didSelectPaywallOption(DidSelectPaywallOption)
 
     init<A>(action: A) {
         switch action {
@@ -69,6 +87,12 @@ public enum SomeAction {
         case let action as DidPurchase:
             self = .didPurchase(action)
 
+        case let action as DidLoadSubscriptions:
+            self = .didLoadSubscriptions(action)
+
+        case let action as DidSelectPaywallOption:
+            self = .didSelectPaywallOption(action)
+
         default:
             fatalError("Unknown action: \(action)")
         }
@@ -83,6 +107,8 @@ public enum SomeAction {
         case let .didFinishLaunch(action): return action
         case let .didLoadRemoteConfig(action): return action
         case let .didPurchase(action): return action
+        case let .didLoadSubscriptions(action): return action
+        case let .didSelectPaywallOption(action): return action
         }
     }
 }

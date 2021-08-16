@@ -3,17 +3,20 @@ public struct AppState: Equatable {
     public private(set) var flow: Flow
     public private(set) var user: User
     public private(set) var nameInput: NameInput
+    public private(set) var paywall: Paywall
     public private(set) var lastSomeAction: SomeAction
 
     public init(
         flow: Flow = .init(),
         user: User = .init(),
         nameInput: NameInput = .init(),
+        paywall: Paywall = .init(),
         lastSomeAction: SomeAction = .initial(Initial())
     ) {
         self.flow = flow
         self.user = user
         self.nameInput = nameInput
+        self.paywall = paywall
         self.lastSomeAction = lastSomeAction
     }
 
@@ -21,6 +24,7 @@ public struct AppState: Equatable {
         flow.reduce(action)
         user.reduce(action)
         nameInput.reduce(action)
+        paywall.reduce(action)
         lastSomeAction = SomeAction(action: action)
     }
 }

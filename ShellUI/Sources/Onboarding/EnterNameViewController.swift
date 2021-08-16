@@ -10,13 +10,13 @@ public extension EnterNameViewController {
             }
         }
         public let field: EnterNameTextField.Props
-        public let button: EnterNameNextButton.Props
+        public let button: NextButton.Props
 
         public init(
             title: String,
             invalidCaption: InvalidCaption,
             field: EnterNameTextField.Props,
-            button: EnterNameNextButton.Props)
+            button: NextButton.Props)
         {
             self.title = title
             self.invalidCaption = invalidCaption
@@ -36,7 +36,7 @@ public final class EnterNameViewController: UIViewController {
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var textField: EnterNameTextField!
     @IBOutlet weak private var invalidLabel: UILabel!
-    @IBOutlet weak private var nextButton: EnterNameNextButton!
+    @IBOutlet weak private var nextButton: NextButton!
     @IBOutlet weak private var nextButtonBottomConstraint: NSLayoutConstraint!
 
     private var keyboardHandler: KeyboardHandler?

@@ -24,23 +24,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FfZ-Dn-vkg" customClass="EnterNameTextField" customModule="ShellUI">
-                                <rect key="frame" x="15" y="151.5" width="384" height="65"/>
+                                <rect key="frame" x="16" y="151.5" width="382" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="rcm-zC-dE2"/>
+                                    <constraint firstAttribute="height" constant="64" id="rcm-zC-dE2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLk-rT-t3K" customClass="EnterNameNextButton" customModule="ShellUI">
-                                <rect key="frame" x="15" y="519" width="384" height="65"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLk-rT-t3K" customClass="NextButton" customModule="ShellUI">
+                                <rect key="frame" x="16" y="520" width="382" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="bxX-hv-ywM"/>
+                                    <constraint firstAttribute="height" constant="64" id="bxX-hv-ywM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Next"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The name must not contain numbers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRJ-E6-4Pi">
-                                <rect key="frame" x="20" y="240.5" width="374" height="20.5"/>
+                                <rect key="frame" x="32" y="239.5" width="350" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
@@ -49,16 +49,16 @@
                         <viewLayoutGuide key="safeArea" id="Le8-Gb-3IZ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yRJ-E6-4Pi" firstAttribute="leading" secondItem="Le8-Gb-3IZ" secondAttribute="leading" constant="20" id="6Tc-4d-qfV"/>
-                            <constraint firstItem="Le8-Gb-3IZ" firstAttribute="trailing" secondItem="yRJ-E6-4Pi" secondAttribute="trailing" constant="20" id="CY8-Tr-qlb"/>
+                            <constraint firstItem="yRJ-E6-4Pi" firstAttribute="leading" secondItem="Le8-Gb-3IZ" secondAttribute="leading" constant="32" id="6Tc-4d-qfV"/>
+                            <constraint firstItem="Le8-Gb-3IZ" firstAttribute="trailing" secondItem="yRJ-E6-4Pi" secondAttribute="trailing" constant="32" id="CY8-Tr-qlb"/>
                             <constraint firstItem="9bD-0N-ReR" firstAttribute="top" secondItem="Le8-Gb-3IZ" secondAttribute="top" constant="15" id="JZ3-lS-5Fg"/>
                             <constraint firstItem="Le8-Gb-3IZ" firstAttribute="bottom" secondItem="yLk-rT-t3K" secondAttribute="bottom" constant="278" id="Li9-W8-vja"/>
-                            <constraint firstItem="yLk-rT-t3K" firstAttribute="leading" secondItem="Le8-Gb-3IZ" secondAttribute="leading" constant="15" id="MsW-Vg-aeU"/>
+                            <constraint firstItem="yLk-rT-t3K" firstAttribute="leading" secondItem="Le8-Gb-3IZ" secondAttribute="leading" constant="16" id="MsW-Vg-aeU"/>
                             <constraint firstItem="yRJ-E6-4Pi" firstAttribute="top" secondItem="FfZ-Dn-vkg" secondAttribute="bottom" constant="24" id="NWT-gj-9rx"/>
-                            <constraint firstItem="Le8-Gb-3IZ" firstAttribute="trailing" secondItem="FfZ-Dn-vkg" secondAttribute="trailing" constant="15" id="WeI-V8-3Gj"/>
+                            <constraint firstItem="Le8-Gb-3IZ" firstAttribute="trailing" secondItem="FfZ-Dn-vkg" secondAttribute="trailing" constant="16" id="WeI-V8-3Gj"/>
                             <constraint firstItem="Le8-Gb-3IZ" firstAttribute="trailing" secondItem="9bD-0N-ReR" secondAttribute="trailing" constant="15" id="XQE-PP-DPy"/>
-                            <constraint firstItem="Le8-Gb-3IZ" firstAttribute="trailing" secondItem="yLk-rT-t3K" secondAttribute="trailing" constant="15" id="byb-iw-kbW"/>
-                            <constraint firstItem="FfZ-Dn-vkg" firstAttribute="leading" secondItem="Le8-Gb-3IZ" secondAttribute="leading" constant="15" id="gcC-fA-0wO"/>
+                            <constraint firstItem="Le8-Gb-3IZ" firstAttribute="trailing" secondItem="yLk-rT-t3K" secondAttribute="trailing" constant="16" id="byb-iw-kbW"/>
+                            <constraint firstItem="FfZ-Dn-vkg" firstAttribute="leading" secondItem="Le8-Gb-3IZ" secondAttribute="leading" constant="16" id="gcC-fA-0wO"/>
                             <constraint firstItem="FfZ-Dn-vkg" firstAttribute="top" secondItem="9bD-0N-ReR" secondAttribute="bottom" constant="16" id="uY7-Ej-t5Q"/>
                             <constraint firstItem="9bD-0N-ReR" firstAttribute="leading" secondItem="Ihn-jR-1HQ" secondAttribute="leading" constant="15" id="wIT-54-Yxk"/>
                         </constraints>
