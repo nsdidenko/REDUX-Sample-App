@@ -32,7 +32,7 @@ public extension Store where State == Core.AppState, Action == Core.Action {
     }
 }
 
-public struct FirebaseRemoteConfigFetch {
+public enum FirebaseRemoteConfigFetch {
     public static func run(completion: @escaping () -> Void) {
         DispatchQueue.global().asyncAfter(deadline: .now() + 1, execute: completion)
     }
