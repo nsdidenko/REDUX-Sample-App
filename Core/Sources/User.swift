@@ -1,4 +1,3 @@
-import Foundation
 
 public struct User: Equatable {
     public var name: Name
