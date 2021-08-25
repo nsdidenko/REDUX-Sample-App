@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18373DAD26CFFFD6000DB9E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DAC26CFFFD6000DB9E8 /* User.swift */; };
+		18373DB526D00277000DB9E8 /* PaywallUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DAF26D00277000DB9E8 /* PaywallUIComposer.swift */; };
+		18373DB626D00277000DB9E8 /* PaywallPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DB026D00277000DB9E8 /* PaywallPresenter.swift */; };
+		18373DB726D00277000DB9E8 /* Paywall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18373DB126D00277000DB9E8 /* Paywall.storyboard */; };
+		18373DB826D00277000DB9E8 /* PaywallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DB226D00277000DB9E8 /* PaywallViewController.swift */; };
+		18373DB926D00277000DB9E8 /* PlanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DB426D00277000DB9E8 /* PlanButton.swift */; };
+		18373DBF26D004D7000DB9E8 /* InAppProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DBE26D004D7000DB9E8 /* InAppProduct.swift */; };
+		18373DC126D19DC7000DB9E8 /* PaywallsLoaderOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC026D19DC7000DB9E8 /* PaywallsLoaderOperator.swift */; };
+		18373DC326D1A1DE000DB9E8 /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC226D1A1DE000DB9E8 /* Paywall.swift */; };
+		18373DC726D1B170000DB9E8 /* UserDefaultsNameCacheOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC626D1B170000DB9E8 /* UserDefaultsNameCacheOperator.swift */; };
+		18373DC926D1B675000DB9E8 /* UserLoaderOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC826D1B675000DB9E8 /* UserLoaderOperator.swift */; };
+		18373DCD26D392D9000DB9E8 /* LaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DCC26D392D9000DB9E8 /* LaunchTests.swift */; };
+		183F081726CD0D50008CD538 /* EnterName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183F081026CD0D4F008CD538 /* EnterName.storyboard */; };
+		183F081826CD0D50008CD538 /* EnterNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081226CD0D4F008CD538 /* EnterNameTextField.swift */; };
+		183F081926CD0D50008CD538 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081326CD0D4F008CD538 /* KeyboardHandler.swift */; };
+		183F081A26CD0D50008CD538 /* EnterNamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081426CD0D4F008CD538 /* EnterNamePresenter.swift */; };
+		183F081B26CD0D50008CD538 /* EnterNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081526CD0D4F008CD538 /* EnterNameViewController.swift */; };
+		183F081C26CD0D50008CD538 /* EnterNameUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081626CD0D50008CD538 /* EnterNameUIComposer.swift */; };
+		183F081F26CD0D70008CD538 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081D26CD0D70008CD538 /* Storyboarded.swift */; };
+		183F082026CD0D70008CD538 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081E26CD0D70008CD538 /* NextButton.swift */; };
+		183F082226CD0DCF008CD538 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082126CD0DCF008CD538 /* Command.swift */; };
+		183F082426CD113F008CD538 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082326CD113F008CD538 /* Flow.swift */; };
+		183F082626CD1152008CD538 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082526CD1152008CD538 /* RemoteConfig.swift */; };
+		183F082826CD1162008CD538 /* AllPaywalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082726CD1162008CD538 /* AllPaywalls.swift */; };
+		183F082A26CD1171008CD538 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082926CD1171008CD538 /* NameInput.swift */; };
+		18C337A626CCFCDF006705E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337A526CCFCDF006705E2 /* AppDelegate.swift */; };
+		18C337AF26CCFCE2006705E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C337AE26CCFCE2006705E2 /* Assets.xcassets */; };
+		18C337B226CCFCE2006705E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */; };
+		18C337DA26CCFE68006705E2 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337D926CCFE68006705E2 /* Store.swift */; };
+		18C337DC26CCFE7C006705E2 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337DB26CCFE7C006705E2 /* Observer.swift */; };
+		18C337DE26CCFEC2006705E2 /* AppState+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337DD26CCFEC2006705E2 /* AppState+Actions.swift */; };
+		18C337E026CD0369006705E2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337DF26CD0369006705E2 /* SplashViewController.swift */; };
+		18C337E426CD09DB006705E2 /* SplashShowOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337E326CD09DB006705E2 /* SplashShowOperator.swift */; };
+		18C337E626CD09F0006705E2 /* RemoteConfigFetcherOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337E526CD09F0006705E2 /* RemoteConfigFetcherOperator.swift */; };
+		18C337E826CD0A0F006705E2 /* PaywallShowOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337E726CD0A0F006705E2 /* PaywallShowOperator.swift */; };
+		18C337EA26CD0A97006705E2 /* EnterNameShowOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337E926CD0A97006705E2 /* EnterNameShowOperator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18C337B926CCFCE2006705E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18C3379A26CCFCDF006705E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18C337A126CCFCDF006705E2;
+			remoteInfo = ReduxApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18373DAC26CFFFD6000DB9E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		18373DAF26D00277000DB9E8 /* PaywallUIComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallUIComposer.swift; sourceTree = "<group>"; };
+		18373DB026D00277000DB9E8 /* PaywallPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallPresenter.swift; sourceTree = "<group>"; };
+		18373DB126D00277000DB9E8 /* Paywall.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Paywall.storyboard; sourceTree = "<group>"; };
+		18373DB226D00277000DB9E8 /* PaywallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallViewController.swift; sourceTree = "<group>"; };
+		18373DB426D00277000DB9E8 /* PlanButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanButton.swift; sourceTree = "<group>"; };
+		18373DBE26D004D7000DB9E8 /* InAppProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppProduct.swift; sourceTree = "<group>"; };
+		18373DC026D19DC7000DB9E8 /* PaywallsLoaderOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallsLoaderOperator.swift; sourceTree = "<group>"; };
+		18373DC226D1A1DE000DB9E8 /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
+		18373DC626D1B170000DB9E8 /* UserDefaultsNameCacheOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNameCacheOperator.swift; sourceTree = "<group>"; };
+		18373DC826D1B675000DB9E8 /* UserLoaderOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoaderOperator.swift; sourceTree = "<group>"; };
+		18373DCC26D392D9000DB9E8 /* LaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchTests.swift; sourceTree = "<group>"; };
+		183F081026CD0D4F008CD538 /* EnterName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EnterName.storyboard; sourceTree = "<group>"; };
+		183F081226CD0D4F008CD538 /* EnterNameTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNameTextField.swift; sourceTree = "<group>"; };
+		183F081326CD0D4F008CD538 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		183F081426CD0D4F008CD538 /* EnterNamePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNamePresenter.swift; sourceTree = "<group>"; };
+		183F081526CD0D4F008CD538 /* EnterNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNameViewController.swift; sourceTree = "<group>"; };
+		183F081626CD0D50008CD538 /* EnterNameUIComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNameUIComposer.swift; sourceTree = "<group>"; };
+		183F081D26CD0D70008CD538 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		183F081E26CD0D70008CD538 /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		183F082126CD0DCF008CD538 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		183F082326CD113F008CD538 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		183F082526CD1152008CD538 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
+		183F082726CD1162008CD538 /* AllPaywalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPaywalls.swift; sourceTree = "<group>"; };
+		183F082926CD1171008CD538 /* NameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInput.swift; sourceTree = "<group>"; };
+		18C337A226CCFCDF006705E2 /* ReduxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C337A526CCFCDF006705E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18C337AE26CCFCE2006705E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18C337B126CCFCE2006705E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18C337B326CCFCE2006705E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C337B826CCFCE2006705E2 /* ReduxAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C337BE26CCFCE2006705E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C337D926CCFE68006705E2 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		18C337DB26CCFE7C006705E2 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		18C337DD26CCFEC2006705E2 /* AppState+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState+Actions.swift"; sourceTree = "<group>"; };
+		18C337DF26CD0369006705E2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		18C337E326CD09DB006705E2 /* SplashShowOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashShowOperator.swift; sourceTree = "<group>"; };
+		18C337E526CD09F0006705E2 /* RemoteConfigFetcherOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigFetcherOperator.swift; sourceTree = "<group>"; };
+		18C337E726CD0A0F006705E2 /* PaywallShowOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallShowOperator.swift; sourceTree = "<group>"; };
+		18C337E926CD0A97006705E2 /* EnterNameShowOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameShowOperator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18C3379F26CCFCDF006705E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18C337B526CCFCE2006705E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18373DAE26D00277000DB9E8 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				18373DB326D00277000DB9E8 /* Custom */,
+				18C337E726CD0A0F006705E2 /* PaywallShowOperator.swift */,
+				18373DAF26D00277000DB9E8 /* PaywallUIComposer.swift */,
+				18373DB026D00277000DB9E8 /* PaywallPresenter.swift */,
+				18373DC026D19DC7000DB9E8 /* PaywallsLoaderOperator.swift */,
+				18373DB126D00277000DB9E8 /* Paywall.storyboard */,
+				18373DB226D00277000DB9E8 /* PaywallViewController.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		18373DB326D00277000DB9E8 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				18373DB426D00277000DB9E8 /* PlanButton.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		18373DBA26D00482000DB9E8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				183F082326CD113F008CD538 /* Flow.swift */,
+				183F082526CD1152008CD538 /* RemoteConfig.swift */,
+				183F082726CD1162008CD538 /* AllPaywalls.swift */,
+				183F082926CD1171008CD538 /* NameInput.swift */,
+				18373DAC26CFFFD6000DB9E8 /* User.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		18373DBB26D0049B000DB9E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18373DC226D1A1DE000DB9E8 /* Paywall.swift */,
+				18373DBE26D004D7000DB9E8 /* InAppProduct.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18373DC426D1A894000DB9E8 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				18C337E326CD09DB006705E2 /* SplashShowOperator.swift */,
+				18C337DF26CD0369006705E2 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		18373DC526D1A8E8000DB9E8 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				18C337E526CD09F0006705E2 /* RemoteConfigFetcherOperator.swift */,
+				18373DC826D1B675000DB9E8 /* UserLoaderOperator.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		183F080526CD0D07008CD538 /* Enter name */ = {
+			isa = PBXGroup;
+			children = (
+				183F081126CD0D4F008CD538 /* Custom */,
+				18C337E926CD0A97006705E2 /* EnterNameShowOperator.swift */,
+				183F081626CD0D50008CD538 /* EnterNameUIComposer.swift */,
+				183F081426CD0D4F008CD538 /* EnterNamePresenter.swift */,
+				183F081026CD0D4F008CD538 /* EnterName.storyboard */,
+				183F081526CD0D4F008CD538 /* EnterNameViewController.swift */,
+				18373DC626D1B170000DB9E8 /* UserDefaultsNameCacheOperator.swift */,
+			);
+			path = "Enter name";
+			sourceTree = "<group>";
+		};
+		183F081126CD0D4F008CD538 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				183F082126CD0DCF008CD538 /* Command.swift */,
+				183F081E26CD0D70008CD538 /* NextButton.swift */,
+				183F081D26CD0D70008CD538 /* Storyboarded.swift */,
+				183F081226CD0D4F008CD538 /* EnterNameTextField.swift */,
+				183F081326CD0D4F008CD538 /* KeyboardHandler.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		18C3379926CCFCDF006705E2 = {
+			isa = PBXGroup;
+			children = (
+				18C337A426CCFCDF006705E2 /* ReduxApp */,
+				18C337BB26CCFCE2006705E2 /* ReduxAppTests */,
+				18C337A326CCFCDF006705E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18C337A326CCFCDF006705E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18C337A226CCFCDF006705E2 /* ReduxApp.app */,
+				18C337B826CCFCE2006705E2 /* ReduxAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18C337A426CCFCDF006705E2 /* ReduxApp */ = {
+			isa = PBXGroup;
+			children = (
+				18C337D526CCFDA3006705E2 /* Core */,
+				18C337D626CCFDA9006705E2 /* Store */,
+				18C337D726CCFDB5006705E2 /* Shell */,
+				18C337D826CCFDD1006705E2 /* App */,
+			);
+			path = ReduxApp;
+			sourceTree = "<group>";
+		};
+		18C337BB26CCFCE2006705E2 /* ReduxAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				18373DCC26D392D9000DB9E8 /* LaunchTests.swift */,
+				18C337BE26CCFCE2006705E2 /* Info.plist */,
+			);
+			path = ReduxAppTests;
+			sourceTree = "<group>";
+		};
+		18C337D526CCFDA3006705E2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				18373DBB26D0049B000DB9E8 /* Models */,
+				18373DBA26D00482000DB9E8 /* Components */,
+				18C337DD26CCFEC2006705E2 /* AppState+Actions.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		18C337D626CCFDA9006705E2 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				18C337D926CCFE68006705E2 /* Store.swift */,
+				18C337DB26CCFE7C006705E2 /* Observer.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		18C337D726CCFDB5006705E2 /* Shell */ = {
+			isa = PBXGroup;
+			children = (
+				18373DC526D1A8E8000DB9E8 /* Launch */,
+				18373DC426D1A894000DB9E8 /* Splash */,
+				183F080526CD0D07008CD538 /* Enter name */,
+				18373DAE26D00277000DB9E8 /* Paywall */,
+			);
+			path = Shell;
+			sourceTree = "<group>";
+		};
+		18C337D826CCFDD1006705E2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				18C337A526CCFCDF006705E2 /* AppDelegate.swift */,
+				18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */,
+				18C337AE26CCFCE2006705E2 /* Assets.xcassets */,
+				18C337B326CCFCE2006705E2 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18C337A126CCFCDF006705E2 /* ReduxApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18C337CC26CCFCE2006705E2 /* Build configuration list for PBXNativeTarget "ReduxApp" */;
+			buildPhases = (
+				18C3379E26CCFCDF006705E2 /* Sources */,
+				18C3379F26CCFCDF006705E2 /* Frameworks */,
+				18C337A026CCFCDF006705E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReduxApp;
+			productName = ReduxApp;
+			productReference = 18C337A226CCFCDF006705E2 /* ReduxApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18C337B726CCFCE2006705E2 /* ReduxAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18C337CF26CCFCE2006705E2 /* Build configuration list for PBXNativeTarget "ReduxAppTests" */;
+			buildPhases = (
+				18C337B426CCFCE2006705E2 /* Sources */,
+				18C337B526CCFCE2006705E2 /* Frameworks */,
+				18C337B626CCFCE2006705E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18C337BA26CCFCE2006705E2 /* PBXTargetDependency */,
+			);
+			name = ReduxAppTests;
+			productName = ReduxAppTests;
+			productReference = 18C337B826CCFCE2006705E2 /* ReduxAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18C3379A26CCFCDF006705E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					18C337A126CCFCDF006705E2 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					18C337B726CCFCE2006705E2 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+						TestTargetID = 18C337A126CCFCDF006705E2;
+					};
+				};
+			};
+			buildConfigurationList = 18C3379D26CCFCDF006705E2 /* Build configuration list for PBXProject "ReduxApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18C3379926CCFCDF006705E2;
+			productRefGroup = 18C337A326CCFCDF006705E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18C337A126CCFCDF006705E2 /* ReduxApp */,
+				18C337B726CCFCE2006705E2 /* ReduxAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18C337A026CCFCDF006705E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183F081726CD0D50008CD538 /* EnterName.storyboard in Resources */,
+				18C337B226CCFCE2006705E2 /* LaunchScreen.storyboard in Resources */,
+				18C337AF26CCFCE2006705E2 /* Assets.xcassets in Resources */,
+				18373DB726D00277000DB9E8 /* Paywall.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18C337B626CCFCE2006705E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18C3379E26CCFCDF006705E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C337DA26CCFE68006705E2 /* Store.swift in Sources */,
+				183F082426CD113F008CD538 /* Flow.swift in Sources */,
+				183F081826CD0D50008CD538 /* EnterNameTextField.swift in Sources */,
+				18C337E426CD09DB006705E2 /* SplashShowOperator.swift in Sources */,
+				183F081926CD0D50008CD538 /* KeyboardHandler.swift in Sources */,
+				183F081A26CD0D50008CD538 /* EnterNamePresenter.swift in Sources */,
+				183F082226CD0DCF008CD538 /* Command.swift in Sources */,
+				183F082026CD0D70008CD538 /* NextButton.swift in Sources */,
+				18373DB926D00277000DB9E8 /* PlanButton.swift in Sources */,
+				18373DC126D19DC7000DB9E8 /* PaywallsLoaderOperator.swift in Sources */,
+				183F081C26CD0D50008CD538 /* EnterNameUIComposer.swift in Sources */,
+				18373DB826D00277000DB9E8 /* PaywallViewController.swift in Sources */,
+				18C337E626CD09F0006705E2 /* RemoteConfigFetcherOperator.swift in Sources */,
+				18373DAD26CFFFD6000DB9E8 /* User.swift in Sources */,
+				18373DB626D00277000DB9E8 /* PaywallPresenter.swift in Sources */,
+				183F082626CD1152008CD538 /* RemoteConfig.swift in Sources */,
+				18373DC726D1B170000DB9E8 /* UserDefaultsNameCacheOperator.swift in Sources */,
+				18C337E826CD0A0F006705E2 /* PaywallShowOperator.swift in Sources */,
+				18C337DE26CCFEC2006705E2 /* AppState+Actions.swift in Sources */,
+				18373DBF26D004D7000DB9E8 /* InAppProduct.swift in Sources */,
+				183F082826CD1162008CD538 /* AllPaywalls.swift in Sources */,
+				18373DB526D00277000DB9E8 /* PaywallUIComposer.swift in Sources */,
+				18373DC326D1A1DE000DB9E8 /* Paywall.swift in Sources */,
+				183F082A26CD1171008CD538 /* NameInput.swift in Sources */,
+				18C337DC26CCFE7C006705E2 /* Observer.swift in Sources */,
+				183F081B26CD0D50008CD538 /* EnterNameViewController.swift in Sources */,
+				18C337A626CCFCDF006705E2 /* AppDelegate.swift in Sources */,
+				18C337EA26CD0A97006705E2 /* EnterNameShowOperator.swift in Sources */,
+				18C337E026CD0369006705E2 /* SplashViewController.swift in Sources */,
+				18373DC926D1B675000DB9E8 /* UserLoaderOperator.swift in Sources */,
+				183F081F26CD0D70008CD538 /* Storyboarded.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18C337B426CCFCE2006705E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18373DCD26D392D9000DB9E8 /* LaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18C337BA26CCFCE2006705E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18C337A126CCFCDF006705E2 /* ReduxApp */;
+			targetProxy = 18C337B926CCFCE2006705E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C337B126CCFCE2006705E2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18C337CA26CCFCE2006705E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18C337CB26CCFCE2006705E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18C337CD26CCFCE2006705E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34Z4454BBG;
+				INFOPLIST_FILE = "$(SRCROOT)/ReduxApp/App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redux.ReduxApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		18C337CE26CCFCE2006705E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34Z4454BBG;
+				INFOPLIST_FILE = "$(SRCROOT)/ReduxApp/App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redux.ReduxApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		18C337D026CCFCE2006705E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34Z4454BBG;
+				INFOPLIST_FILE = ReduxAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redux.ReduxAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReduxApp.app/ReduxApp";
+			};
+			name = Debug;
+		};
+		18C337D126CCFCE2006705E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 34Z4454BBG;
+				INFOPLIST_FILE = ReduxAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.redux.ReduxAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReduxApp.app/ReduxApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18C3379D26CCFCDF006705E2 /* Build configuration list for PBXProject "ReduxApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C337CA26CCFCE2006705E2 /* Debug */,
+				18C337CB26CCFCE2006705E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18C337CC26CCFCE2006705E2 /* Build configuration list for PBXNativeTarget "ReduxApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C337CD26CCFCE2006705E2 /* Debug */,
+				18C337CE26CCFCE2006705E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18C337CF26CCFCE2006705E2 /* Build configuration list for PBXNativeTarget "ReduxAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C337D026CCFCE2006705E2 /* Debug */,
+				18C337D126CCFCE2006705E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18C3379A26CCFCDF006705E2 /* Project object */;
+}
