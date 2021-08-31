@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1818F65426D64B5800023C15 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65326D64B5800023C15 /* RemoteConfig.swift */; };
+		1818F65626D654E300023C15 /* PaywallsLoadingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65526D654E300023C15 /* PaywallsLoadingStatus.swift */; };
+		1818F65826D666A300023C15 /* PaywallsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65726D666A300023C15 /* PaywallsLoader.swift */; };
+		1818F65A26D666BE00023C15 /* UserNameLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65926D666BE00023C15 /* UserNameLoader.swift */; };
+		1818F65C26D666D900023C15 /* RemoteConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */; };
+		1818F66026D674F300023C15 /* UserDefaultsNameCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */; };
 		18373DAD26CFFFD6000DB9E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DAC26CFFFD6000DB9E8 /* User.swift */; };
 		18373DB526D00277000DB9E8 /* PaywallUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DAF26D00277000DB9E8 /* PaywallUIComposer.swift */; };
 		18373DB626D00277000DB9E8 /* PaywallPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DB026D00277000DB9E8 /* PaywallPresenter.swift */; };
@@ -14,10 +20,10 @@
 		18373DB826D00277000DB9E8 /* PaywallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DB226D00277000DB9E8 /* PaywallViewController.swift */; };
 		18373DB926D00277000DB9E8 /* PlanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DB426D00277000DB9E8 /* PlanButton.swift */; };
 		18373DBF26D004D7000DB9E8 /* InAppProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DBE26D004D7000DB9E8 /* InAppProduct.swift */; };
-		18373DC126D19DC7000DB9E8 /* PaywallsLoaderOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC026D19DC7000DB9E8 /* PaywallsLoaderOperator.swift */; };
+		18373DC126D19DC7000DB9E8 /* PaywallsLoadOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC026D19DC7000DB9E8 /* PaywallsLoadOperator.swift */; };
 		18373DC326D1A1DE000DB9E8 /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC226D1A1DE000DB9E8 /* Paywall.swift */; };
-		18373DC726D1B170000DB9E8 /* UserDefaultsNameCacheOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC626D1B170000DB9E8 /* UserDefaultsNameCacheOperator.swift */; };
-		18373DC926D1B675000DB9E8 /* UserLoaderOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC826D1B675000DB9E8 /* UserLoaderOperator.swift */; };
+		18373DC726D1B170000DB9E8 /* UserNameCacheOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC626D1B170000DB9E8 /* UserNameCacheOperator.swift */; };
+		18373DC926D1B675000DB9E8 /* UserNameLoadOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC826D1B675000DB9E8 /* UserNameLoadOperator.swift */; };
 		18373DCD26D392D9000DB9E8 /* LaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DCC26D392D9000DB9E8 /* LaunchTests.swift */; };
 		183F081726CD0D50008CD538 /* EnterName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183F081026CD0D4F008CD538 /* EnterName.storyboard */; };
 		183F081826CD0D50008CD538 /* EnterNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081226CD0D4F008CD538 /* EnterNameTextField.swift */; };
@@ -29,7 +35,7 @@
 		183F082026CD0D70008CD538 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081E26CD0D70008CD538 /* NextButton.swift */; };
 		183F082226CD0DCF008CD538 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082126CD0DCF008CD538 /* Command.swift */; };
 		183F082426CD113F008CD538 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082326CD113F008CD538 /* Flow.swift */; };
-		183F082626CD1152008CD538 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082526CD1152008CD538 /* RemoteConfig.swift */; };
+		183F082626CD1152008CD538 /* RemoteConfigState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082526CD1152008CD538 /* RemoteConfigState.swift */; };
 		183F082826CD1162008CD538 /* AllPaywalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082726CD1162008CD538 /* AllPaywalls.swift */; };
 		183F082A26CD1171008CD538 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082926CD1171008CD538 /* NameInput.swift */; };
 		18C337A626CCFCDF006705E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337A526CCFCDF006705E2 /* AppDelegate.swift */; };
@@ -40,7 +46,7 @@
 		18C337DE26CCFEC2006705E2 /* AppState+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337DD26CCFEC2006705E2 /* AppState+Actions.swift */; };
 		18C337E026CD0369006705E2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337DF26CD0369006705E2 /* SplashViewController.swift */; };
 		18C337E426CD09DB006705E2 /* SplashShowOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337E326CD09DB006705E2 /* SplashShowOperator.swift */; };
-		18C337E626CD09F0006705E2 /* RemoteConfigFetcherOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337E526CD09F0006705E2 /* RemoteConfigFetcherOperator.swift */; };
+		18C337E626CD09F0006705E2 /* RemoteConfigLoadOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337E526CD09F0006705E2 /* RemoteConfigLoadOperator.swift */; };
 		18C337E826CD0A0F006705E2 /* PaywallShowOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337E726CD0A0F006705E2 /* PaywallShowOperator.swift */; };
 		18C337EA26CD0A97006705E2 /* EnterNameShowOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337E926CD0A97006705E2 /* EnterNameShowOperator.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +62,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1818F65326D64B5800023C15 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
+		1818F65526D654E300023C15 /* PaywallsLoadingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallsLoadingStatus.swift; sourceTree = "<group>"; };
+		1818F65726D666A300023C15 /* PaywallsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallsLoader.swift; sourceTree = "<group>"; };
+		1818F65926D666BE00023C15 /* UserNameLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameLoader.swift; sourceTree = "<group>"; };
+		1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigLoader.swift; sourceTree = "<group>"; };
+		1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNameCacher.swift; sourceTree = "<group>"; };
 		18373DAC26CFFFD6000DB9E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		18373DAF26D00277000DB9E8 /* PaywallUIComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallUIComposer.swift; sourceTree = "<group>"; };
 		18373DB026D00277000DB9E8 /* PaywallPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallPresenter.swift; sourceTree = "<group>"; };
@@ -63,10 +75,10 @@
 		18373DB226D00277000DB9E8 /* PaywallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallViewController.swift; sourceTree = "<group>"; };
 		18373DB426D00277000DB9E8 /* PlanButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanButton.swift; sourceTree = "<group>"; };
 		18373DBE26D004D7000DB9E8 /* InAppProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppProduct.swift; sourceTree = "<group>"; };
-		18373DC026D19DC7000DB9E8 /* PaywallsLoaderOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallsLoaderOperator.swift; sourceTree = "<group>"; };
+		18373DC026D19DC7000DB9E8 /* PaywallsLoadOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallsLoadOperator.swift; sourceTree = "<group>"; };
 		18373DC226D1A1DE000DB9E8 /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
-		18373DC626D1B170000DB9E8 /* UserDefaultsNameCacheOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNameCacheOperator.swift; sourceTree = "<group>"; };
-		18373DC826D1B675000DB9E8 /* UserLoaderOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoaderOperator.swift; sourceTree = "<group>"; };
+		18373DC626D1B170000DB9E8 /* UserNameCacheOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameCacheOperator.swift; sourceTree = "<group>"; };
+		18373DC826D1B675000DB9E8 /* UserNameLoadOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameLoadOperator.swift; sourceTree = "<group>"; };
 		18373DCC26D392D9000DB9E8 /* LaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchTests.swift; sourceTree = "<group>"; };
 		183F081026CD0D4F008CD538 /* EnterName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EnterName.storyboard; sourceTree = "<group>"; };
 		183F081226CD0D4F008CD538 /* EnterNameTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNameTextField.swift; sourceTree = "<group>"; };
@@ -78,7 +90,7 @@
 		183F081E26CD0D70008CD538 /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 		183F082126CD0DCF008CD538 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		183F082326CD113F008CD538 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
-		183F082526CD1152008CD538 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
+		183F082526CD1152008CD538 /* RemoteConfigState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigState.swift; sourceTree = "<group>"; };
 		183F082726CD1162008CD538 /* AllPaywalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPaywalls.swift; sourceTree = "<group>"; };
 		183F082926CD1171008CD538 /* NameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInput.swift; sourceTree = "<group>"; };
 		18C337A226CCFCDF006705E2 /* ReduxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +105,7 @@
 		18C337DD26CCFEC2006705E2 /* AppState+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState+Actions.swift"; sourceTree = "<group>"; };
 		18C337DF26CD0369006705E2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		18C337E326CD09DB006705E2 /* SplashShowOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashShowOperator.swift; sourceTree = "<group>"; };
-		18C337E526CD09F0006705E2 /* RemoteConfigFetcherOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigFetcherOperator.swift; sourceTree = "<group>"; };
+		18C337E526CD09F0006705E2 /* RemoteConfigLoadOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigLoadOperator.swift; sourceTree = "<group>"; };
 		18C337E726CD0A0F006705E2 /* PaywallShowOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallShowOperator.swift; sourceTree = "<group>"; };
 		18C337E926CD0A97006705E2 /* EnterNameShowOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameShowOperator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +135,7 @@
 				18C337E726CD0A0F006705E2 /* PaywallShowOperator.swift */,
 				18373DAF26D00277000DB9E8 /* PaywallUIComposer.swift */,
 				18373DB026D00277000DB9E8 /* PaywallPresenter.swift */,
-				18373DC026D19DC7000DB9E8 /* PaywallsLoaderOperator.swift */,
+				18373DC026D19DC7000DB9E8 /* PaywallsLoadOperator.swift */,
 				18373DB126D00277000DB9E8 /* Paywall.storyboard */,
 				18373DB226D00277000DB9E8 /* PaywallViewController.swift */,
 			);
@@ -142,8 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				183F082326CD113F008CD538 /* Flow.swift */,
-				183F082526CD1152008CD538 /* RemoteConfig.swift */,
+				183F082526CD1152008CD538 /* RemoteConfigState.swift */,
 				183F082726CD1162008CD538 /* AllPaywalls.swift */,
+				1818F65526D654E300023C15 /* PaywallsLoadingStatus.swift */,
 				183F082926CD1171008CD538 /* NameInput.swift */,
 				18373DAC26CFFFD6000DB9E8 /* User.swift */,
 			);
@@ -155,6 +168,7 @@
 			children = (
 				18373DC226D1A1DE000DB9E8 /* Paywall.swift */,
 				18373DBE26D004D7000DB9E8 /* InAppProduct.swift */,
+				1818F65326D64B5800023C15 /* RemoteConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,8 +185,8 @@
 		18373DC526D1A8E8000DB9E8 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				18C337E526CD09F0006705E2 /* RemoteConfigFetcherOperator.swift */,
-				18373DC826D1B675000DB9E8 /* UserLoaderOperator.swift */,
+				18C337E526CD09F0006705E2 /* RemoteConfigLoadOperator.swift */,
+				18373DC826D1B675000DB9E8 /* UserNameLoadOperator.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -186,7 +200,7 @@
 				183F081426CD0D4F008CD538 /* EnterNamePresenter.swift */,
 				183F081026CD0D4F008CD538 /* EnterName.storyboard */,
 				183F081526CD0D4F008CD538 /* EnterNameViewController.swift */,
-				18373DC626D1B170000DB9E8 /* UserDefaultsNameCacheOperator.swift */,
+				18373DC626D1B170000DB9E8 /* UserNameCacheOperator.swift */,
 			);
 			path = "Enter name";
 			sourceTree = "<group>";
@@ -275,6 +289,10 @@
 			isa = PBXGroup;
 			children = (
 				18C337A526CCFCDF006705E2 /* AppDelegate.swift */,
+				1818F65726D666A300023C15 /* PaywallsLoader.swift */,
+				1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */,
+				1818F65926D666BE00023C15 /* UserNameLoader.swift */,
+				1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */,
 				18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */,
 				18C337AE26CCFCE2006705E2 /* Assets.xcassets */,
 				18C337B326CCFCE2006705E2 /* Info.plist */,
@@ -384,7 +402,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1818F66026D674F300023C15 /* UserDefaultsNameCacher.swift in Sources */,
 				18C337DA26CCFE68006705E2 /* Store.swift in Sources */,
+				1818F65A26D666BE00023C15 /* UserNameLoader.swift in Sources */,
+				1818F65826D666A300023C15 /* PaywallsLoader.swift in Sources */,
 				183F082426CD113F008CD538 /* Flow.swift in Sources */,
 				183F081826CD0D50008CD538 /* EnterNameTextField.swift in Sources */,
 				18C337E426CD09DB006705E2 /* SplashShowOperator.swift in Sources */,
@@ -393,14 +414,16 @@
 				183F082226CD0DCF008CD538 /* Command.swift in Sources */,
 				183F082026CD0D70008CD538 /* NextButton.swift in Sources */,
 				18373DB926D00277000DB9E8 /* PlanButton.swift in Sources */,
-				18373DC126D19DC7000DB9E8 /* PaywallsLoaderOperator.swift in Sources */,
+				18373DC126D19DC7000DB9E8 /* PaywallsLoadOperator.swift in Sources */,
+				1818F65C26D666D900023C15 /* RemoteConfigLoader.swift in Sources */,
 				183F081C26CD0D50008CD538 /* EnterNameUIComposer.swift in Sources */,
 				18373DB826D00277000DB9E8 /* PaywallViewController.swift in Sources */,
-				18C337E626CD09F0006705E2 /* RemoteConfigFetcherOperator.swift in Sources */,
+				18C337E626CD09F0006705E2 /* RemoteConfigLoadOperator.swift in Sources */,
 				18373DAD26CFFFD6000DB9E8 /* User.swift in Sources */,
 				18373DB626D00277000DB9E8 /* PaywallPresenter.swift in Sources */,
-				183F082626CD1152008CD538 /* RemoteConfig.swift in Sources */,
-				18373DC726D1B170000DB9E8 /* UserDefaultsNameCacheOperator.swift in Sources */,
+				1818F65426D64B5800023C15 /* RemoteConfig.swift in Sources */,
+				183F082626CD1152008CD538 /* RemoteConfigState.swift in Sources */,
+				18373DC726D1B170000DB9E8 /* UserNameCacheOperator.swift in Sources */,
 				18C337E826CD0A0F006705E2 /* PaywallShowOperator.swift in Sources */,
 				18C337DE26CCFEC2006705E2 /* AppState+Actions.swift in Sources */,
 				18373DBF26D004D7000DB9E8 /* InAppProduct.swift in Sources */,
@@ -409,11 +432,12 @@
 				18373DC326D1A1DE000DB9E8 /* Paywall.swift in Sources */,
 				183F082A26CD1171008CD538 /* NameInput.swift in Sources */,
 				18C337DC26CCFE7C006705E2 /* Observer.swift in Sources */,
+				1818F65626D654E300023C15 /* PaywallsLoadingStatus.swift in Sources */,
 				183F081B26CD0D50008CD538 /* EnterNameViewController.swift in Sources */,
 				18C337A626CCFCDF006705E2 /* AppDelegate.swift in Sources */,
 				18C337EA26CD0A97006705E2 /* EnterNameShowOperator.swift in Sources */,
 				18C337E026CD0369006705E2 /* SplashViewController.swift in Sources */,
-				18373DC926D1B675000DB9E8 /* UserLoaderOperator.swift in Sources */,
+				18373DC926D1B675000DB9E8 /* UserNameLoadOperator.swift in Sources */,
 				183F081F26CD0D70008CD538 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

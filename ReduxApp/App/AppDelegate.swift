@@ -3,6 +3,7 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+
     private let store: Store<AppState, Action>
     private let navigationController = UINavigationController()
 
@@ -13,12 +14,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         super.init()
+        setupOperators()
+    }
 
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        store.dispatch(action: DidFinishLaunch())
+        return true
+    }
+
+    // MARK: - Private
+
+    private func setupOperators() {
         let splashShowOperator = SplashShowOperator(window: window, splash: { SplashViewController() })
         store.subscribe(observer: splashShowOperator.asObserver)
 
-        let remoteConfigFetcherOperator = RemoteConfigFetcherOperator(store: store, fetch: RemoteConfigFetch.run)
-        store.subscribe(observer: remoteConfigFetcherOperator.asObserver)
+        let remoteConfigLoadOperator = RemoteConfigLoadOperator(store: store, fetch: RemoteConfigLoader.load)
+        store.subscribe(observer: remoteConfigLoadOperator.asObserver)
 
         let enterNameShowOperator = EnterNameShowOperator(store: store, navigationController: navigationController)
         store.subscribe(observer: enterNameShowOperator.asObserver)
@@ -26,15 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let paywallShowOperator = PaywallShowOperator(store: store, navigationController: navigationController)
         store.subscribe(observer: paywallShowOperator.asObserver)
 
-        let paywallsLoaderOperator = PaywallsLoaderOperator(store: store, load: PaywallsLoader.run)
-        store.subscribe(observer: paywallsLoaderOperator.asObserver)
+        let paywallsLoadOperator = PaywallsLoadOperator(store: store, load: PaywallsLoader.load)
+        store.subscribe(observer: paywallsLoadOperator.asObserver)
 
-        let userLoadOperator = UserLoaderOperator(store: store)
-        store.subscribe(observer: userLoadOperator.asObserver)
-    }
+        let userNameLoadOperator = UserNameLoadOperator(store: store, load: UserNameLoader.load)
+        store.subscribe(observer: userNameLoadOperator.asObserver)
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        store.dispatch(action: DidFinishLaunch())
-        return true
+        let userNameCacheOperator = UserNameCacheOperator(
+            store: store, cache: UserDefaultsNameCacher.cache, remove: UserDefaultsNameCacher.remove)
+        store.subscribe(observer: userNameCacheOperator.asObserver)
     }
 }

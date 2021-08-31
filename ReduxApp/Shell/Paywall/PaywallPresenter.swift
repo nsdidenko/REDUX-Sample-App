@@ -23,8 +23,8 @@ public struct PaywallPresenter {
     public func process(_ state: AppState) {
         let props = Props(
             title: "\(state.user.name), we have a special offer for you!",
-            state: map(state.allPaywalls),
-            button: .init(title: "Purchase", state: map(state.allPaywalls)))
+            state: map(state.allPaywalls, loadingStatus: state.paywallsLoadingStatus),
+            button: .init(title: "Purchase", state: map(state.paywallsLoadingStatus)))
 
         render.perform(with: props)
     }
@@ -35,16 +35,15 @@ public struct PaywallPresenter {
         allPaywalls.paywalls.filter({ $0.id == paywallId }).first
     }
 
-    private func map(_ allPaywalls: AllPaywalls) -> Props.State {
-        switch allPaywalls.status {
+    private func map(_ allPaywalls: AllPaywalls, loadingStatus: PaywallsLoadingStatus) -> Props.State {
+        switch loadingStatus {
         case .idle, .loading:
             return .loading
 
         case .ready:
             if let paywall = paywall(from: allPaywalls) {
                 return .active(paywall.inAppProducts.enumerated().map { i, inAppProduct in
-                    let chosenId = allPaywalls.chosen[paywallId]
-                    return map(inAppProduct, index: i, selected: i == chosenId)
+                    map(inAppProduct, index: i, selected: i == paywall.chosen)
                 })
             } else {
                 return .active([])
@@ -58,8 +57,8 @@ public struct PaywallPresenter {
               action: .init { store.dispatch(action: DidSelectInAppProduct(at: index, in: paywallId)) })
     }
 
-    private func map(_ allPaywalls: AllPaywalls) -> NextButton.Props.State {
-        switch allPaywalls.status {
+    private func map(_ loadingStatus: PaywallsLoadingStatus) -> NextButton.Props.State {
+        switch loadingStatus {
         case .idle, .loading:
             return .inactive
 

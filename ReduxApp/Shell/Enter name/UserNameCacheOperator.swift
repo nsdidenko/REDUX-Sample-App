@@ -1,15 +1,19 @@
 import Foundation
 
-public final class UserDefaultsNameCacheOperator {
+public final class UserNameCacheOperator {
     public typealias Store = ReduxApp.Store<AppState, Action>
     public typealias Observer = ReduxApp.Observer<AppState>
+    public typealias Cache = (String) -> Void
+    public typealias Remove = () -> Void
 
     private let store: Store
-    private let defaults: UserDefaults
+    private let cache: Cache
+    private let remove: Remove
 
-    public init(store: Store, defaults: UserDefaults = .standard) {
+    public init(store: Store, cache: @escaping Cache, remove: @escaping Remove) {
         self.store = store
-        self.defaults = defaults
+        self.cache = cache
+        self.remove = remove
     }
 
     private var name: String?
@@ -18,11 +22,7 @@ public final class UserDefaultsNameCacheOperator {
         guard name != state.name else { return }
         name = state.name
 
-        if let name = name, !name.isEmpty {
-            defaults.setValue(name, forKey: "user_name")
-        } else {
-            defaults.removeObject(forKey: "user_name")
-        }
+        name.map { $0.isEmpty ? remove() : cache($0) }
     }
 
     public var asObserver: Observer {

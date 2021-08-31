@@ -7,7 +7,7 @@ public enum PaywallUIComposer: Storyboarded {
         let presenter = PaywallPresenter(
             store: store,
             render: .init { vc.props = $0 },
-            paywallId: "paywall 2")
+            paywallId: "paywall 1")
 
         store.subscribe(observer: presenter.asObserver)
 

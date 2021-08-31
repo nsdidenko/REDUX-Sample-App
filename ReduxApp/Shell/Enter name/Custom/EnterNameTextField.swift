@@ -3,16 +3,14 @@ import UIKit
 public extension EnterNameTextField {
     struct Props {
         public let text: String
-        public let placeholder: String
         public let updated: CommandWith<String>
 
-        public init(text: String, placeholder: String, updated: CommandWith<String>) {
+        public init(text: String, updated: CommandWith<String>) {
             self.text = text
-            self.placeholder = placeholder
             self.updated = updated
         }
 
-        static let initial = Props(text: "", placeholder: "", updated: .nop)
+        static let initial = Props(text: "", updated: .nop)
     }
 }
 
@@ -42,7 +40,7 @@ public final class EnterNameTextField: UITextField {
         text = props.text
 
         attributedPlaceholder = NSAttributedString(
-            string: props.placeholder,
+            string: "Enter name",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray.withAlphaComponent(0.5)])
     }
 

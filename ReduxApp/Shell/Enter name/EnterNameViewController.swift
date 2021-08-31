@@ -2,9 +2,7 @@ import UIKit
 
 public extension EnterNameViewController {
     struct Props {
-        public let title: String
         public let invalidCaption: InvalidCaption; public struct InvalidCaption {
-            let title: String
             let state: State; enum State {
                 case shown, hidden
             }
@@ -14,20 +12,18 @@ public extension EnterNameViewController {
         public let didAppear: Command
 
         public init(
-            title: String,
             invalidCaption: InvalidCaption,
             field: EnterNameTextField.Props,
             button: NextButton.Props,
             didAppear: Command)
         {
-            self.title = title
             self.invalidCaption = invalidCaption
             self.field = field
             self.button = button
             self.didAppear = didAppear
         }
 
-        static let initial = Props(title: "", invalidCaption: .init(title: "", state: .hidden), field: .initial, button: .initial, didAppear: .nop)
+        static let initial = Props(invalidCaption: .init(state: .hidden), field: .initial, button: .initial, didAppear: .nop)
     }
 }
 
@@ -69,11 +65,11 @@ public final class EnterNameViewController: UIViewController {
     }
 
     private func render() {
-        titleLabel.text = props.title
+        titleLabel.text = "Please enter the name you would like to use:"
         textField.props = props.field
         nextButton.props = props.button
 
-        invalidLabel.text = props.invalidCaption.title
+        invalidLabel.text = "The name must not contain numbers."
         invalidLabel.isHidden = {
             switch props.invalidCaption.state {
             case .shown: return false
