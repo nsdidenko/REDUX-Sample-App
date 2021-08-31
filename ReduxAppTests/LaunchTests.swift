@@ -23,19 +23,4 @@ class LaunchTests: XCTestCase {
         XCTAssertNotNil(window.rootViewController)
     }
 
-    func test() {
-        let exp = expectation(description: "Wait for notificaion")
-        let store = Store<AppState, Action>(initial: .init()) { state, action in
-            state.reduce(action)
-            exp.fulfill()
-        }
-
-        func remoteConfigLoad() {
-
-        }
-
-        let op = RemoteConfigLoadOperator(store: store, fetch: remoteConfigLoad)
-        
-    }
-
 }
