@@ -3,7 +3,7 @@ import ReduxApp
 
 class UserNameCacheTests: XCTestCase {
 
-    func test_emptyAndNonEmptyName() {
+    func test() {
         let store = Store<AppState, Action>(initial: .init()) { $0.reduce($1) }
         let oldName = "Bobby"
         let newName = "Bob"
@@ -25,6 +25,7 @@ class UserNameCacheTests: XCTestCase {
 
         let op = UserNameCacheOperator(store: store, cache: cache, remove: remove)
         store.subscribe(observer: op.asObserver)
+        let observersAfterSubscribe = store.observers
 
         store.dispatch(action: DidLoadName(""))
         store.dispatch(action: DidSetName(oldName))
@@ -37,5 +38,6 @@ class UserNameCacheTests: XCTestCase {
 
         XCTAssertEqual([oldName, newName], cachedNames)
         XCTAssertEqual(removeCallsCount, 2)
+        XCTAssertEqual(observersAfterSubscribe, store.observers)
     }
 }
