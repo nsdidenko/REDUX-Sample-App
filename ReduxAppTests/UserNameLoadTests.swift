@@ -3,7 +3,7 @@ import ReduxApp
 
 class UserNameLoadTests: XCTestCase {
 
-    func test_subscribe_providesUserNameLoad() {
+    func test_subscribe_providesUserNameLoadOnes() {
         let store = Store<AppState, Action>(initial: .init()) { $0.reduce($1) }
         let name = "Some-name"
 
@@ -14,11 +14,16 @@ class UserNameLoadTests: XCTestCase {
         }
 
         let op = UserNameLoadOperator(store: store, load: loadName)
-        store.subscribe(observer: op.asObserver)
+        let observer = op.asObserver
+        store.subscribe(observer: observer)
+        var observersAfterSubscribe = store.observers
 
         wait(for: [exp], timeout: 0.1)
 
+        observersAfterSubscribe.remove(observer)
+
         XCTAssertEqual(name, store.state.user.name)
+        XCTAssertEqual(observersAfterSubscribe, store.observers)
     }
 
 }
