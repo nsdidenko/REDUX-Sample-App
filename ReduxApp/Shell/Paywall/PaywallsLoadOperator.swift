@@ -15,7 +15,11 @@ public final class PaywallsLoadOperator {
 
     private var status: PaywallsLoadingStatus?
 
-    public func process(_ state: PaywallsLoadingStatus) -> Observer.Status {
+    public var asObserver: Observer {
+        .init { self.process($0.paywallsLoadingStatus) }
+    }
+
+    private func process(_ state: PaywallsLoadingStatus) -> Observer.Status {
         guard status != state else { return .active }
         status = state
 
@@ -27,9 +31,5 @@ public final class PaywallsLoadOperator {
         } else {
             return .active
         }
-    }
-
-    public var asObserver: Observer {
-        .init { self.process($0.paywallsLoadingStatus) }
     }
 }

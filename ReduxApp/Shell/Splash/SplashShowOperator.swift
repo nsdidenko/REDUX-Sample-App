@@ -13,7 +13,14 @@ public final class SplashShowOperator {
 
     private var isLaunchCompleted = false
 
-    public func process(_ state: Flow) {
+    public var asObserver: Observer {
+        .init {
+            self.process($0.flow)
+            return .active
+        }
+    }
+
+    private func process(_ state: Flow) {
         guard state.isLaunchCompleted != isLaunchCompleted else { return }
         isLaunchCompleted = state.isLaunchCompleted
 
@@ -21,13 +28,6 @@ public final class SplashShowOperator {
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.makeKeyAndVisible()
             window?.rootViewController = splash()
-        }
-    }
-
-    public var asObserver: Observer {
-        .init {
-            self.process($0.flow)
-            return .active
         }
     }
 }

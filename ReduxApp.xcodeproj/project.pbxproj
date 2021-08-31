@@ -182,13 +182,12 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		18373DC526D1A8E8000DB9E8 /* Launch */ = {
+		18373DC526D1A8E8000DB9E8 /* Remote config */ = {
 			isa = PBXGroup;
 			children = (
 				18C337E526CD09F0006705E2 /* RemoteConfigLoadOperator.swift */,
-				18373DC826D1B675000DB9E8 /* UserNameLoadOperator.swift */,
 			);
-			path = Launch;
+			path = "Remote config";
 			sourceTree = "<group>";
 		};
 		183F080526CD0D07008CD538 /* Enter name */ = {
@@ -277,7 +276,8 @@
 		18C337D726CCFDB5006705E2 /* Shell */ = {
 			isa = PBXGroup;
 			children = (
-				18373DC526D1A8E8000DB9E8 /* Launch */,
+				18373DC826D1B675000DB9E8 /* UserNameLoadOperator.swift */,
+				18373DC526D1A8E8000DB9E8 /* Remote config */,
 				18373DC426D1A894000DB9E8 /* Splash */,
 				183F080526CD0D07008CD538 /* Enter name */,
 				18373DAE26D00277000DB9E8 /* Paywall */,

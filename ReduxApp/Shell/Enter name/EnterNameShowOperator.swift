@@ -14,7 +14,11 @@ public final class EnterNameShowOperator {
 
     private var isSplashCompleted = false
 
-    public func process(_ state: Flow) -> Observer.Status {
+    public var asObserver: Observer {
+        .init { self.process($0.flow) }
+    }
+
+    private func process(_ state: Flow) -> Observer.Status {
         guard state.isSplashCompleted != isSplashCompleted else { return .active }
         isSplashCompleted = state.isSplashCompleted
 
@@ -27,9 +31,5 @@ public final class EnterNameShowOperator {
         } else {
             return .active
         }
-    }
-
-    public var asObserver: Observer {
-        .init { self.process($0.flow) }
     }
 }

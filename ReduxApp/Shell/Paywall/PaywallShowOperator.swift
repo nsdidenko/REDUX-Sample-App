@@ -14,7 +14,11 @@ public final class PaywallShowOperator {
 
     private var isEnterNameCompleted = false
 
-    public func process(_ state: Flow) -> Observer.Status {
+    public var asObserver: Observer {
+        .init { self.process($0.flow) }
+    }
+
+    private func process(_ state: Flow) -> Observer.Status {
         guard state.isEnterNameCompleted != isEnterNameCompleted else { return .active }
         isEnterNameCompleted = state.isEnterNameCompleted
 
@@ -24,9 +28,5 @@ public final class PaywallShowOperator {
         }
 
         return .active
-    }
-
-    public var asObserver: Observer {
-        .init { self.process($0.flow) }
     }
 }

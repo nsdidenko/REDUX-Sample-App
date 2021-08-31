@@ -15,19 +15,19 @@ public final class UserNameLoadOperator {
 
     private var needToProcess = true
 
-    public func process(_ state: User) {
+    public var asObserver: Observer {
+        .init {
+            self.process($0.user)
+            return .dead
+        }
+    }
+
+    private func process(_ state: User) {
         guard needToProcess else { return }
         needToProcess = false
 
         load() { [weak store] name in
             store?.dispatch(action: DidLoadName(name))
-        }
-    }
-
-    public var asObserver: Observer {
-        .init {
-            self.process($0.user)
-            return .dead
         }
     }
 }

@@ -15,19 +15,19 @@ public final class RemoteConfigLoadOperator {
         self.load = fetch
     }
 
-    public func process(_ state: RemoteConfigState) {
+    public var asObserver: Observer {
+        .init {
+            self.process($0.remoteConfigState)
+            return .dead
+        }
+    }
+
+    private func process(_ state: RemoteConfigState) {
         guard needToProcess else { return }
         needToProcess = false
 
         load() {
             self.store.dispatch(action: DidLoadRemoteConfig(remoteConfig: $0))
-        }
-    }
-
-    public var asObserver: Observer {
-        .init {
-            self.process($0.remoteConfigState)
-            return .dead
         }
     }
 }
