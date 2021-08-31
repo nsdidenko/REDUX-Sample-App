@@ -38,7 +38,8 @@
 		183F082626CD1152008CD538 /* RemoteConfigState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082526CD1152008CD538 /* RemoteConfigState.swift */; };
 		183F082826CD1162008CD538 /* AllPaywalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082726CD1162008CD538 /* AllPaywalls.swift */; };
 		183F082A26CD1171008CD538 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082926CD1171008CD538 /* NameInput.swift */; };
-		18B9E72026DE0E9700ADB48C /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9E71F26DE0E9700ADB48C /* UserTests.swift */; };
+		18B9E72026DE0E9700ADB48C /* UserNameLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9E71F26DE0E9700ADB48C /* UserNameLoadTests.swift */; };
+		18B9E72226DE289500ADB48C /* UserNameCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9E72126DE289500ADB48C /* UserNameCacheTests.swift */; };
 		18C337A626CCFCDF006705E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337A526CCFCDF006705E2 /* AppDelegate.swift */; };
 		18C337AF26CCFCE2006705E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C337AE26CCFCE2006705E2 /* Assets.xcassets */; };
 		18C337B226CCFCE2006705E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */; };
@@ -94,7 +95,8 @@
 		183F082526CD1152008CD538 /* RemoteConfigState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigState.swift; sourceTree = "<group>"; };
 		183F082726CD1162008CD538 /* AllPaywalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPaywalls.swift; sourceTree = "<group>"; };
 		183F082926CD1171008CD538 /* NameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInput.swift; sourceTree = "<group>"; };
-		18B9E71F26DE0E9700ADB48C /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		18B9E71F26DE0E9700ADB48C /* UserNameLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameLoadTests.swift; sourceTree = "<group>"; };
+		18B9E72126DE289500ADB48C /* UserNameCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameCacheTests.swift; sourceTree = "<group>"; };
 		18C337A226CCFCDF006705E2 /* ReduxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C337A526CCFCDF006705E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C337AE26CCFCE2006705E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -266,7 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				18373DCC26D392D9000DB9E8 /* SplashTests.swift */,
-				18B9E71F26DE0E9700ADB48C /* UserTests.swift */,
+				18B9E71F26DE0E9700ADB48C /* UserNameLoadTests.swift */,
+				18B9E72126DE289500ADB48C /* UserNameCacheTests.swift */,
 				18C337BE26CCFCE2006705E2 /* Info.plist */,
 			);
 			path = ReduxAppTests;
@@ -465,7 +468,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B9E72026DE0E9700ADB48C /* UserTests.swift in Sources */,
+				18B9E72026DE0E9700ADB48C /* UserNameLoadTests.swift in Sources */,
+				18B9E72226DE289500ADB48C /* UserNameCacheTests.swift in Sources */,
 				18373DCD26D392D9000DB9E8 /* SplashTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

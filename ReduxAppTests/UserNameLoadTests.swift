@@ -1,7 +1,7 @@
 import XCTest
 import ReduxApp
 
-class UserTests: XCTestCase {
+class UserNameLoadTests: XCTestCase {
 
     func test_subscribe_providesUserNameLoad() {
         let store = Store<AppState, Action>(initial: .init()) { $0.reduce($1) }
@@ -20,4 +20,5 @@ class UserTests: XCTestCase {
 
         XCTAssertEqual(name, store.state.user.name)
     }
+
 }
