@@ -216,12 +216,13 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
-		18B9E71C26DE09B600ADB48C /* User load */ = {
+		18B9E71C26DE09B600ADB48C /* User */ = {
 			isa = PBXGroup;
 			children = (
+				18373DC626D1B170000DB9E8 /* UserNameCacheOperator.swift */,
 				18373DC826D1B675000DB9E8 /* UserNameLoadOperator.swift */,
 			);
-			path = "User load";
+			path = User;
 			sourceTree = "<group>";
 		};
 		18B9E71D26DE0A7E00ADB48C /* Paywalls load */ = {
@@ -230,14 +231,6 @@
 				18373DC026D19DC7000DB9E8 /* PaywallsLoadOperator.swift */,
 			);
 			path = "Paywalls load";
-			sourceTree = "<group>";
-		};
-		18B9E71E26DE0ABB00ADB48C /* User name cache */ = {
-			isa = PBXGroup;
-			children = (
-				18373DC626D1B170000DB9E8 /* UserNameCacheOperator.swift */,
-			);
-			path = "User name cache";
 			sourceTree = "<group>";
 		};
 		18C3379926CCFCDF006705E2 = {
@@ -301,9 +294,8 @@
 		18C337D726CCFDB5006705E2 /* Shell */ = {
 			isa = PBXGroup;
 			children = (
-				18B9E71E26DE0ABB00ADB48C /* User name cache */,
 				18B9E71D26DE0A7E00ADB48C /* Paywalls load */,
-				18B9E71C26DE09B600ADB48C /* User load */,
+				18B9E71C26DE09B600ADB48C /* User */,
 				18373DC526D1A8E8000DB9E8 /* Remote config load */,
 				18373DC426D1A894000DB9E8 /* Splash */,
 				183F080526CD0D07008CD538 /* Enter name */,
