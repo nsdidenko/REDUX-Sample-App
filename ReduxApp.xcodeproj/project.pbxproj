@@ -24,7 +24,7 @@
 		18373DC326D1A1DE000DB9E8 /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC226D1A1DE000DB9E8 /* Paywall.swift */; };
 		18373DC726D1B170000DB9E8 /* UserNameCacheOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC626D1B170000DB9E8 /* UserNameCacheOperator.swift */; };
 		18373DC926D1B675000DB9E8 /* UserNameLoadOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC826D1B675000DB9E8 /* UserNameLoadOperator.swift */; };
-		18373DCD26D392D9000DB9E8 /* LaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DCC26D392D9000DB9E8 /* LaunchTests.swift */; };
+		18373DCD26D392D9000DB9E8 /* SplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DCC26D392D9000DB9E8 /* SplashTests.swift */; };
 		183F081726CD0D50008CD538 /* EnterName.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183F081026CD0D4F008CD538 /* EnterName.storyboard */; };
 		183F081826CD0D50008CD538 /* EnterNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081226CD0D4F008CD538 /* EnterNameTextField.swift */; };
 		183F081926CD0D50008CD538 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081326CD0D4F008CD538 /* KeyboardHandler.swift */; };
@@ -38,6 +38,7 @@
 		183F082626CD1152008CD538 /* RemoteConfigState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082526CD1152008CD538 /* RemoteConfigState.swift */; };
 		183F082826CD1162008CD538 /* AllPaywalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082726CD1162008CD538 /* AllPaywalls.swift */; };
 		183F082A26CD1171008CD538 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082926CD1171008CD538 /* NameInput.swift */; };
+		18B9E72026DE0E9700ADB48C /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9E71F26DE0E9700ADB48C /* UserTests.swift */; };
 		18C337A626CCFCDF006705E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337A526CCFCDF006705E2 /* AppDelegate.swift */; };
 		18C337AF26CCFCE2006705E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C337AE26CCFCE2006705E2 /* Assets.xcassets */; };
 		18C337B226CCFCE2006705E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */; };
@@ -79,7 +80,7 @@
 		18373DC226D1A1DE000DB9E8 /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
 		18373DC626D1B170000DB9E8 /* UserNameCacheOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameCacheOperator.swift; sourceTree = "<group>"; };
 		18373DC826D1B675000DB9E8 /* UserNameLoadOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameLoadOperator.swift; sourceTree = "<group>"; };
-		18373DCC26D392D9000DB9E8 /* LaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchTests.swift; sourceTree = "<group>"; };
+		18373DCC26D392D9000DB9E8 /* SplashTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashTests.swift; sourceTree = "<group>"; };
 		183F081026CD0D4F008CD538 /* EnterName.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EnterName.storyboard; sourceTree = "<group>"; };
 		183F081226CD0D4F008CD538 /* EnterNameTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterNameTextField.swift; sourceTree = "<group>"; };
 		183F081326CD0D4F008CD538 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		183F082526CD1152008CD538 /* RemoteConfigState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigState.swift; sourceTree = "<group>"; };
 		183F082726CD1162008CD538 /* AllPaywalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPaywalls.swift; sourceTree = "<group>"; };
 		183F082926CD1171008CD538 /* NameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInput.swift; sourceTree = "<group>"; };
+		18B9E71F26DE0E9700ADB48C /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		18C337A226CCFCDF006705E2 /* ReduxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C337A526CCFCDF006705E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C337AE26CCFCE2006705E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -270,7 +272,8 @@
 		18C337BB26CCFCE2006705E2 /* ReduxAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				18373DCC26D392D9000DB9E8 /* LaunchTests.swift */,
+				18373DCC26D392D9000DB9E8 /* SplashTests.swift */,
+				18B9E71F26DE0E9700ADB48C /* UserTests.swift */,
 				18C337BE26CCFCE2006705E2 /* Info.plist */,
 			);
 			path = ReduxAppTests;
@@ -470,7 +473,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18373DCD26D392D9000DB9E8 /* LaunchTests.swift in Sources */,
+				18B9E72026DE0E9700ADB48C /* UserTests.swift in Sources */,
+				18373DCD26D392D9000DB9E8 /* SplashTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

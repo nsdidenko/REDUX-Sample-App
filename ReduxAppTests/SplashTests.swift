@@ -1,7 +1,7 @@
 import XCTest
 import ReduxApp
 
-class LaunchTests: XCTestCase {
+class SplashTests: XCTestCase {
 
     func test_didFinishLaunch_providesSplash() {
         let exp = expectation(description: "Wait for notificaion")
@@ -22,5 +22,4 @@ class LaunchTests: XCTestCase {
         XCTAssertTrue(window.isKeyWindow)
         XCTAssertNotNil(window.rootViewController)
     }
-
 }
