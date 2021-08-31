@@ -1,6 +1,6 @@
 import UIKit
 
-public struct EnterNamePresenter {
+public struct EnterNameUIOperator {
     public typealias Props = EnterNameViewController.Props
 
     let store: Store<AppState, Action>
@@ -18,7 +18,9 @@ public struct EnterNamePresenter {
         }
     }
 
-    public func process(_ state: NameInput) {
+    // MARK: - Private
+
+    private func process(_ state: NameInput) {
         let props = Props(
             invalidCaption: .init(state: map(state.validity)),
             field: .init(
@@ -29,8 +31,6 @@ public struct EnterNamePresenter {
 
         render.perform(with: props)
     }
-
-    // MARK: - Helpers
 
     private func map(_ input: NameInput) -> NextButton.Props.State {
         switch input.validity {

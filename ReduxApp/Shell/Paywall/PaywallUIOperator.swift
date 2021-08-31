@@ -1,6 +1,6 @@
 import UIKit
 
-public struct PaywallPresenter {
+public struct PaywallUIOperator {
     public typealias Props = PaywallViewController.Props
 
     let store: Store<AppState, Action>
@@ -20,7 +20,9 @@ public struct PaywallPresenter {
         }
     }
 
-    public func process(_ state: AppState) {
+    // MARK: - Private
+
+    private func process(_ state: AppState) {
         let props = Props(
             title: "\(state.user.name), we have a special offer for you!",
             state: map(state.allPaywalls, loadingStatus: state.paywallsLoadingStatus),
@@ -28,8 +30,6 @@ public struct PaywallPresenter {
 
         render.perform(with: props)
     }
-
-    // MARK: - Private
 
     private func paywall(from allPaywalls: AllPaywalls) -> Paywall? {
         allPaywalls.paywalls.filter({ $0.id == paywallId }).first
