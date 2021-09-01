@@ -1,4 +1,5 @@
 import UIKit
+import Shared
 
 public extension PlanButton {
     struct Props: Equatable {

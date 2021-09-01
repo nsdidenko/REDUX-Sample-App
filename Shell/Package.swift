@@ -7,7 +7,8 @@ let package = Package(
     platforms: [ .iOS(.v13), .macOS(.v11) ],
     products: [
         .library(name: "Shared", targets: ["Shared"]),
-        .library(name: "EnterName", targets: ["EnterName"])
+        .library(name: "EnterName", targets: ["EnterName"]),
+        .library(name: "Paywall", targets: ["Paywall"])
     ],
     dependencies: [
         .package(path: "Core"),
@@ -16,6 +17,7 @@ let package = Package(
     targets: [
         .target(name: "Shared", dependencies: ["Core", "ReduxStore"]),
         .target(name: "EnterName", dependencies: ["Core", "ReduxStore", "Shared"]),
+        .target(name: "Paywall", dependencies: ["Core", "ReduxStore", "Shared"]),
         .testTarget(name: "ShellTests", dependencies: ["Shared"])
     ]
 )

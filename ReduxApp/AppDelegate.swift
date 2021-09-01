@@ -2,6 +2,7 @@ import UIKit
 import Core
 import EnterName
 import Shared
+import Paywall
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

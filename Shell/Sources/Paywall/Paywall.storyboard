@@ -12,7 +12,7 @@
         <!--Paywall View Controller-->
         <scene sceneID="puD-vW-TRn">
             <objects>
-                <viewController storyboardIdentifier="PaywallViewController" id="CDY-aj-1Kb" customClass="PaywallViewController" customModule="Shared" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaywallViewController" id="CDY-aj-1Kb" customClass="PaywallViewController" customModule="Paywall" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gCW-K4-Xca">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                                             <constraint firstAttribute="height" id="hgJ-un-kXY"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBd-7p-7RK" customClass="PlanButton" customModule="Shared">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBd-7p-7RK" customClass="PlanButton" customModule="Paywall">
                                         <rect key="frame" x="0.0" y="24" width="382" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="ORV-Li-T3q"/>
@@ -49,7 +49,7 @@
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
                                         <state key="normal" title="9.99$"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-pP-L2x" customClass="PlanButton" customModule="Shared">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXx-pP-L2x" customClass="PlanButton" customModule="Paywall">
                                         <rect key="frame" x="0.0" y="113" width="382" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="tpn-X7-Hwt"/>
@@ -57,7 +57,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="16.99$"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnF-j1-KeV" customClass="PlanButton" customModule="Shared">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnF-j1-KeV" customClass="PlanButton" customModule="Paywall">
                                         <rect key="frame" x="0.0" y="202" width="382" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="sLU-B8-Ukx"/>
