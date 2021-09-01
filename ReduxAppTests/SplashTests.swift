@@ -1,5 +1,7 @@
 import XCTest
 import ReduxApp
+import Shell
+import Core
 
 class SplashTests: XCTestCase {
 
