@@ -1,6 +1,5 @@
 import XCTest
 import Core
-import ReduxStore
 import Shared
 
 class UserNameCacheTests: XCTestCase {

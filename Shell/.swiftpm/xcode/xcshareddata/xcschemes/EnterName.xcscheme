@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18C337A126CCFCDF006705E2"
-               BuildableName = "ReduxApp.app"
-               BlueprintName = "ReduxApp"
-               ReferencedContainer = "container:ReduxApp.xcodeproj">
+               BlueprintIdentifier = "EnterName"
+               BuildableName = "EnterName"
+               BlueprintName = "EnterName"
+               ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18C337B726CCFCE2006705E2"
-               BuildableName = "ReduxAppTests.xctest"
-               BlueprintName = "ReduxAppTests"
-               ReferencedContainer = "container:ReduxApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ShellTests"
-               BuildableName = "ShellTests"
-               BlueprintName = "ShellTests"
-               ReferencedContainer = "container:Shell">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -60,16 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18C337A126CCFCDF006705E2"
-            BuildableName = "ReduxApp.app"
-            BlueprintName = "ReduxApp"
-            ReferencedContainer = "container:ReduxApp.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -77,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "18C337A126CCFCDF006705E2"
-            BuildableName = "ReduxApp.app"
-            BlueprintName = "ReduxApp"
-            ReferencedContainer = "container:ReduxApp.xcodeproj">
+            BlueprintIdentifier = "EnterName"
+            BuildableName = "EnterName"
+            BlueprintName = "EnterName"
+            ReferencedContainer = "container:">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

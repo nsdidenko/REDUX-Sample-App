@@ -1,5 +1,4 @@
 import XCTest
-import ReduxStore
 import Shared
 
 class UserNameLoadTests: XCTestCase {
