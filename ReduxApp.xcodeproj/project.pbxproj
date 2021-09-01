@@ -11,13 +11,11 @@
 		1818F65A26D666BE00023C15 /* UserNameLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65926D666BE00023C15 /* UserNameLoader.swift */; };
 		1818F65C26D666D900023C15 /* RemoteConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */; };
 		1818F66026D674F300023C15 /* UserDefaultsNameCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */; };
-		18373DCD26D392D9000DB9E8 /* SplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DCC26D392D9000DB9E8 /* SplashTests.swift */; };
-		18B9E72026DE0E9700ADB48C /* UserNameLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9E71F26DE0E9700ADB48C /* UserNameLoadTests.swift */; };
-		18B9E72226DE289500ADB48C /* UserNameCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9E72126DE289500ADB48C /* UserNameCacheTests.swift */; };
+		1827935526E0140600F0D0BD /* Shell in Frameworks */ = {isa = PBXBuildFile; productRef = 1827935426E0140600F0D0BD /* Shell */; };
+		1827935926E0161000F0D0BD /* SplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827935826E0161000F0D0BD /* SplashTests.swift */; };
 		18B9E72626DFAB1A00ADB48C /* ReduxStore in Frameworks */ = {isa = PBXBuildFile; productRef = 18B9E72526DFAB1A00ADB48C /* ReduxStore */; };
 		18B9E72826DFAB3700ADB48C /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9E72726DFAB3700ADB48C /* Types.swift */; };
 		18B9E72B26DFADAE00ADB48C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 18B9E72A26DFADAE00ADB48C /* Core */; };
-		18B9E72E26DFB02B00ADB48C /* Shell in Frameworks */ = {isa = PBXBuildFile; productRef = 18B9E72D26DFB02B00ADB48C /* Shell */; };
 		18C337A626CCFCDF006705E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337A526CCFCDF006705E2 /* AppDelegate.swift */; };
 		18C337AF26CCFCE2006705E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C337AE26CCFCE2006705E2 /* Assets.xcassets */; };
 		18C337B226CCFCE2006705E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */; };
@@ -38,13 +36,11 @@
 		1818F65926D666BE00023C15 /* UserNameLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameLoader.swift; sourceTree = "<group>"; };
 		1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigLoader.swift; sourceTree = "<group>"; };
 		1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNameCacher.swift; sourceTree = "<group>"; };
-		18373DCC26D392D9000DB9E8 /* SplashTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashTests.swift; sourceTree = "<group>"; };
-		18B9E71F26DE0E9700ADB48C /* UserNameLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameLoadTests.swift; sourceTree = "<group>"; };
-		18B9E72126DE289500ADB48C /* UserNameCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameCacheTests.swift; sourceTree = "<group>"; };
+		1827935326E0128600F0D0BD /* Shell */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shell; sourceTree = "<group>"; };
+		1827935826E0161000F0D0BD /* SplashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTests.swift; sourceTree = "<group>"; };
 		18B9E72326DFAA6400ADB48C /* Store */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Store; sourceTree = "<group>"; };
 		18B9E72726DFAB3700ADB48C /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		18B9E72926DFACFF00ADB48C /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
-		18B9E72C26DFAF0700ADB48C /* Shell */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shell; sourceTree = "<group>"; };
 		18C337A226CCFCDF006705E2 /* ReduxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C337A526CCFCDF006705E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C337AE26CCFCE2006705E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B9E72E26DFB02B00ADB48C /* Shell in Frameworks */,
+				1827935526E0140600F0D0BD /* Shell in Frameworks */,
 				18B9E72626DFAB1A00ADB48C /* ReduxStore in Frameworks */,
 				18B9E72B26DFADAE00ADB48C /* Core in Frameworks */,
 			);
@@ -86,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				18B9E72926DFACFF00ADB48C /* Core */,
-				18B9E72C26DFAF0700ADB48C /* Shell */,
+				1827935326E0128600F0D0BD /* Shell */,
 				18C337A426CCFCDF006705E2 /* ReduxApp */,
 				18C337BB26CCFCE2006705E2 /* ReduxAppTests */,
 				18B9E72326DFAA6400ADB48C /* Store */,
@@ -123,9 +119,7 @@
 		18C337BB26CCFCE2006705E2 /* ReduxAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				18373DCC26D392D9000DB9E8 /* SplashTests.swift */,
-				18B9E71F26DE0E9700ADB48C /* UserNameLoadTests.swift */,
-				18B9E72126DE289500ADB48C /* UserNameCacheTests.swift */,
+				1827935826E0161000F0D0BD /* SplashTests.swift */,
 				18C337BE26CCFCE2006705E2 /* Info.plist */,
 			);
 			path = ReduxAppTests;
@@ -150,7 +144,7 @@
 			packageProductDependencies = (
 				18B9E72526DFAB1A00ADB48C /* ReduxStore */,
 				18B9E72A26DFADAE00ADB48C /* Core */,
-				18B9E72D26DFB02B00ADB48C /* Shell */,
+				1827935426E0140600F0D0BD /* Shell */,
 			);
 			productName = ReduxApp;
 			productReference = 18C337A226CCFCDF006705E2 /* ReduxApp.app */;
@@ -249,9 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B9E72026DE0E9700ADB48C /* UserNameLoadTests.swift in Sources */,
-				18B9E72226DE289500ADB48C /* UserNameCacheTests.swift in Sources */,
-				18373DCD26D392D9000DB9E8 /* SplashTests.swift in Sources */,
+				1827935926E0161000F0D0BD /* SplashTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +503,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1827935426E0140600F0D0BD /* Shell */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Shell;
+		};
 		18B9E72526DFAB1A00ADB48C /* ReduxStore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ReduxStore;
@@ -518,10 +514,6 @@
 		18B9E72A26DFADAE00ADB48C /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Core;
-		};
-		18B9E72D26DFB02B00ADB48C /* Shell */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Shell;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

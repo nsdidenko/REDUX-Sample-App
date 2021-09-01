@@ -1,5 +1,4 @@
 import XCTest
-import ReduxApp
 import Core
 import Shell
 
