@@ -7,21 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1818F65426D64B5800023C15 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65326D64B5800023C15 /* RemoteConfig.swift */; };
-		1818F65626D654E300023C15 /* PaywallsLoadingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65526D654E300023C15 /* PaywallsLoadingStatus.swift */; };
 		1818F65826D666A300023C15 /* PaywallsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65726D666A300023C15 /* PaywallsLoader.swift */; };
 		1818F65A26D666BE00023C15 /* UserNameLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65926D666BE00023C15 /* UserNameLoader.swift */; };
 		1818F65C26D666D900023C15 /* RemoteConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */; };
 		1818F66026D674F300023C15 /* UserDefaultsNameCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */; };
-		18373DAD26CFFFD6000DB9E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DAC26CFFFD6000DB9E8 /* User.swift */; };
 		18373DB526D00277000DB9E8 /* PaywallUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DAF26D00277000DB9E8 /* PaywallUIComposer.swift */; };
 		18373DB626D00277000DB9E8 /* PaywallUIOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DB026D00277000DB9E8 /* PaywallUIOperator.swift */; };
 		18373DB726D00277000DB9E8 /* Paywall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18373DB126D00277000DB9E8 /* Paywall.storyboard */; };
 		18373DB826D00277000DB9E8 /* PaywallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DB226D00277000DB9E8 /* PaywallViewController.swift */; };
 		18373DB926D00277000DB9E8 /* PlanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DB426D00277000DB9E8 /* PlanButton.swift */; };
-		18373DBF26D004D7000DB9E8 /* InAppProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DBE26D004D7000DB9E8 /* InAppProduct.swift */; };
 		18373DC126D19DC7000DB9E8 /* PaywallsLoadOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC026D19DC7000DB9E8 /* PaywallsLoadOperator.swift */; };
-		18373DC326D1A1DE000DB9E8 /* Paywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC226D1A1DE000DB9E8 /* Paywall.swift */; };
 		18373DC726D1B170000DB9E8 /* UserNameCacheOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC626D1B170000DB9E8 /* UserNameCacheOperator.swift */; };
 		18373DC926D1B675000DB9E8 /* UserNameLoadOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DC826D1B675000DB9E8 /* UserNameLoadOperator.swift */; };
 		18373DCD26D392D9000DB9E8 /* SplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18373DCC26D392D9000DB9E8 /* SplashTests.swift */; };
@@ -34,18 +29,14 @@
 		183F081F26CD0D70008CD538 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081D26CD0D70008CD538 /* Storyboarded.swift */; };
 		183F082026CD0D70008CD538 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F081E26CD0D70008CD538 /* NextButton.swift */; };
 		183F082226CD0DCF008CD538 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082126CD0DCF008CD538 /* Command.swift */; };
-		183F082426CD113F008CD538 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082326CD113F008CD538 /* Flow.swift */; };
-		183F082626CD1152008CD538 /* RemoteConfigState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082526CD1152008CD538 /* RemoteConfigState.swift */; };
-		183F082826CD1162008CD538 /* AllPaywalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082726CD1162008CD538 /* AllPaywalls.swift */; };
-		183F082A26CD1171008CD538 /* NameInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F082926CD1171008CD538 /* NameInput.swift */; };
 		18B9E72026DE0E9700ADB48C /* UserNameLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9E71F26DE0E9700ADB48C /* UserNameLoadTests.swift */; };
 		18B9E72226DE289500ADB48C /* UserNameCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9E72126DE289500ADB48C /* UserNameCacheTests.swift */; };
 		18B9E72626DFAB1A00ADB48C /* ReduxStore in Frameworks */ = {isa = PBXBuildFile; productRef = 18B9E72526DFAB1A00ADB48C /* ReduxStore */; };
 		18B9E72826DFAB3700ADB48C /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9E72726DFAB3700ADB48C /* Types.swift */; };
+		18B9E72B26DFADAE00ADB48C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 18B9E72A26DFADAE00ADB48C /* Core */; };
 		18C337A626CCFCDF006705E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337A526CCFCDF006705E2 /* AppDelegate.swift */; };
 		18C337AF26CCFCE2006705E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C337AE26CCFCE2006705E2 /* Assets.xcassets */; };
 		18C337B226CCFCE2006705E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */; };
-		18C337DE26CCFEC2006705E2 /* AppState+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337DD26CCFEC2006705E2 /* AppState+Actions.swift */; };
 		18C337E026CD0369006705E2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337DF26CD0369006705E2 /* SplashViewController.swift */; };
 		18C337E426CD09DB006705E2 /* SplashShowOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337E326CD09DB006705E2 /* SplashShowOperator.swift */; };
 		18C337E626CD09F0006705E2 /* RemoteConfigLoadOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337E526CD09F0006705E2 /* RemoteConfigLoadOperator.swift */; };
@@ -64,21 +55,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1818F65326D64B5800023C15 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
-		1818F65526D654E300023C15 /* PaywallsLoadingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallsLoadingStatus.swift; sourceTree = "<group>"; };
 		1818F65726D666A300023C15 /* PaywallsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallsLoader.swift; sourceTree = "<group>"; };
 		1818F65926D666BE00023C15 /* UserNameLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameLoader.swift; sourceTree = "<group>"; };
 		1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigLoader.swift; sourceTree = "<group>"; };
 		1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNameCacher.swift; sourceTree = "<group>"; };
-		18373DAC26CFFFD6000DB9E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		18373DAF26D00277000DB9E8 /* PaywallUIComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallUIComposer.swift; sourceTree = "<group>"; };
 		18373DB026D00277000DB9E8 /* PaywallUIOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallUIOperator.swift; sourceTree = "<group>"; };
 		18373DB126D00277000DB9E8 /* Paywall.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Paywall.storyboard; sourceTree = "<group>"; };
 		18373DB226D00277000DB9E8 /* PaywallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaywallViewController.swift; sourceTree = "<group>"; };
 		18373DB426D00277000DB9E8 /* PlanButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanButton.swift; sourceTree = "<group>"; };
-		18373DBE26D004D7000DB9E8 /* InAppProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppProduct.swift; sourceTree = "<group>"; };
 		18373DC026D19DC7000DB9E8 /* PaywallsLoadOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallsLoadOperator.swift; sourceTree = "<group>"; };
-		18373DC226D1A1DE000DB9E8 /* Paywall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paywall.swift; sourceTree = "<group>"; };
 		18373DC626D1B170000DB9E8 /* UserNameCacheOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameCacheOperator.swift; sourceTree = "<group>"; };
 		18373DC826D1B675000DB9E8 /* UserNameLoadOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameLoadOperator.swift; sourceTree = "<group>"; };
 		18373DCC26D392D9000DB9E8 /* SplashTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashTests.swift; sourceTree = "<group>"; };
@@ -91,14 +77,11 @@
 		183F081D26CD0D70008CD538 /* Storyboarded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		183F081E26CD0D70008CD538 /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 		183F082126CD0DCF008CD538 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		183F082326CD113F008CD538 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
-		183F082526CD1152008CD538 /* RemoteConfigState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigState.swift; sourceTree = "<group>"; };
-		183F082726CD1162008CD538 /* AllPaywalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPaywalls.swift; sourceTree = "<group>"; };
-		183F082926CD1171008CD538 /* NameInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInput.swift; sourceTree = "<group>"; };
 		18B9E71F26DE0E9700ADB48C /* UserNameLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameLoadTests.swift; sourceTree = "<group>"; };
 		18B9E72126DE289500ADB48C /* UserNameCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameCacheTests.swift; sourceTree = "<group>"; };
 		18B9E72326DFAA6400ADB48C /* Store */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Store; sourceTree = "<group>"; };
 		18B9E72726DFAB3700ADB48C /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		18B9E72926DFACFF00ADB48C /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
 		18C337A226CCFCDF006705E2 /* ReduxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C337A526CCFCDF006705E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C337AE26CCFCE2006705E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,7 +89,6 @@
 		18C337B326CCFCE2006705E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18C337B826CCFCE2006705E2 /* ReduxAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C337BE26CCFCE2006705E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18C337DD26CCFEC2006705E2 /* AppState+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState+Actions.swift"; sourceTree = "<group>"; };
 		18C337DF26CD0369006705E2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		18C337E326CD09DB006705E2 /* SplashShowOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashShowOperator.swift; sourceTree = "<group>"; };
 		18C337E526CD09F0006705E2 /* RemoteConfigLoadOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigLoadOperator.swift; sourceTree = "<group>"; };
@@ -120,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B9E72626DFAB1A00ADB48C /* ReduxStore in Frameworks */,
+				18B9E72B26DFADAE00ADB48C /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,29 +135,6 @@
 				18373DB426D00277000DB9E8 /* PlanButton.swift */,
 			);
 			path = Custom;
-			sourceTree = "<group>";
-		};
-		18373DBA26D00482000DB9E8 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				183F082326CD113F008CD538 /* Flow.swift */,
-				183F082526CD1152008CD538 /* RemoteConfigState.swift */,
-				183F082726CD1162008CD538 /* AllPaywalls.swift */,
-				1818F65526D654E300023C15 /* PaywallsLoadingStatus.swift */,
-				183F082926CD1171008CD538 /* NameInput.swift */,
-				18373DAC26CFFFD6000DB9E8 /* User.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		18373DBB26D0049B000DB9E8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				18373DC226D1A1DE000DB9E8 /* Paywall.swift */,
-				18373DBE26D004D7000DB9E8 /* InAppProduct.swift */,
-				1818F65326D64B5800023C15 /* RemoteConfig.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		18373DC426D1A894000DB9E8 /* Splash */ = {
@@ -246,9 +206,10 @@
 		18C3379926CCFCDF006705E2 = {
 			isa = PBXGroup;
 			children = (
-				18B9E72326DFAA6400ADB48C /* Store */,
+				18B9E72926DFACFF00ADB48C /* Core */,
 				18C337A426CCFCDF006705E2 /* ReduxApp */,
 				18C337BB26CCFCE2006705E2 /* ReduxAppTests */,
+				18B9E72326DFAA6400ADB48C /* Store */,
 				18C337A326CCFCDF006705E2 /* Products */,
 				18B9E72426DFAB1A00ADB48C /* Frameworks */,
 			);
@@ -266,7 +227,6 @@
 		18C337A426CCFCDF006705E2 /* ReduxApp */ = {
 			isa = PBXGroup;
 			children = (
-				18C337D526CCFDA3006705E2 /* Core */,
 				18C337D726CCFDB5006705E2 /* Shell */,
 				18C337D826CCFDD1006705E2 /* App */,
 			);
@@ -282,16 +242,6 @@
 				18C337BE26CCFCE2006705E2 /* Info.plist */,
 			);
 			path = ReduxAppTests;
-			sourceTree = "<group>";
-		};
-		18C337D526CCFDA3006705E2 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				18373DBB26D0049B000DB9E8 /* Models */,
-				18373DBA26D00482000DB9E8 /* Components */,
-				18C337DD26CCFEC2006705E2 /* AppState+Actions.swift */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		18C337D726CCFDB5006705E2 /* Shell */ = {
@@ -341,6 +291,7 @@
 			name = ReduxApp;
 			packageProductDependencies = (
 				18B9E72526DFAB1A00ADB48C /* ReduxStore */,
+				18B9E72A26DFADAE00ADB48C /* Core */,
 			);
 			productName = ReduxApp;
 			productReference = 18C337A226CCFCDF006705E2 /* ReduxApp.app */;
@@ -431,7 +382,6 @@
 				1818F66026D674F300023C15 /* UserDefaultsNameCacher.swift in Sources */,
 				1818F65A26D666BE00023C15 /* UserNameLoader.swift in Sources */,
 				1818F65826D666A300023C15 /* PaywallsLoader.swift in Sources */,
-				183F082426CD113F008CD538 /* Flow.swift in Sources */,
 				183F081826CD0D50008CD538 /* EnterNameTextField.swift in Sources */,
 				18C337E426CD09DB006705E2 /* SplashShowOperator.swift in Sources */,
 				183F081926CD0D50008CD538 /* KeyboardHandler.swift in Sources */,
@@ -444,20 +394,11 @@
 				183F081C26CD0D50008CD538 /* EnterNameUIComposer.swift in Sources */,
 				18373DB826D00277000DB9E8 /* PaywallViewController.swift in Sources */,
 				18C337E626CD09F0006705E2 /* RemoteConfigLoadOperator.swift in Sources */,
-				18373DAD26CFFFD6000DB9E8 /* User.swift in Sources */,
 				18373DB626D00277000DB9E8 /* PaywallUIOperator.swift in Sources */,
-				1818F65426D64B5800023C15 /* RemoteConfig.swift in Sources */,
-				183F082626CD1152008CD538 /* RemoteConfigState.swift in Sources */,
 				18373DC726D1B170000DB9E8 /* UserNameCacheOperator.swift in Sources */,
 				18C337E826CD0A0F006705E2 /* PaywallShowOperator.swift in Sources */,
 				18B9E72826DFAB3700ADB48C /* Types.swift in Sources */,
-				18C337DE26CCFEC2006705E2 /* AppState+Actions.swift in Sources */,
-				18373DBF26D004D7000DB9E8 /* InAppProduct.swift in Sources */,
-				183F082826CD1162008CD538 /* AllPaywalls.swift in Sources */,
 				18373DB526D00277000DB9E8 /* PaywallUIComposer.swift in Sources */,
-				18373DC326D1A1DE000DB9E8 /* Paywall.swift in Sources */,
-				183F082A26CD1171008CD538 /* NameInput.swift in Sources */,
-				1818F65626D654E300023C15 /* PaywallsLoadingStatus.swift in Sources */,
 				183F081B26CD0D50008CD538 /* EnterNameViewController.swift in Sources */,
 				18C337A626CCFCDF006705E2 /* AppDelegate.swift in Sources */,
 				18C337EA26CD0A97006705E2 /* EnterNameShowOperator.swift in Sources */,
@@ -736,6 +677,10 @@
 		18B9E72526DFAB1A00ADB48C /* ReduxStore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ReduxStore;
+		};
+		18B9E72A26DFADAE00ADB48C /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,4 +1,5 @@
 import UIKit
+import Core
 
 public struct EnterNameUIOperator {
     public typealias Props = EnterNameViewController.Props

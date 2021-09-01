@@ -1,4 +1,5 @@
 import UIKit
+import Core
 
 public struct PaywallUIOperator {
     public typealias Props = PaywallViewController.Props

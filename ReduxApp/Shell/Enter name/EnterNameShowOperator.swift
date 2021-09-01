@@ -1,9 +1,7 @@
 import UIKit
+import Core
 
 public final class EnterNameShowOperator {
-    public typealias Store = ReduxApp.Store
-    public typealias Observer = ReduxApp.Observer
-
     private let store: Store
     private let navigationController: UINavigationController
 

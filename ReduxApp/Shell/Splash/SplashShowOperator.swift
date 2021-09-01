@@ -1,4 +1,5 @@
 import UIKit
+import Core
 
 public final class SplashShowOperator {
     public typealias Observer = ReduxApp.Observer

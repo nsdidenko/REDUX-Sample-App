@@ -1,8 +1,7 @@
 import Foundation
+import Core
 
 public final class RemoteConfigLoadOperator {
-    public typealias Store = ReduxApp.Store
-    public typealias Observer = ReduxApp.Observer
     public typealias Load = (@escaping (RemoteConfig) -> Void) -> Void
 
     public let store: Store

@@ -1,4 +1,5 @@
 import Foundation
+import Core
 
 enum PaywallsLoader {
     static func load(completion: @escaping ([Paywall]) -> Void) {

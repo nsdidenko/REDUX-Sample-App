@@ -1,8 +1,7 @@
 import Foundation
+import Core
 
 public final class PaywallsLoadOperator {
-    public typealias Store = ReduxApp.Store
-    public typealias Observer = ReduxApp.Observer
     public typealias Load = (@escaping ([Paywall]) -> Void) -> Void
 
     private let store: Store

@@ -1,4 +1,5 @@
 import Foundation
+import Core
 
 enum RemoteConfigLoader {
     static func load(completion: @escaping (RemoteConfig) -> Void) {
