@@ -5,7 +5,7 @@ import Shared
 import Paywall
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder {
     var window: UIWindow?
 
     private let store: Store
@@ -20,15 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         super.init()
         setupOperators()
     }
+}
 
+extension AppDelegate: UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         store.dispatch(action: DidFinishLaunch())
         return true
     }
+}
 
-    // MARK: - Private
+// MARK: - Private
 
-    private func setupOperators() {
+private extension AppDelegate {
+    func setupOperators() {
         let splashShowOperator = SplashShowOperator(window: window, splash: { SplashViewController() })
         store.subscribe(observer: splashShowOperator.asObserver)
 
