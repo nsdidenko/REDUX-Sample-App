@@ -5,7 +5,7 @@ class SplashTests: XCTestCase {
 
     func test_didFinishLaunch_providesSplash() {
         let exp = expectation(description: "Wait for notificaion")
-        let store = Store<AppState, Action>(initial: .init()) { state, action in
+        let store = Store(initial: .init()) { state, action in
             state.reduce(action)
             exp.fulfill()
         }

@@ -1,7 +1,7 @@
 import UIKit
 
 public enum PaywallUIComposer: Storyboarded {
-    public static func compose(store: Store<AppState, Action>) -> PaywallViewController {
+    public static func compose(store: Store) -> PaywallViewController {
         let vc = storyboarded(.paywall, ofType: PaywallViewController.self)
 
         let uiOperator = PaywallUIOperator(

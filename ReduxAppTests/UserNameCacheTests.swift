@@ -4,7 +4,7 @@ import ReduxApp
 class UserNameCacheTests: XCTestCase {
 
     func test() {
-        let store = Store<AppState, Action>(initial: .init()) { $0.reduce($1) }
+        let store = Store(initial: .init()) { $0.reduce($1) }
         let oldName = "Bobby"
         let newName = "Bob"
 

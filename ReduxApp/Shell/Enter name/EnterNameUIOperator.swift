@@ -3,15 +3,15 @@ import UIKit
 public struct EnterNameUIOperator {
     public typealias Props = EnterNameViewController.Props
 
-    let store: Store<AppState, Action>
+    let store: Store
     let render: CommandWith<Props>
 
-    public init(store: Store<AppState, Action>, render: CommandWith<Props>) {
+    public init(store: Store, render: CommandWith<Props>) {
         self.store = store
         self.render = render
     }
 
-    public var asObserver: Observer<AppState> {
+    public var asObserver: Observer {
         .init {
             self.process($0.nameInput)
             return .active

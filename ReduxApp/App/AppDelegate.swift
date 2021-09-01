@@ -4,7 +4,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-    private let store: Store<AppState, Action>
+    private let store: Store
     private let navigationController = UINavigationController()
 
     override init() {

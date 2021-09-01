@@ -1,7 +1,7 @@
 import UIKit
 
 public final class SplashShowOperator {
-    public typealias Observer = ReduxApp.Observer<AppState>
+    public typealias Observer = ReduxApp.Observer
 
     private var window: UIWindow?
     private let splash: () -> UIViewController

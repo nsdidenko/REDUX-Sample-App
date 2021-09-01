@@ -1,7 +1,7 @@
 import UIKit
 
 public enum EnterNameUIComposer: Storyboarded {
-    public static func compose(store: Store<AppState, Action>) -> EnterNameViewController {
+    public static func compose(store: Store) -> EnterNameViewController {
         let vc = storyboarded(.onboarding, ofType: EnterNameViewController.self)
 
         let uiOperator = EnterNameUIOperator(

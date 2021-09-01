@@ -1,8 +1,8 @@
 import Foundation
 
 public final class UserNameCacheOperator {
-    public typealias Store = ReduxApp.Store<AppState, Action>
-    public typealias Observer = ReduxApp.Observer<AppState>
+    public typealias Store = ReduxApp.Store
+    public typealias Observer = ReduxApp.Observer
     public typealias Cache = (String) -> Void
     public typealias Remove = () -> Void
 

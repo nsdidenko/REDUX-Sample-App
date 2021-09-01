@@ -1,8 +1,8 @@
 import Foundation
 
 public final class UserNameLoadOperator {
-    public typealias Store = ReduxApp.Store<AppState, Action>
-    public typealias Observer = ReduxApp.Observer<AppState>
+    public typealias Store = ReduxApp.Store
+    public typealias Observer = ReduxApp.Observer
     public typealias Load = (@escaping (String) -> Void) -> Void
 
     private let store: Store

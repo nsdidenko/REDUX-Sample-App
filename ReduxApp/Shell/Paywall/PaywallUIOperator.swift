@@ -3,17 +3,17 @@ import UIKit
 public struct PaywallUIOperator {
     public typealias Props = PaywallViewController.Props
 
-    let store: Store<AppState, Action>
+    let store: Store
     let render: CommandWith<Props>
     let paywallId: String
 
-    public init(store: Store<AppState, Action>, render: CommandWith<Props>, paywallId: String) {
+    public init(store: Store, render: CommandWith<Props>, paywallId: String) {
         self.store = store
         self.render = render
         self.paywallId = paywallId
     }
 
-    public var asObserver: Observer<AppState> {
+    public var asObserver: Observer {
         .init {
             self.process($0)
             return .active

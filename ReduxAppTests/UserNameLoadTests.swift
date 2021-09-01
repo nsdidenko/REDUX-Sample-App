@@ -4,7 +4,7 @@ import ReduxApp
 class UserNameLoadTests: XCTestCase {
 
     func test_subscribe_providesUserNameLoadOnes() {
-        let store = Store<AppState, Action>(initial: .init()) { $0.reduce($1) }
+        let store = Store(initial: .init()) { $0.reduce($1) }
         let name = "Some-name"
 
         let exp = expectation(description: "Wait for notificaion")
