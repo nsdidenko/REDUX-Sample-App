@@ -107,7 +107,15 @@
 		18C337A426CCFCDF006705E2 /* ReduxApp */ = {
 			isa = PBXGroup;
 			children = (
-				18C337D826CCFDD1006705E2 /* App */,
+				18C337A526CCFCDF006705E2 /* AppDelegate.swift */,
+				1818F65726D666A300023C15 /* PaywallsLoader.swift */,
+				1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */,
+				1818F65926D666BE00023C15 /* UserNameLoader.swift */,
+				1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */,
+				18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */,
+				18C337AE26CCFCE2006705E2 /* Assets.xcassets */,
+				18C337B326CCFCE2006705E2 /* Info.plist */,
+				18B9E72726DFAB3700ADB48C /* Types.swift */,
 			);
 			path = ReduxApp;
 			sourceTree = "<group>";
@@ -121,22 +129,6 @@
 				18C337BE26CCFCE2006705E2 /* Info.plist */,
 			);
 			path = ReduxAppTests;
-			sourceTree = "<group>";
-		};
-		18C337D826CCFDD1006705E2 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				18C337A526CCFCDF006705E2 /* AppDelegate.swift */,
-				1818F65726D666A300023C15 /* PaywallsLoader.swift */,
-				1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */,
-				1818F65926D666BE00023C15 /* UserNameLoader.swift */,
-				1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */,
-				18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */,
-				18C337AE26CCFCE2006705E2 /* Assets.xcassets */,
-				18C337B326CCFCE2006705E2 /* Info.plist */,
-				18B9E72726DFAB3700ADB48C /* Types.swift */,
-			);
-			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,7 +400,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34Z4454BBG;
-				INFOPLIST_FILE = "$(SRCROOT)/ReduxApp/App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ReduxApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -427,7 +419,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34Z4454BBG;
-				INFOPLIST_FILE = "$(SRCROOT)/ReduxApp/App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/ReduxApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
