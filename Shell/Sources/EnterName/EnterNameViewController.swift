@@ -1,4 +1,5 @@
 import UIKit
+import Shared
 
 public extension EnterNameViewController {
     struct Props {

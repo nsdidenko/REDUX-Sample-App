@@ -1,6 +1,7 @@
 import UIKit
 import Core
-import Shell
+import EnterName
+import Shared
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

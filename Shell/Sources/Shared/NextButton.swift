@@ -17,7 +17,7 @@ public extension NextButton {
             self.state = state
         }
 
-        static let initial = Props(title: "", state: .inactive)
+        public static let initial = Props(title: "", state: .inactive)
 
         public static func == (lhs: Self, rhs: Self) -> Bool {
             lhs.title == rhs.title && lhs.state.isInactive == rhs.state.isInactive

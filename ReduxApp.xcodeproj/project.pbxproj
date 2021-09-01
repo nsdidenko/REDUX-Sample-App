@@ -11,8 +11,9 @@
 		1818F65A26D666BE00023C15 /* UserNameLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65926D666BE00023C15 /* UserNameLoader.swift */; };
 		1818F65C26D666D900023C15 /* RemoteConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */; };
 		1818F66026D674F300023C15 /* UserDefaultsNameCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */; };
-		1827935526E0140600F0D0BD /* Shell in Frameworks */ = {isa = PBXBuildFile; productRef = 1827935426E0140600F0D0BD /* Shell */; };
 		1827935926E0161000F0D0BD /* SplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827935826E0161000F0D0BD /* SplashTests.swift */; };
+		1827935D26E01AF000F0D0BD /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 1827935C26E01AF000F0D0BD /* Shared */; };
+		1827935F26E01B2300F0D0BD /* EnterName in Frameworks */ = {isa = PBXBuildFile; productRef = 1827935E26E01B2300F0D0BD /* EnterName */; };
 		18B9E72626DFAB1A00ADB48C /* ReduxStore in Frameworks */ = {isa = PBXBuildFile; productRef = 18B9E72526DFAB1A00ADB48C /* ReduxStore */; };
 		18B9E72826DFAB3700ADB48C /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B9E72726DFAB3700ADB48C /* Types.swift */; };
 		18B9E72B26DFADAE00ADB48C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 18B9E72A26DFADAE00ADB48C /* Core */; };
@@ -55,7 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1827935526E0140600F0D0BD /* Shell in Frameworks */,
+				1827935F26E01B2300F0D0BD /* EnterName in Frameworks */,
+				1827935D26E01AF000F0D0BD /* Shared in Frameworks */,
 				18B9E72626DFAB1A00ADB48C /* ReduxStore in Frameworks */,
 				18B9E72B26DFADAE00ADB48C /* Core in Frameworks */,
 			);
@@ -144,7 +146,8 @@
 			packageProductDependencies = (
 				18B9E72526DFAB1A00ADB48C /* ReduxStore */,
 				18B9E72A26DFADAE00ADB48C /* Core */,
-				1827935426E0140600F0D0BD /* Shell */,
+				1827935C26E01AF000F0D0BD /* Shared */,
+				1827935E26E01B2300F0D0BD /* EnterName */,
 			);
 			productName = ReduxApp;
 			productReference = 18C337A226CCFCDF006705E2 /* ReduxApp.app */;
@@ -503,9 +506,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1827935426E0140600F0D0BD /* Shell */ = {
+		1827935C26E01AF000F0D0BD /* Shared */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Shell;
+			productName = Shared;
+		};
+		1827935E26E01B2300F0D0BD /* EnterName */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = EnterName;
 		};
 		18B9E72526DFAB1A00ADB48C /* ReduxStore */ = {
 			isa = XCSwiftPackageProductDependency;

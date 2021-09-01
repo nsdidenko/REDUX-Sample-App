@@ -1,6 +1,6 @@
 import XCTest
 import Core
-import Shell
+import Shared
 
 class SplashTests: XCTestCase {
 

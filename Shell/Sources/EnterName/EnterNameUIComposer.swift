@@ -1,8 +1,10 @@
 import UIKit
+import Shared
 
-public enum EnterNameUIComposer: Storyboarded {
+public enum EnterNameUIComposer {
     public static func compose(store: Store) -> EnterNameViewController {
-        let vc = storyboarded(.onboarding, ofType: EnterNameViewController.self)
+        let vc = UIStoryboard.init(name: "EnterName", bundle: Bundle.module)
+            .instantiateViewController(withIdentifier: "\(EnterNameViewController.self)") as! EnterNameViewController
 
         let uiOperator = EnterNameUIOperator(
             store: store,
