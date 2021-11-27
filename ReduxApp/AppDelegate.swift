@@ -8,11 +8,14 @@ import Paywall
 class AppDelegate: UIResponder {
     var window: UIWindow?
 
-    private let store: Store
+    private let store: Core.Store<AppState, Action>
     private let navigationController = UINavigationController()
 
     override init() {
-        store = Store()
+        store = Store(
+            state: .init(),
+            differ: { $0.diff(from: $1) },
+            reducer: { $0.reduce($1) })
 
         super.init()
         setupOperators()

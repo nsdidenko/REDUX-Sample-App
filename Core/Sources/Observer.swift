@@ -1,9 +1,9 @@
 import Foundation
 
-public class Observer: Hashable {
-    public typealias Process = (AppState) -> Status
+public class Observer<State>: Hashable {
+    public typealias Process = (State) -> Status
 
-    public static func == (lhs: Observer, rhs: Observer) -> Bool {
+    public static func == (lhs: Observer<State>, rhs: Observer<State>) -> Bool {
         ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
     }
 

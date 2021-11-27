@@ -1,26 +1,34 @@
 import Foundation
 
-public final class Store {
-    public init() {}
+public final class Store<State, Action> {
+    public typealias Differ = (State, State) -> [String]
+    public typealias Reducer = (inout State, Action) -> Void
     
-    public private(set) var state = AppState() {
-        didSet { changed = state.diff(from: oldValue) }
+    public private(set) var state: State {
+        didSet { changed = differ(state, oldValue) }
     }
     
     private let queue = DispatchQueue(label: "Store queue", qos: .userInitiated)
-    
-    private var observers: Set<Observer> = []
+    private let differ: Differ
+    private let reducer: Reducer
+    private var observers: Set<Observer<State>> = []
     private var changed = [String]()
+    
+    public init(state: State, differ: @escaping Differ, reducer: @escaping Reducer) {
+        self.state = state
+        self.differ = differ
+        self.reducer = reducer
+    }
 
     public func dispatch(action: Action) {
         queue.async {
-            self.state.reduce(action)
+            self.reducer(&self.state, action)
             self.notifyAll(after: action)
             self.changed = []
         }
     }
 
-    public func subscribe(observer: Observer) {
+    public func subscribe(observer: Observer<State>) {
         queue.async {
             self.observers.insert(observer)
             self.notify(observer)
@@ -32,7 +40,7 @@ public final class Store {
         printInfo(after: action, notified: notified)
     }
     
-    private func notifyExact(_ observer: Observer) -> String? {
+    private func notifyExact(_ observer: Observer<State>) -> String? {
         if needToNotify(observer: observer) {
             notify(observer)
             return observer.id
@@ -41,7 +49,7 @@ public final class Store {
         return nil
     }
 
-    private func notify(_ observer: Observer) {
+    private func notify(_ observer: Observer<State>) {
         let state = self.state
         observer.queue.async {
             let status = observer.process(state)
@@ -56,7 +64,7 @@ public final class Store {
 }
 
 private extension Store {
-    func needToNotify(observer: Observer) -> Bool {
+    func needToNotify(observer: Observer<State>) -> Bool {
         if observer.ids.isEmpty {
             return true
         } else {

@@ -1,6 +1,6 @@
 
 // Кодогенерация
-extension AppState {
+public extension AppState {
     func diff(from previous: AppState) -> [String] {
         var ids = [String]()
         
