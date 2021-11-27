@@ -5,6 +5,6 @@ public protocol Identifiable {
 
 public extension Identifiable {
     static var id: String {
-        String(describing: type(of: self))
+        String(describing: type(of: self)).replacingOccurrences(of: ".Type", with: "")
     }
 }

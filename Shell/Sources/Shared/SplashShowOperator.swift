@@ -13,7 +13,7 @@ public final class SplashShowOperator {
     private var isLaunchCompleted = false
 
     public var asObserver: Observer {
-        .init(ids: [Flow.id]) {
+        .init(id: typename(Self.self), ids: [Flow.id]) {
             self.process($0)
             return .active
         }

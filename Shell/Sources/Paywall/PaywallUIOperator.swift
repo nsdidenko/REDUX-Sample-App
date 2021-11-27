@@ -16,7 +16,7 @@ public struct PaywallUIOperator {
     }
 
     public var asObserver: Observer {
-        .init(ids: [User.id, PaywallsLoadingStatus.id, AllPaywalls.id]) {
+        .init(id: typename(Self.self), ids: [User.id, PaywallsLoadingStatus.id, AllPaywalls.id]) {
             self.process($0)
             return .active
         }

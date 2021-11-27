@@ -16,11 +16,13 @@ public class Observer: Hashable {
         case dead
     }
 
+    let id: String
     let queue: DispatchQueue
     let process: Process
     let ids: [String]
 
-    public init(queue: DispatchQueue = .main, ids: [String], process: @escaping Process) {
+    public init(id: String, queue: DispatchQueue = .main, ids: [String], process: @escaping Process) {
+        self.id = id
         self.queue = queue
         self.ids = ids
         self.process = process

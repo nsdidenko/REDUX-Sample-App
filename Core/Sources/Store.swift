@@ -13,25 +13,32 @@ public final class Store {
     private var changed = [String]()
 
     public func dispatch(action: Action) {
-        queue.sync {
-            state.reduce(action)
-            print("[Store]\nAction: \(action)\nChanged: \(changed)\n")
-            self.observers.forEach(self.notifyExact)
-            changed = []
+        queue.async {
+            self.state.reduce(action)
+            self.notifyAll(after: action)
+            self.changed = []
         }
     }
 
     public func subscribe(observer: Observer) {
-        queue.sync {
+        queue.async {
             self.observers.insert(observer)
             self.notify(observer)
         }
     }
     
-    private func notifyExact(_ observer: Observer) {
-        for id in observer.ids where changed.contains(id) {
+    private func notifyAll(after action: Action) {
+        let notified = observers.compactMap { notifyExact($0) ?? nil }
+        printInfo(after: action, notified: notified)
+    }
+    
+    private func notifyExact(_ observer: Observer) -> String? {
+        if needToNotify(observer: observer) {
             notify(observer)
+            return observer.id
         }
+        
+        return nil
     }
 
     private func notify(_ observer: Observer) {
@@ -45,5 +52,37 @@ public final class Store {
                 }
             }
         }
+    }
+}
+
+private extension Store {
+    func needToNotify(observer: Observer) -> Bool {
+        if observer.ids.isEmpty {
+            return true
+        } else {
+            for id in observer.ids where changed.contains(id) {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    func printInfo(after action: Action, notified: [String]) {
+        let info = """
+        
+        - Action   : \(action)
+        - Changed  : \(changed)
+        - Notified : \(notified)
+        
+        """.withoutBrackets
+        
+        print("---------------[Store]---------------\n".appending(info))
+    }
+}
+
+extension String {
+    var withoutBrackets: String {
+        replacingOccurrences(of: "[", with: "").replacingOccurrences(of: "]", with: "")
     }
 }

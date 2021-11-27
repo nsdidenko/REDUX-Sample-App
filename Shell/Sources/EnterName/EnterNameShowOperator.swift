@@ -1,5 +1,6 @@
 import UIKit
 import Core
+import Shared
 
 public final class EnterNameShowOperator {
     private let store: Store
@@ -13,7 +14,7 @@ public final class EnterNameShowOperator {
     private var isSplashCompleted = false
 
     public var asObserver: Observer {
-        .init(ids: [Flow.id]) {
+        .init(id: typename(Self.self), ids: [Flow.id]) {
             self.process($0)
         }
     }

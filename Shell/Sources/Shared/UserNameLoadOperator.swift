@@ -15,7 +15,7 @@ public final class UserNameLoadOperator {
     private var needToProcess = true
 
     public var asObserver: Observer {
-        .init(ids: [User.id]) {
+        .init(id: typename(Self.self), ids: [User.id]) {
             self.process($0)
             return .dead
         }
