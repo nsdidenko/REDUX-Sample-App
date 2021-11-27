@@ -1,4 +1,5 @@
 import UIKit
+import Core
 
 public enum PaywallUIComposer {
     public static func compose(store: Store) -> PaywallViewController {

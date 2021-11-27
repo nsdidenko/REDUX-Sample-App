@@ -1,5 +1,6 @@
 import UIKit
 import Shared
+import Core
 
 public enum EnterNameUIComposer {
     public static func compose(store: Store) -> EnterNameViewController {

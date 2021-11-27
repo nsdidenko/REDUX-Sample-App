@@ -15,13 +15,13 @@ public final class UserNameLoadOperator {
     private var needToProcess = true
 
     public var asObserver: Observer {
-        .init {
-            self.process($0.user)
+        .init(ids: [User.id]) {
+            self.process($0)
             return .dead
         }
     }
 
-    private func process(_ state: User) {
+    private func process(_ state: AppState) {
         guard needToProcess else { return }
         needToProcess = false
 

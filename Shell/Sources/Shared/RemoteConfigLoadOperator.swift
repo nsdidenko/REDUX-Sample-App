@@ -15,13 +15,13 @@ public final class RemoteConfigLoadOperator {
     }
 
     public var asObserver: Observer {
-        .init {
-            self.process($0.remoteConfigState)
+        .init(ids: []) {
+            self.process($0)
             return .dead
         }
     }
 
-    private func process(_ state: RemoteConfigState) {
+    private func process(_ state: AppState) {
         guard needToProcess else { return }
         needToProcess = false
 

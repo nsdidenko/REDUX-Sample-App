@@ -13,12 +13,16 @@ public final class PaywallShowOperator {
     private var isEnterNameCompleted = false
 
     public var asObserver: Observer {
-        .init { self.process($0.flow) }
+        .init(ids: [Flow.id]) {
+            self.process($0)
+        }
     }
 
-    private func process(_ state: Flow) -> Observer.Status {
-        guard state.isEnterNameCompleted != isEnterNameCompleted else { return .active }
-        isEnterNameCompleted = state.isEnterNameCompleted
+    private func process(_ state: AppState) -> Observer.Status {
+        let isEnterNameCompleted = state.flow.isEnterNameCompleted
+        
+        guard self.isEnterNameCompleted != isEnterNameCompleted else { return .active }
+        self.isEnterNameCompleted = isEnterNameCompleted
 
         if isEnterNameCompleted {
             let vc = PaywallUIComposer.compose(store: store)

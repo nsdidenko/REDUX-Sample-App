@@ -1,9 +1,9 @@
 import Foundation
 
-public class Observer<State>: Hashable {
-    public typealias Process = (State) -> Status
+public class Observer: Hashable {
+    public typealias Process = (AppState) -> Status
 
-    public static func == (lhs: Observer<State>, rhs: Observer<State>) -> Bool {
+    public static func == (lhs: Observer, rhs: Observer) -> Bool {
         ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
     }
 
@@ -18,9 +18,11 @@ public class Observer<State>: Hashable {
 
     let queue: DispatchQueue
     let process: Process
+    let ids: [String]
 
-    public init(queue: DispatchQueue = .main, process: @escaping Process) {
+    public init(queue: DispatchQueue = .main, ids: [String], process: @escaping Process) {
         self.queue = queue
+        self.ids = ids
         self.process = process
     }
 }

@@ -20,15 +20,17 @@ public final class UserNameCacheOperator {
     }
 
     public var asObserver: Observer {
-        .init {
-            self.process($0.user)
+        .init(ids: [User.id]) {
+            self.process($0)
             return .active
         }
     }
 
-    private func process(_ state: User) {
-        guard name != state.name else { return }
-        name = state.name
+    private func process(_ state: AppState) {
+        let name = state.user.name
+        
+        guard self.name != name else { return }
+        self.name = name
 
         name.isEmpty ? remove() : cache(name)
     }

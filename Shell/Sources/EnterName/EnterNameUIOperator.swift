@@ -14,21 +14,23 @@ public struct EnterNameUIOperator {
     }
 
     public var asObserver: Observer {
-        .init {
-            self.process($0.nameInput)
+        .init(ids: [NameInput.id]) {
+            self.process($0)
             return .active
         }
     }
 
     // MARK: - Private
 
-    private func process(_ state: NameInput) {
+    private func process(_ state: AppState) {
+        let nameInput = state.nameInput
+        
         let props = Props(
-            invalidCaption: .init(state: map(state.validity)),
+            invalidCaption: .init(state: map(nameInput.validity)),
             field: .init(
-                text: state.value,
+                text: nameInput.value,
                 updated: .init { store.dispatch(action: NameInputValueChanged(with: $0)) }),
-            button: .init(title: "Next", state: map(state)),
+            button: .init(title: "Next", state: map(nameInput)),
             didAppear: .init { store.dispatch(action: DidStartEnterName()) })
 
         render.perform(with: props)

@@ -12,10 +12,7 @@ class AppDelegate: UIResponder {
     private let navigationController = UINavigationController()
 
     override init() {
-        store = Store(initial: .init()) {
-            print("Action -> \($1)")
-            $0.reduce($1)
-        }
+        store = Store()
 
         super.init()
         setupOperators()

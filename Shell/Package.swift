@@ -12,12 +12,11 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "Core"),
-        .package(name: "ReduxStore", path: "../Store")
     ],
     targets: [
-        .target(name: "Shared", dependencies: ["Core", "ReduxStore"]),
-        .target(name: "EnterName", dependencies: ["Core", "ReduxStore", "Shared"]),
-        .target(name: "Paywall", dependencies: ["Core", "ReduxStore", "Shared"]),
+        .target(name: "Shared", dependencies: ["Core"]),
+        .target(name: "EnterName", dependencies: ["Core", "Shared"]),
+        .target(name: "Paywall", dependencies: ["Core", "Shared"]),
         .testTarget(name: "ShellTests", dependencies: ["Shared"])
     ]
 )

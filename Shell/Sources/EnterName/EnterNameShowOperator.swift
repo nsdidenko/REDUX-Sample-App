@@ -13,12 +13,16 @@ public final class EnterNameShowOperator {
     private var isSplashCompleted = false
 
     public var asObserver: Observer {
-        .init { self.process($0.flow) }
+        .init(ids: [Flow.id]) {
+            self.process($0)
+        }
     }
 
-    private func process(_ state: Flow) -> Observer.Status {
-        guard state.isSplashCompleted != isSplashCompleted else { return .active }
-        isSplashCompleted = state.isSplashCompleted
+    private func process(_ state: AppState) -> Observer.Status {
+        let isSplashCompleted = state.flow.isSplashCompleted
+        
+        guard self.isSplashCompleted != isSplashCompleted else { return .active }
+        self.isSplashCompleted = isSplashCompleted
 
         if isSplashCompleted, let window = UIApplication.shared.windows.first {
             let vc = EnterNameUIComposer.compose(store: store)
@@ -26,6 +30,7 @@ public final class EnterNameShowOperator {
             window.rootViewController = navigationController
             UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: nil)
             return .dead
+            
         } else {
             return .active
         }

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct NameInput: Equatable, Codable {
+public struct NameInput: Equatable, Codable, Identifiable {
     public enum Validity: Int, Codable {
         case empty, valid, invalid
     }
