@@ -6,32 +6,21 @@ public struct PaywallUIOperator {
     public typealias Props = PaywallViewController.Props
 
     let store: Store
-    let render: CommandWith<Props>
     let paywallId: String
 
-    public init(store: Store, render: CommandWith<Props>, paywallId: String) {
+    public init(store: Store, paywallId: String) {
         self.store = store
-        self.render = render
         self.paywallId = paywallId
     }
 
-    public var asObserver: Observer {
-        .init(id: typename(Self.self), ids: [User.id, PaywallsLoadingStatus.id, AllPaywalls.id]) {
-            self.process($0)
-            return .active
-        }
-    }
-
-    // MARK: - Private
-
-    private func process(_ state: AppState) {
-        let props = Props(
+    func process(_ state: AppState) -> Props {
+        Props(
             title: "\(state.user.name), we have a special offer for you!",
             state: map(state.allPaywalls, loadingStatus: state.paywallsLoadingStatus),
             button: .init(title: "Purchase", state: map(state.paywallsLoadingStatus)))
-
-        render.perform(with: props)
     }
+    
+    // MARK: - Private
 
     private func paywall(from allPaywalls: AllPaywalls) -> Paywall? {
         allPaywalls.paywalls.filter({ $0.id == paywallId }).first
