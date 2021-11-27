@@ -24,7 +24,6 @@ public final class Store<State, Action> {
         queue.async {
             self.reducer(&self.state, action)
             self.notifyAll(after: action)
-            self.changed = []
         }
     }
 
@@ -34,13 +33,16 @@ public final class Store<State, Action> {
             self.notify(observer)
         }
     }
-    
-    private func notifyAll(after action: Action) {
+}
+
+private extension Store {
+    func notifyAll(after action: Action) {
         let notified = observers.compactMap { notifyExact($0) ?? nil }
         printInfo(after: action, notified: notified)
+        self.changed = []
     }
     
-    private func notifyExact(_ observer: Observer<State>) -> String? {
+    func notifyExact(_ observer: Observer<State>) -> String? {
         if needToNotify(observer: observer) {
             notify(observer)
             return observer.id
@@ -49,7 +51,7 @@ public final class Store<State, Action> {
         return nil
     }
 
-    private func notify(_ observer: Observer<State>) {
+    func notify(_ observer: Observer<State>) {
         let state = self.state
         observer.queue.async {
             let status = observer.process(state)
@@ -61,9 +63,7 @@ public final class Store<State, Action> {
             }
         }
     }
-}
-
-private extension Store {
+    
     func needToNotify(observer: Observer<State>) -> Bool {
         if observer.ids.isEmpty {
             return true
