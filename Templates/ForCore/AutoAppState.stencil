@@ -1,0 +1,15 @@
+// swiftlint:disable all
+
+public struct AppState {
+{% for type in types.implementing.AutoAppState %}
+    public private(set) var {{ type.name|lowerFirstLetter }} = {{ type.name }}()
+{% endfor %}
+
+    public mutating func reduce(_ action: Action) {
+    {% for type in types.implementing.AutoAppState %}
+        {{ type.name|lowerFirstLetter }}.reduce(action)
+    {% endfor %}
+    }
+
+    public init() {}
+}

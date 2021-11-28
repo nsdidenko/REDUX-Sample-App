@@ -1,5 +1,5 @@
 
-public struct Flow: Equatable, Codable, Identifiable {
+public struct Flow: Equatable, Codable, Identifiable, AutoAppState {
     public private(set) var isLaunchCompleted = false
     public private(set) var isSplashCompleted = false
     public private(set) var isEnterNameCompleted = false

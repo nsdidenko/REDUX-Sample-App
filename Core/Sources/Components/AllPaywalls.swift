@@ -1,5 +1,5 @@
 
-public struct AllPaywalls: Equatable, Codable, Identifiable {
+public struct AllPaywalls: Equatable, Codable, Identifiable, AutoAppState {
     public private(set) var paywalls = [Paywall]()
 
     mutating func reduce(_ action: Action) {

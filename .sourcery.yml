@@ -1,0 +1,8 @@
+configurations:
+
+  # Core
+  - sources:
+    - Core
+    templates:
+    - Templates/ForCore
+    output: Core/Sources/Generated
