@@ -1,1 +1,15 @@
 // swiftlint:disable all
+
+public extension AppState {
+    func diff(from previous: Self) -> [String] {
+        var ids = [String]()
+
+        {% for type in types.implementing.StateIdentifiable %}
+        if {{ type.name|lowerFirstLetter }} != previous.{{ type.name|lowerFirstLetter }} {
+            ids.append({{ type.name }}.id)
+        }
+
+        {% endfor %}
+        return ids
+    }
+}
