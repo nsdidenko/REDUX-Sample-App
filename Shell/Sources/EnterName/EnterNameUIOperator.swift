@@ -14,7 +14,7 @@ public struct EnterNameUIOperator {
     }
 
     public var asObserver: Observer {
-        .init(id: typename(Self.self), ids: [NameInput.id]) {
+        .init(id: typename(self), ids: NameInput.id) {
             self.process($0)
             return .active
         }

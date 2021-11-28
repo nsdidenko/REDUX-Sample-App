@@ -1,4 +1,4 @@
 
 public func typename(_ any: Any) -> String {
-    String(describing: any)
+    String(describing: type(of: any))
 }

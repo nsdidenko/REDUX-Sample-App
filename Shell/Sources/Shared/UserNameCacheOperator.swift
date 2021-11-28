@@ -20,7 +20,7 @@ public final class UserNameCacheOperator {
     }
 
     public var asObserver: Observer {
-        .init(id: typename(Self.self), ids: [User.id]) {
+        .init(id: typename(self), ids: User.id) {
             self.process($0)
             return .active
         }

@@ -14,7 +14,7 @@ public final class PaywallShowOperator {
     private var isEnterNameCompleted = false
 
     public var asObserver: Observer {
-        .init(id: typename(Self.self), ids: [Flow.id]) {
+        .init(id: typename(self), ids: Flow.id) {
             self.process($0)
         }
     }

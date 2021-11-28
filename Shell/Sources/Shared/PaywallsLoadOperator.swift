@@ -15,7 +15,7 @@ public final class PaywallsLoadOperator {
     private var status: PaywallsLoadingStatus?
 
     public var asObserver: Observer {
-        .init(id: typename(Self.self), ids: [PaywallsLoadingStatus.id]) {
+        .init(id: typename(self), ids: PaywallsLoadingStatus.id) {
             self.process($0)
         }
     }

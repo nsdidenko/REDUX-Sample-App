@@ -15,7 +15,7 @@ public final class RemoteConfigLoadOperator {
     }
 
     public var asObserver: Observer {
-        .init(id: typename(Self.self), ids: []) {
+        .init(id: typename(self)) {
             self.process($0)
             return .dead
         }

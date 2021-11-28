@@ -11,7 +11,7 @@ public enum PaywallUIComposer {
         
         let observer = Observer(
             id: typename(PaywallUIOperator.self),
-            ids: [User.id, PaywallsLoadingStatus.id, AllPaywalls.id])
+            ids: User.id, PaywallsLoadingStatus.id, AllPaywalls.id)
         { [weak vc] state in
             guard let vc = vc else { return .dead }
             
