@@ -1,5 +1,5 @@
 
-public struct RemoteConfigState: Equatable, Codable, Identifiable, AutoAppState {
+public struct RemoteConfigState: Equatable, Codable, StateIdentifiable, AutoAppState {
     public private(set) var config: RemoteConfig?
 
     mutating func reduce(_ action: Action) {

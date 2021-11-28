@@ -1,9 +1,9 @@
 
-public protocol Identifiable {
+public protocol StateIdentifiable {
     static var id: String { get }
 }
 
-public extension Identifiable {
+public extension StateIdentifiable {
     static var id: String {
         String(describing: type(of: self)).replacingOccurrences(of: ".Type", with: "")
     }

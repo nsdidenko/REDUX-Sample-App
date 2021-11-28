@@ -1,5 +1,5 @@
 
-public struct User: Equatable, Codable, Identifiable, AutoAppState {
+public struct User: Equatable, Codable, StateIdentifiable, AutoAppState {
     public private(set) var name = ""
 
     public mutating func reduce(_ action: Action) {

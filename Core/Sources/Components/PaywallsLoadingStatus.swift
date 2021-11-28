@@ -1,5 +1,5 @@
 
-public enum PaywallsLoadingStatus: Int, Equatable, Codable, Identifiable, AutoAppState {
+public enum PaywallsLoadingStatus: Equatable, Codable, StateIdentifiable, AutoAppState {
     case idle, loading, ready
     // TODO: - error
 
