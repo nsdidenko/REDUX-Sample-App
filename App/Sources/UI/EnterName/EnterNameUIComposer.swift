@@ -1,5 +1,4 @@
 import UIKit
-import Shared
 import Core
 
 public enum EnterNameUIComposer {

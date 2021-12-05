@@ -1,8 +1,6 @@
 import UIKit
 import Core
-import EnterName
-import Shared
-import Paywall
+import UI
 
 @main
 class AppDelegate: UIResponder {

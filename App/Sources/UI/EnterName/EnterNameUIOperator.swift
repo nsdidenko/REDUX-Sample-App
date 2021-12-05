@@ -1,6 +1,5 @@
 import UIKit
 import Core
-import Shared
 
 public struct EnterNameUIOperator {
     public typealias Props = EnterNameViewController.Props

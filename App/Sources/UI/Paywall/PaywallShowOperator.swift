@@ -1,6 +1,5 @@
 import UIKit
 import Core
-import Shared
 
 public final class PaywallShowOperator {
     private let store: Store

@@ -1,5 +1,4 @@
 import UIKit
-import Shared
 
 public extension PaywallViewController {
     struct Props: Equatable {

@@ -11,13 +11,11 @@
 		1818F65A26D666BE00023C15 /* UserNameLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65926D666BE00023C15 /* UserNameLoader.swift */; };
 		1818F65C26D666D900023C15 /* RemoteConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */; };
 		1818F66026D674F300023C15 /* UserDefaultsNameCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */; };
-		1827935D26E01AF000F0D0BD /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = 1827935C26E01AF000F0D0BD /* Shared */; };
-		1827935F26E01B2300F0D0BD /* EnterName in Frameworks */ = {isa = PBXBuildFile; productRef = 1827935E26E01B2300F0D0BD /* EnterName */; };
-		1827936126E01D8600F0D0BD /* Paywall in Frameworks */ = {isa = PBXBuildFile; productRef = 1827936026E01D8600F0D0BD /* Paywall */; };
-		18B9E72B26DFADAE00ADB48C /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 18B9E72A26DFADAE00ADB48C /* Core */; };
 		18C337A626CCFCDF006705E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C337A526CCFCDF006705E2 /* AppDelegate.swift */; };
 		18C337AF26CCFCE2006705E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C337AE26CCFCE2006705E2 /* Assets.xcassets */; };
 		18C337B226CCFCE2006705E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */; };
+		C32BBE3C275CF0C9004337B0 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = C32BBE3B275CF0C9004337B0 /* Core */; };
+		C32BBE3E275CF0CB004337B0 /* UI in Frameworks */ = {isa = PBXBuildFile; productRef = C32BBE3D275CF0CB004337B0 /* UI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +33,6 @@
 		1818F65926D666BE00023C15 /* UserNameLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameLoader.swift; sourceTree = "<group>"; };
 		1818F65B26D666D900023C15 /* RemoteConfigLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigLoader.swift; sourceTree = "<group>"; };
 		1818F65F26D674F300023C15 /* UserDefaultsNameCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsNameCacher.swift; sourceTree = "<group>"; };
-		1827935326E0128600F0D0BD /* Shell */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shell; sourceTree = "<group>"; };
-		18B9E72926DFACFF00ADB48C /* Core */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Core; sourceTree = "<group>"; };
 		18C337A226CCFCDF006705E2 /* ReduxApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C337A526CCFCDF006705E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18C337AE26CCFCE2006705E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +41,7 @@
 		18C337B826CCFCE2006705E2 /* ReduxAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C337BE26CCFCE2006705E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3208EBC27526F6700170CAD /* Helper.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Helper.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		C32BBE39275CE979004337B0 /* App */ = {isa = PBXFileReference; lastKnownFileType = folder; path = App; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1827935F26E01B2300F0D0BD /* EnterName in Frameworks */,
-				1827936126E01D8600F0D0BD /* Paywall in Frameworks */,
-				1827935D26E01AF000F0D0BD /* Shared in Frameworks */,
-				18B9E72B26DFADAE00ADB48C /* Core in Frameworks */,
+				C32BBE3E275CF0CB004337B0 /* UI in Frameworks */,
+				C32BBE3C275CF0C9004337B0 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,8 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				C3208EBC27526F6700170CAD /* Helper.playground */,
-				18B9E72926DFACFF00ADB48C /* Core */,
-				1827935326E0128600F0D0BD /* Shell */,
+				C32BBE39275CE979004337B0 /* App */,
 				18C337A426CCFCDF006705E2 /* ReduxApp */,
 				18C337BB26CCFCE2006705E2 /* ReduxAppTests */,
 				18C337A326CCFCDF006705E2 /* Products */,
@@ -138,10 +132,8 @@
 			);
 			name = ReduxApp;
 			packageProductDependencies = (
-				18B9E72A26DFADAE00ADB48C /* Core */,
-				1827935C26E01AF000F0D0BD /* Shared */,
-				1827935E26E01B2300F0D0BD /* EnterName */,
-				1827936026E01D8600F0D0BD /* Paywall */,
+				C32BBE3B275CF0C9004337B0 /* Core */,
+				C32BBE3D275CF0CB004337B0 /* UI */,
 			);
 			productName = ReduxApp;
 			productReference = 18C337A226CCFCDF006705E2 /* ReduxApp.app */;
@@ -500,21 +492,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1827935C26E01AF000F0D0BD /* Shared */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Shared;
-		};
-		1827935E26E01B2300F0D0BD /* EnterName */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = EnterName;
-		};
-		1827936026E01D8600F0D0BD /* Paywall */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Paywall;
-		};
-		18B9E72A26DFADAE00ADB48C /* Core */ = {
+		C32BBE3B275CF0C9004337B0 /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Core;
+		};
+		C32BBE3D275CF0CB004337B0 /* UI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

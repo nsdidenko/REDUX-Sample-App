@@ -2,7 +2,7 @@ configurations:
 
   # Core
   - sources:
-    - Core
+    - App
     templates:
     - Templates/ForCore
-    output: Core/Sources/Generated
+    output: App/Sources/Core/Generated

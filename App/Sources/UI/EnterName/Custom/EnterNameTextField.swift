@@ -1,5 +1,4 @@
 import UIKit
-import Shared
 
 public extension EnterNameTextField {
     struct Props {
