@@ -1,8 +1,11 @@
 import UIKit
 import Core
+import Injected
 
 public struct PaywallUIOperator {
     public typealias Props = PaywallViewController.Props
+    
+    @Injected(\.analytics) var analytics
 
     let store: Store
     let paywallId: String
@@ -44,7 +47,10 @@ public struct PaywallUIOperator {
     private func map(_ inAppProduct: InAppProduct, index: Int, selected: Bool) -> PlanButton.Props {
         .init(title: "\(inAppProduct.localizedPrice())",
               state: selected ? .active : .inactive,
-              action: .init { store.dispatch(action: DidSelectInAppProduct(at: index, in: paywallId)) })
+              action: .init {
+            store.dispatch(action: DidSelectInAppProduct(at: index, in: paywallId))
+            analytics.track("Choose option \(index)")
+        })
     }
 
     private func map(_ loadingStatus: PaywallsLoadingStatus) -> NextButton.Props.State {

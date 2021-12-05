@@ -16,6 +16,7 @@
 		18C337B226CCFCE2006705E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C337B026CCFCE2006705E2 /* LaunchScreen.storyboard */; };
 		C32BBE3C275CF0C9004337B0 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = C32BBE3B275CF0C9004337B0 /* Core */; };
 		C32BBE3E275CF0CB004337B0 /* UI in Frameworks */ = {isa = PBXBuildFile; productRef = C32BBE3D275CF0CB004337B0 /* UI */; };
+		C32BBE41275CFC62004337B0 /* Injected in Frameworks */ = {isa = PBXBuildFile; productRef = C32BBE40275CFC62004337B0 /* Injected */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		18C337BE26CCFCE2006705E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3208EBC27526F6700170CAD /* Helper.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Helper.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C32BBE39275CE979004337B0 /* App */ = {isa = PBXFileReference; lastKnownFileType = folder; path = App; sourceTree = "<group>"; };
+		C32BBE3F275CFC07004337B0 /* Foundation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Foundation; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32BBE3E275CF0CB004337B0 /* UI in Frameworks */,
+				C32BBE41275CFC62004337B0 /* Injected in Frameworks */,
 				C32BBE3C275CF0C9004337B0 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +79,7 @@
 			children = (
 				C3208EBC27526F6700170CAD /* Helper.playground */,
 				C32BBE39275CE979004337B0 /* App */,
+				C32BBE3F275CFC07004337B0 /* Foundation */,
 				18C337A426CCFCDF006705E2 /* ReduxApp */,
 				18C337BB26CCFCE2006705E2 /* ReduxAppTests */,
 				18C337A326CCFCDF006705E2 /* Products */,
@@ -134,6 +138,7 @@
 			packageProductDependencies = (
 				C32BBE3B275CF0C9004337B0 /* Core */,
 				C32BBE3D275CF0CB004337B0 /* UI */,
+				C32BBE40275CFC62004337B0 /* Injected */,
 			);
 			productName = ReduxApp;
 			productReference = 18C337A226CCFCDF006705E2 /* ReduxApp.app */;
@@ -499,6 +504,10 @@
 		C32BBE3D275CF0CB004337B0 /* UI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UI;
+		};
+		C32BBE40275CFC62004337B0 /* Injected */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Injected;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

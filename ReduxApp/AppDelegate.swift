@@ -1,10 +1,13 @@
 import UIKit
 import Core
 import UI
+import Injected
 
 @main
 class AppDelegate: UIResponder {
     var window: UIWindow?
+    
+    @Injected(\.analytics) var analytics
 
     private let store: Core.Store<AppState, Action>
     private let navigationController = UINavigationController()
@@ -23,6 +26,7 @@ class AppDelegate: UIResponder {
 extension AppDelegate: UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         store.dispatch(action: DidFinishLaunch())
+        analytics.track("DidFinishLaunch")
         return true
     }
 }
