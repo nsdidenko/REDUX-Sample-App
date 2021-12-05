@@ -1,5 +1,6 @@
 import Foundation
 import Core
+import Helpers
 
 public final class UserNameCacheOperator {
     public typealias Cache = (String) -> Void

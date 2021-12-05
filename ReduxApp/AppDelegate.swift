@@ -2,6 +2,7 @@ import UIKit
 import Core
 import UI
 import Injected
+import ReduxStore
 
 @main
 class AppDelegate: UIResponder {
@@ -9,12 +10,12 @@ class AppDelegate: UIResponder {
     
     @Injected(\.analytics) var analytics
 
-    private let store: Core.Store<AppState, Action>
+    private let store: ReduxStore.Store<AppState, Action>
     private let navigationController = UINavigationController()
 
     override init() {
         store = Store(
-            state: .init(),
+            state: .init(),
             differ: { $0.diff(from: $1) },
             reducer: { $0.reduce($1) })
 

@@ -4,9 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "App",
-    platforms: [
-        .iOS(.v14)
-    ],
+    platforms: [ .iOS(.v14) ],
     products: [
         .library(name: "Core", targets: ["Core"]),
         .library(name: "UI", targets: ["UI"]),
@@ -16,6 +14,12 @@ let package = Package(
     ],
     targets: [
         .target(name: "Core", dependencies: []),
-        .target(name: "UI", dependencies: [ "Core", .product(name: "Injected", package: "Foundation") ])
+        .target(name: "UI", dependencies: [
+            "Core",
+            .product(name: "Injected", package: "Foundation"),
+            .product(name: "Command", package: "Foundation"),
+            .product(name: "Helpers", package: "Foundation"),
+            .product(name: "ReduxStore", package: "Foundation")
+        ])
     ]
 )

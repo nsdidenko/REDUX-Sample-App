@@ -17,6 +17,7 @@
 		C32BBE3C275CF0C9004337B0 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = C32BBE3B275CF0C9004337B0 /* Core */; };
 		C32BBE3E275CF0CB004337B0 /* UI in Frameworks */ = {isa = PBXBuildFile; productRef = C32BBE3D275CF0CB004337B0 /* UI */; };
 		C32BBE41275CFC62004337B0 /* Injected in Frameworks */ = {isa = PBXBuildFile; productRef = C32BBE40275CFC62004337B0 /* Injected */; };
+		C32BBE45275D08F9004337B0 /* Command in Frameworks */ = {isa = PBXBuildFile; productRef = C32BBE44275D08F9004337B0 /* Command */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 			files = (
 				C32BBE3E275CF0CB004337B0 /* UI in Frameworks */,
 				C32BBE41275CFC62004337B0 /* Injected in Frameworks */,
+				C32BBE45275D08F9004337B0 /* Command in Frameworks */,
 				C32BBE3C275CF0C9004337B0 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +141,7 @@
 				C32BBE3B275CF0C9004337B0 /* Core */,
 				C32BBE3D275CF0CB004337B0 /* UI */,
 				C32BBE40275CFC62004337B0 /* Injected */,
+				C32BBE44275D08F9004337B0 /* Command */,
 			);
 			productName = ReduxApp;
 			productReference = 18C337A226CCFCDF006705E2 /* ReduxApp.app */;
@@ -508,6 +511,10 @@
 		C32BBE40275CFC62004337B0 /* Injected */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Injected;
+		};
+		C32BBE44275D08F9004337B0 /* Command */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Command;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

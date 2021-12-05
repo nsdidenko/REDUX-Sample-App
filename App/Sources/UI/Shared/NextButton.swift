@@ -1,4 +1,5 @@
 import UIKit
+import Command
 
 public extension NextButton {
     struct Props: Equatable {

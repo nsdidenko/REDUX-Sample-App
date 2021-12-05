@@ -1,5 +1,6 @@
 import UIKit
 import Core
+import Helpers
 
 public final class EnterNameShowOperator {
     private let store: Store
