@@ -13,14 +13,7 @@ public final class SplashShowOperator {
 
     private var isLaunchCompleted = false
 
-    public var asObserver: Observer {
-        .init(id: typename(self), ids: Flow.id) {
-            self.process($0)
-            return .active
-        }
-    }
-
-    private func process(_ state: AppState) {
+    public func process(_ state: AppState) {
         let isLaunchCompleted = state.flow.isLaunchCompleted
         
         guard self.isLaunchCompleted != isLaunchCompleted else { return }

@@ -21,8 +21,8 @@ public class Observer<State>: Hashable {
     let process: Process
     let ids: [String]
 
-    public init(id: String, queue: DispatchQueue = .main, ids: String..., process: @escaping Process) {
-        self.id = id
+    public init(_ operator: Any, queue: DispatchQueue = .main, ids: [String] = [], process: @escaping Process) {
+        self.id = String(describing: type(of: `operator`))
         self.queue = queue
         self.ids = ids
         self.process = process

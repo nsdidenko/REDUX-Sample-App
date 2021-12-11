@@ -10,23 +10,14 @@ class AppDelegate: UIResponder {
     
     @Injected(\.analytics) var analytics
 
-    private let store: ReduxStore.Store<AppState, Action>
+    private let store = Store(state: .init(), differ: { $0.diff(from: $1) }, reducer: { $0.reduce($1) })
     private let navigationController = UINavigationController()
-
-    override init() {
-        store = Store(
-            state: .init(),
-            differ: { $0.diff(from: $1) },
-            reducer: { $0.reduce($1) })
-
-        super.init()
-        setupOperators()
-    }
 }
 
 extension AppDelegate: UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        store.dispatch(action: DidFinishLaunch())
+        connectOperators()
+        store.dispatch(DidFinishLaunch())
         analytics.track("DidFinishLaunch")
         return true
     }
@@ -35,27 +26,81 @@ extension AppDelegate: UIApplicationDelegate {
 // MARK: - Private
 
 private extension AppDelegate {
-    func setupOperators() {
-        let splashShowOperator = SplashShowOperator(window: window, splash: { SplashViewController() })
-        store.subscribe(observer: splashShowOperator.asObserver)
-
-        let remoteConfigLoadOperator = RemoteConfigLoadOperator(store: store, fetch: RemoteConfigLoader.load)
-        store.subscribe(observer: remoteConfigLoadOperator.asObserver)
-
-        let enterNameShowOperator = EnterNameShowOperator(store: store, navigationController: navigationController)
-        store.subscribe(observer: enterNameShowOperator.asObserver)
-
-        let paywallShowOperator = PaywallShowOperator(store: store, navigationController: navigationController)
-        store.subscribe(observer: paywallShowOperator.asObserver)
-
-        let paywallsLoadOperator = PaywallsLoadOperator(store: store, load: PaywallsLoader.load)
-        store.subscribe(observer: paywallsLoadOperator.asObserver)
-
-        let userNameLoadOperator = UserNameLoadOperator(store: store, load: UserNameLoader.load)
-        store.subscribe(observer: userNameLoadOperator.asObserver)
-
-        let userNameCacheOperator = UserNameCacheOperator(
+    func connectOperators() {
+        connectSplashShowOperator()
+        connectRemoteConfigLoadOperator()
+        connectEnterNameShowOperator()
+        connectPaywallShowOperator()
+        connectPaywallsLoadOperator()
+        connectUserNameLoadOperator()
+        connectUserNameCacheOperator()
+    }
+    
+    private func connectSplashShowOperator() {
+        let op = SplashShowOperator(window: window, splash: { SplashViewController() })
+        let observer = Observer(op, ids: [Flow.id]) { state in
+            op.process(state)
+            return .active
+        }
+        
+        store.subscribe(observer: observer)
+    }
+    
+    private func connectRemoteConfigLoadOperator() {
+        let op = RemoteConfigLoadOperator(store: store, fetch: RemoteConfigLoader.load)
+        let observer = Observer(op) { state in
+            op.process(state)
+            return .dead
+        }
+        
+        store.subscribe(observer: observer)
+    }
+    
+    private func connectEnterNameShowOperator() {
+        let op = EnterNameShowOperator(store: store, navigationController: navigationController)
+        let observer = Observer(op, ids: [Flow.id]) { state in
+            op.process(state)
+        }
+        
+        store.subscribe(observer: observer)
+    }
+    
+    private func connectPaywallShowOperator() {
+        let op = PaywallShowOperator(store: store, navigationController: navigationController)
+        let observer = Observer(op, ids: [Flow.id]) { state in
+            op.process(state)
+        }
+        
+        store.subscribe(observer: observer)
+    }
+    
+    private func connectPaywallsLoadOperator() {
+        let op = PaywallsLoadOperator(store: store, load: PaywallsLoader.load)
+        let observer = Observer(op, ids: [PaywallsLoadingStatus.id]) { state in
+            op.process(state)
+        }
+        
+        store.subscribe(observer: observer)
+    }
+    
+    private func connectUserNameLoadOperator() {
+        let op = UserNameLoadOperator(store: store, load: UserNameLoader.load)
+        let observer = Observer(op, ids: [User.id]) { state in
+            op.process(state)
+            return .dead
+        }
+        
+        store.subscribe(observer: observer)
+    }
+    
+    private func connectUserNameCacheOperator() {
+        let op = UserNameCacheOperator(
             store: store, cache: UserDefaultsNameCacher.cache, remove: UserDefaultsNameCacher.remove)
-        store.subscribe(observer: userNameCacheOperator.asObserver)
+        let observer = Observer(op, ids: [User.id]) { state in
+            op.process(state)
+            return .active
+        }
+        
+        store.subscribe(observer: observer)
     }
 }

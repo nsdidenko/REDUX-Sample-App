@@ -7,35 +7,24 @@ public struct EnterNameUIOperator {
     public typealias Props = EnterNameViewController.Props
 
     let store: Store
-    let render: CommandWith<Props>
 
-    public init(store: Store, render: CommandWith<Props>) {
-        self.store = store
-        self.render = render
+    var idsToObserve: [String] {
+        [NameInput.id]
     }
 
-    public var asObserver: Observer {
-        .init(id: typename(self), ids: NameInput.id) {
-            self.process($0)
-            return .active
-        }
-    }
-
-    // MARK: - Private
-
-    private func process(_ state: AppState) {
+    func process(_ state: AppState) -> Props {
         let nameInput = state.nameInput
         
-        let props = Props(
+        return Props(
             invalidCaption: .init(state: map(nameInput.validity)),
             field: .init(
                 text: nameInput.value,
-                updated: .init { store.dispatch(action: NameInputValueChanged(with: $0)) }),
+                updated: .init { store.dispatch(NameInputValueChanged(with: $0)) }),
             button: .init(title: "Next", state: map(nameInput)),
-            didAppear: .init { store.dispatch(action: DidStartEnterName()) })
-
-        render.perform(with: props)
+            didAppear: .init { store.dispatch(DidStartEnterName()) })
     }
+    
+    // MARK: - Private
 
     private func map(_ input: NameInput) -> NextButton.Props.State {
         switch input.validity {
@@ -44,7 +33,7 @@ public struct EnterNameUIOperator {
 
         case .valid:
             return .active(.init {
-                store.dispatch(action: DidSetName(input.value))
+                store.dispatch(DidSetName(input.value))
             })
         }
     }

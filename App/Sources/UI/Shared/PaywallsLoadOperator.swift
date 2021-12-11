@@ -15,13 +15,7 @@ public final class PaywallsLoadOperator {
 
     private var status: PaywallsLoadingStatus?
 
-    public var asObserver: Observer {
-        .init(id: typename(self), ids: PaywallsLoadingStatus.id) {
-            self.process($0)
-        }
-    }
-
-    private func process(_ state: AppState) -> Observer.Status {
+    public func process(_ state: AppState) -> Observer.Status {
         let status = state.paywallsLoadingStatus
         
         guard self.status != status else { return .active }
@@ -29,7 +23,7 @@ public final class PaywallsLoadOperator {
 
         if status == .loading {
             load() { [weak store] paywalls in
-                store?.dispatch(action: DidLoadPaywalls(paywalls: paywalls))
+                store?.dispatch(DidLoadPaywalls(paywalls: paywalls))
             }
             return .dead
         } else {

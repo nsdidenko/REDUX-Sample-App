@@ -13,13 +13,7 @@ public final class EnterNameShowOperator {
 
     private var isSplashCompleted = false
 
-    public var asObserver: Observer {
-        .init(id: typename(self), ids: Flow.id) {
-            self.process($0)
-        }
-    }
-
-    private func process(_ state: AppState) -> Observer.Status {
+    public func process(_ state: AppState) -> Observer.Status {
         let isSplashCompleted = state.flow.isSplashCompleted
         
         guard self.isSplashCompleted != isSplashCompleted else { return .active }

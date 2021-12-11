@@ -5,12 +5,15 @@ public enum EnterNameUIComposer {
     public static func compose(store: Store) -> EnterNameViewController {
         let vc = UIStoryboard.init(name: "EnterName", bundle: Bundle.module)
             .instantiateViewController(withIdentifier: "\(EnterNameViewController.self)") as! EnterNameViewController
+        let uiOperator = EnterNameUIOperator(store: store)
+        
+        let observer = Observer(uiOperator, ids: uiOperator.idsToObserve) { [weak vc] state in
+            guard let vc = vc else { return .dead }
+            vc.props = uiOperator.process(state)
+            return .active
+        }
 
-        let uiOperator = EnterNameUIOperator(
-            store: store,
-            render: .init { vc.props = $0 })
-
-        store.subscribe(observer: uiOperator.asObserver)
+        store.subscribe(observer: observer)
 
         return vc
     }

@@ -20,14 +20,7 @@ public final class UserNameCacheOperator {
         name = store.state.user.name
     }
 
-    public var asObserver: Observer {
-        .init(id: typename(self), ids: User.id) {
-            self.process($0)
-            return .active
-        }
-    }
-
-    private func process(_ state: AppState) {
+    public func process(_ state: AppState) {
         let name = state.user.name
         
         guard self.name != name else { return }

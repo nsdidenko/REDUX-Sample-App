@@ -15,6 +15,6 @@ let package = Package(
         .target(name: "Injected"),
         .target(name: "Command"),
         .target(name: "Helpers"),
-        .target(name: "ReduxStore")
+        .target(name: "ReduxStore", dependencies: ["Helpers"])
     ]
 )

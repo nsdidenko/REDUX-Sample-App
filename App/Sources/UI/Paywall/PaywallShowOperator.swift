@@ -13,13 +13,7 @@ public final class PaywallShowOperator {
 
     private var isEnterNameCompleted = false
 
-    public var asObserver: Observer {
-        .init(id: typename(self), ids: Flow.id) {
-            self.process($0)
-        }
-    }
-
-    private func process(_ state: AppState) -> Observer.Status {
+    public func process(_ state: AppState) -> Observer.Status {
         let isEnterNameCompleted = state.flow.isEnterNameCompleted
         
         guard self.isEnterNameCompleted != isEnterNameCompleted else { return .active }

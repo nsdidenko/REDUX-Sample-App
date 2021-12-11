@@ -10,9 +10,8 @@ public struct PaywallUIOperator {
     let store: Store
     let paywallId: String
 
-    public init(store: Store, paywallId: String) {
-        self.store = store
-        self.paywallId = paywallId
+    var idsToObserve: [String] {
+        [User.id, PaywallsLoadingStatus.id, AllPaywalls.id]
     }
 
     func process(_ state: AppState) -> Props {
@@ -48,7 +47,7 @@ public struct PaywallUIOperator {
         .init(title: "\(inAppProduct.localizedPrice())",
               state: selected ? .active : .inactive,
               action: .init {
-            store.dispatch(action: DidSelectInAppProduct(at: index, in: paywallId))
+            store.dispatch(DidSelectInAppProduct(at: index, in: paywallId))
             analytics.track("Choose option \(index)")
         })
     }
@@ -59,7 +58,7 @@ public struct PaywallUIOperator {
             return .inactive
 
         case .ready:
-            return .active(.init { store.dispatch(action: DidPurchase()) })
+            return .active(.init { store.dispatch(DidPurchase()) })
         }
     }
 }
