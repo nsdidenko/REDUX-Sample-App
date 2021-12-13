@@ -3,21 +3,18 @@ public struct AllPaywalls: Equatable, Codable, StateIdentifiable, AutoAppState {
     public private(set) var paywalls = [Paywall]()
 
     mutating func reduce(_ action: Action) {
-        switch action {
-        case let action as DidLoadPaywalls:
-            precondition(!action.paywalls.isEmpty)
+        on(action, DidLoadPaywalls.self) {
+            precondition(!$0.paywalls.isEmpty)
 
-            paywalls = action.paywalls
-
-        case let action as DidSelectInAppProduct:
+            paywalls = $0.paywalls
+        }
+        
+        on(action, DidSelectInAppProduct.self) { action in
             precondition(!paywalls.filter { $0.id == action.paywallId }.isEmpty)
 
             paywalls
                 .firstIndex(where: { $0.id == action.paywallId })
                 .map { paywalls[$0].chosen = action.index }
-
-        default:
-            break
         }
     }
 

@@ -3,18 +3,16 @@ public struct User: Equatable, Codable, StateIdentifiable, AutoAppState {
     public private(set) var name = ""
 
     public mutating func reduce(_ action: Action) {
-        switch action {
-        case let action as DidLoadName:
-            name = action.name
-
-        case let action as DidSetName:
-            name = action.name
-
-        case is DidStartEnterName:
+        on(action, DidLoadName.self) {
+            name = $0.name
+        }
+        
+        on(action, DidSetName.self) {
+            name = $0.name
+        }
+        
+        on(action, DidStartEnterName.self) {
             name = ""
-
-        default:
-            break
         }
     }
 

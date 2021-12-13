@@ -12,9 +12,8 @@ public struct NameInput: Equatable, Codable, StateIdentifiable, AutoAppState {
     public init() {}
 
     mutating func reduce(_ action: Action) {
-        switch action {
-        case let action as NameInputValueChanged:
-            value = String(action.value.prefix(maxLength))
+        on(action, NameInputValueChanged.self) {
+            value = String($0.value.prefix(maxLength))
 
             validity = {
                 if value.isEmpty {
@@ -25,9 +24,6 @@ public struct NameInput: Equatable, Codable, StateIdentifiable, AutoAppState {
                     return .valid
                 }
             }()
-
-        default:
-            break
         }
     }
 

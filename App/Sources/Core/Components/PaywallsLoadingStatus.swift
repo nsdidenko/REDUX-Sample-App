@@ -4,15 +4,12 @@ public enum PaywallsLoadingStatus: Equatable, Codable, StateIdentifiable, AutoAp
     // TODO: - error
 
     mutating func reduce(_ action: Action) {
-        switch action {
-        case is DidFinishLaunch:
+        on(action, DidFinishLaunch.self) {
             self = .loading
-
-        case is DidLoadPaywalls:
+        }
+        
+        on(action, DidLoadPaywalls.self) {
             self = .ready
-
-        default:
-            break
         }
     }
 

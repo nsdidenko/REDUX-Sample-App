@@ -6,24 +6,24 @@ public struct Flow: Equatable, Codable, StateIdentifiable, AutoAppState {
     public private(set) var isPaywallCompleted = false
 
     mutating func reduce(_ action: Action) {
-        switch action {
-        case is DidFinishLaunch:
+        on(action, DidFinishLaunch.self) {
             isLaunchCompleted = true
-
-        case is DidLoadRemoteConfig:
+        }
+        
+        on(action, DidLoadRemoteConfig.self) {
             isSplashCompleted = true
-
-        case is DidSetName:
+        }
+        
+        on(action, DidSetName.self) {
             isEnterNameCompleted = true
-
-        case is DidStartEnterName:
+        }
+        
+        on(action, DidStartEnterName.self) {
             isEnterNameCompleted = false
-
-        case is DidPurchase:
+        }
+        
+        on(action, DidPurchase.self) {
             isPaywallCompleted = true
-
-        default:
-            break
         }
     }
 

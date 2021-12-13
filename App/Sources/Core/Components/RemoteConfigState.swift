@@ -3,12 +3,8 @@ public struct RemoteConfigState: Equatable, Codable, StateIdentifiable, AutoAppS
     public private(set) var config: RemoteConfig?
 
     mutating func reduce(_ action: Action) {
-        switch action {
-        case let action as DidLoadRemoteConfig:
-            config = action.remoteConfig
-
-        default:
-            break
+        on(action, DidLoadRemoteConfig.self) {
+            config = $0.remoteConfig
         }
     }
 
